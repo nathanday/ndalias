@@ -1,0 +1,251 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><head>
+    <title>NDAlias(AliasFile)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ascii">
+ <meta name="generator" content="HeaderDoc" />
+<style><!--
+#tocMenu {
+		display: block;
+		position:fixed;
+		top:0px;
+		left:0px;
+		width:210px;
+		height:100%;
+		background:transparent;
+}
+#bodyText {
+		margin-left: 210px;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+function hidetoc() {
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var toc = document.getElementById('tocMenu');
+		var body = document.getElementById('bodyText');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+--></script>
+<style type="text/css"><!--.keyword {background:#ffffff; color:#761550;}.template {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.function {background:#ffffff; color:#000000;}.string {background: #ffffff; color:#891315;}.preprocessor {background:#ffffff; color:#236e25}.comment {background:#ffffff; color:#236e25}.char {background: #ffffff; color:#0000ff;}.var {background:#ffffff; color:#000000;}.type {background:#ffffff; color:#761550;}.param {background:#ffffff; color:#000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}--></style></head><body bgcolor="#ffffff" onload="hidetoc();">
+<div id='tocMenu'>
+<iframe id='toc_content' name='toc_content' SRC='toc.html' width='210' height='100%' align='left' frameborder='0'>This document set is best viewed in a browser that supports iFrames.</iframe>
+</div>
+<div id='bodyText'>
+<a name="top"></a>
+<hr><table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h1><a name="NDAlias(AliasFile)">NDAlias(AliasFile)</a></h1>
+</td></tr></table><hr><p><!-- begin abstract --><p>A category of the class <tt>NDAlias</tt>
+<!-- end abstract --></p>
+<p><b>Extends&nbsp;Class:</b> <!-- a logicalPath="//apple_ref/occ/cl/NDAlias" -->NDAlias<!-- /a --><br>
+<b>Declared In:</b> <a href="../../index.html" target="_top">NDAlias+AliasFile</a><br>
+</p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>This category add aditional functionality to <tt>NDAlias</tt> for reading and writting <tt>NDAlias</tt> instances to Finder alias files. Though this could be used for archiving purposed, the methods of the adopted protocol <tt>NSCoding</tt> are proble better suited. The method of <tt>NDAlias (AliasFile)</tt> are mainly for creating alias files that are visible in Finder to the user.
+</p>
+<P>As well as the class <tt>NDAlias</tt> and the classes and categories it uses, <tt>NDAlias (AliasFile)</tt> also requires the class <tt>NDResourceFork</tt> and it's category <tt>NDResourceFork (OtherSorces)</tt>. If the additional functioanlity of <tt>NDAlias (AliasFile)</tt> is not required then the files for <tt>NDAlias (AliasFile)</tt>, <tt>NDResourceFork</tt> and <tt>NDResourceFork (OtherSorces)</tt> can be excluded from your project.</P>
+@helperclass NDResourceFork is requried to read and write to the alias file resource fork.
+<!-- end discussion -->
+<p></p><hr><br><h2>Groups</h2>
+
+<h3>Create an alias file from an alias</h3>
+<blockquote>
+<p></p></blockquote>
+<h4>Group members:</h4>
+<blockquote>
+<dl>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias(AliasFile)/writeToFile:" target="_top" -->-writeToFile:<!-- /a --></tt></dt>
+<dd><p>Writes an <tt>NDAlias</tt> to a Finder alias file.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias(AliasFile)/writeToFile:includeCustomIcon:" target="_top" -->-writeToFile:includeCustomIcon:<!-- /a --></tt></dt>
+<dd><p>Writes an <tt>NDAlias</tt> to a Finder alias file.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias(AliasFile)/writeToURL:" target="_top" -->-writeToURL:<!-- /a --></tt></dt>
+<dd><p>Writes an <tt>NDAlias</tt> to a Finder alias file.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias(AliasFile)/writeToURL:includeCustomIcon:" target="_top" -->-writeToURL:includeCustomIcon:<!-- /a --></tt></dt>
+<dd><p>Writes an <tt>NDAlias</tt> to a Finder alias file.
+</dd>
+</dl>
+</blockquote>
+<p>&nbsp;</p>
+<h3>Creating an alias from an alias file</h3>
+<blockquote>
+<p></p></blockquote>
+<h4>Group members:</h4>
+<blockquote>
+<dl>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/clm/NDAlias(AliasFile)/aliasWithContentsOfFile:" target="_top" -->+aliasWithContentsOfFile:<!-- /a --></tt></dt>
+<dd><p>Creates and initalises a <tt>NDAlias</tt>.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/clm/NDAlias(AliasFile)/aliasWithContentsOfURL:" target="_top" -->+aliasWithContentsOfURL:<!-- /a --></tt></dt>
+<dd><p>Initalises a <tt>NDAlias</tt>.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias(AliasFile)/initWithContentsOfFile:" target="_top" -->-initWithContentsOfFile:<!-- /a --></tt></dt>
+<dd><p>Initalises a <tt>NDAlias</tt>.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias(AliasFile)/initWithContentsOfURL:" target="_top" -->-initWithContentsOfURL:<!-- /a --></tt></dt>
+<dd><p>Initalises a <tt>NDAlias</tt>.
+</dd>
+</dl>
+</blockquote>
+<hr><h2>Methods</h2>
+<a name="HeaderDoc_methods"></a>
+<dl>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/NDAlias(AliasFile)/aliasWithContentsOfFile:" target="_top">+aliasWithContentsOfFile:</a></tt></dt>
+<dd><p>Creates and initalises a <tt>NDAlias</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/NDAlias(AliasFile)/aliasWithContentsOfURL:" target="_top">+aliasWithContentsOfURL:</a></tt></dt>
+<dd><p>Initalises a <tt>NDAlias</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias(AliasFile)/initWithContentsOfFile:" target="_top">-initWithContentsOfFile:</a></tt></dt>
+<dd><p>Initalises a <tt>NDAlias</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias(AliasFile)/initWithContentsOfURL:" target="_top">-initWithContentsOfURL:</a></tt></dt>
+<dd><p>Initalises a <tt>NDAlias</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias(AliasFile)/writeToFile:" target="_top">-writeToFile:</a></tt></dt>
+<dd><p>Writes an <tt>NDAlias</tt> to a Finder alias file.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias(AliasFile)/writeToFile:includeCustomIcon:" target="_top">-writeToFile:includeCustomIcon:</a></tt></dt>
+<dd><p>Writes an <tt>NDAlias</tt> to a Finder alias file.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias(AliasFile)/writeToURL:" target="_top">-writeToURL:</a></tt></dt>
+<dd><p>Writes an <tt>NDAlias</tt> to a Finder alias file.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias(AliasFile)/writeToURL:includeCustomIcon:" target="_top">-writeToURL:includeCustomIcon:</a></tt></dt>
+<dd><p>Writes an <tt>NDAlias</tt> to a Finder alias file.
+</dd>
+</dl>
+<hr><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/NDAlias(AliasFile)/aliasWithContentsOfFile:;   name=NDAlias(AliasFile)::aliasWithContentsOfFile: -->
+<a name="//apple_ref/occ/clm/NDAlias(AliasFile)/aliasWithContentsOfFile:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="aliasWithContentsOfFile:">aliasWithContentsOfFile:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Creates and initalises a <tt>NDAlias</tt>.
+<!-- end abstract --></p>
+<p></p><pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/aliasWithContentsOfFile //apple_ref/occ/clm/aliasWithContentsOfFile //apple_ref/occ/intfcm/aliasWithContentsOfFile //apple_ref/occ/intfm/aliasWithContentsOfFile //apple_ref/occ/func/aliasWithContentsOfFile //apple_ref/occ/ftmplt/aliasWithContentsOfFile //apple_ref/occ/defn/aliasWithContentsOfFile //apple_ref/occ/macro/aliasWithContentsOfFile" --><span class="function">aliasWithContentsOfFile</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/path //apple_ref/occ/data/path" --><span class="var">path</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>path</code></dt><dd><p>the path to an alias file.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A <tt>NDAlias</tt> instance, returns <tt>nil</tt> if <tt>NDAlias</tt> creation fails.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>aliasWithContentsOfFile:</tt> allocates and initalises an <tt>NDAlias</tt> with the alias record data within the Finder alias file pointed to by the <tt>NSString</tt> path <tt>path</tt>.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/NDAlias(AliasFile)/aliasWithContentsOfURL:;   name=NDAlias(AliasFile)::aliasWithContentsOfURL: -->
+<a name="//apple_ref/occ/clm/NDAlias(AliasFile)/aliasWithContentsOfURL:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="aliasWithContentsOfURL:">aliasWithContentsOfURL:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Initalises a <tt>NDAlias</tt>.
+<!-- end abstract --></p>
+<p></p><pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/aliasWithContentsOfURL //apple_ref/occ/clm/aliasWithContentsOfURL //apple_ref/occ/intfcm/aliasWithContentsOfURL //apple_ref/occ/intfm/aliasWithContentsOfURL //apple_ref/occ/func/aliasWithContentsOfURL //apple_ref/occ/ftmplt/aliasWithContentsOfURL //apple_ref/occ/defn/aliasWithContentsOfURL //apple_ref/occ/macro/aliasWithContentsOfURL" --><span class="function">aliasWithContentsOfURL</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/URL //apple_ref/occ/data/URL" --><span class="var">URL</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>URL</code></dt><dd><p>the file url to the alias file.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A <tt>NDAlias</tt> instance, returns <tt>nil</tt> if <tt>NDAlias</tt> creation fails.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>aliasWithContentsOfURL:</tt> allocates and initalises an <tt>NDAlias</tt> with the alias record data within the Finder <tt>NSURL</tt> alias file pointed to pay the file url <tt>URL</tt>
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias(AliasFile)/initWithContentsOfFile:;   name=NDAlias(AliasFile)::initWithContentsOfFile: -->
+<a name="//apple_ref/occ/instm/NDAlias(AliasFile)/initWithContentsOfFile:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="initWithContentsOfFile:">initWithContentsOfFile:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Initalises a <tt>NDAlias</tt>.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/initWithContentsOfFile //apple_ref/occ/clm/initWithContentsOfFile //apple_ref/occ/intfcm/initWithContentsOfFile //apple_ref/occ/intfm/initWithContentsOfFile //apple_ref/occ/func/initWithContentsOfFile //apple_ref/occ/ftmplt/initWithContentsOfFile //apple_ref/occ/defn/initWithContentsOfFile //apple_ref/occ/macro/initWithContentsOfFile" --><span class="function">initWithContentsOfFile</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/path //apple_ref/occ/data/path" --><span class="var">path</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>path</code></dt><dd><p>the path to the alias file.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An initalises <tt>NDAlias</tt>, returns <tt>nil</tt> if initalises fails.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>initWithContentsOfFile:</tt> initalises the reciever with the alias record data within the Finder alias file pointed to by the <tt>NSString</tt> path <tt>path</tt>
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias(AliasFile)/initWithContentsOfURL:;   name=NDAlias(AliasFile)::initWithContentsOfURL: -->
+<a name="//apple_ref/occ/instm/NDAlias(AliasFile)/initWithContentsOfURL:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="initWithContentsOfURL:">initWithContentsOfURL:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Initalises a <tt>NDAlias</tt>.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/initWithContentsOfURL //apple_ref/occ/clm/initWithContentsOfURL //apple_ref/occ/intfcm/initWithContentsOfURL //apple_ref/occ/intfm/initWithContentsOfURL //apple_ref/occ/func/initWithContentsOfURL //apple_ref/occ/ftmplt/initWithContentsOfURL //apple_ref/occ/defn/initWithContentsOfURL //apple_ref/occ/macro/initWithContentsOfURL" --><span class="function">initWithContentsOfURL</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/URL //apple_ref/occ/data/URL" --><span class="var">URL</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>URL</code></dt><dd><p>the file url to the alias file.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An initalises <tt>NDAlias</tt>, returns <tt>nil</tt> if initalises fails.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>initWithContentsOfURL:</tt> initalises the reciever with the alias record data within the Finder <tt>NSURL</tt> alias file pointed to pay the file url <tt>URL</tt>.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias(AliasFile)/writeToFile:;   name=NDAlias(AliasFile)::writeToFile: -->
+<a name="//apple_ref/occ/instm/NDAlias(AliasFile)/writeToFile:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="writeToFile:">writeToFile:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Writes an <tt>NDAlias</tt> to a Finder alias file.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/writeToFile //apple_ref/occ/clm/writeToFile //apple_ref/occ/intfcm/writeToFile //apple_ref/occ/intfm/writeToFile //apple_ref/occ/func/writeToFile //apple_ref/occ/ftmplt/writeToFile //apple_ref/occ/defn/writeToFile //apple_ref/occ/macro/writeToFile" --><span class="function">writeToFile</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/path //apple_ref/occ/data/path" --><span class="var">path</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>path</code></dt><dd><p>the path for the alias file. Not the path the alias record represents.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value --><#result#>
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Calls <tt>writeToFile:includeCustomIcon:</tt> with the parameter <tt><i>customIcon</i></tt> set to <tt><i>YES</i></tt>.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias(AliasFile)/writeToFile:includeCustomIcon:;   name=NDAlias(AliasFile)::writeToFile:includeCustomIcon: -->
+<a name="//apple_ref/occ/instm/NDAlias(AliasFile)/writeToFile:includeCustomIcon:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="writeToFile:includeCustomIcon:">writeToFile:includeCustomIcon:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Writes an <tt>NDAlias</tt> to a Finder alias file.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/writeToFile //apple_ref/occ/clm/writeToFile //apple_ref/occ/intfcm/writeToFile //apple_ref/occ/intfm/writeToFile //apple_ref/occ/func/writeToFile //apple_ref/occ/ftmplt/writeToFile //apple_ref/occ/defn/writeToFile //apple_ref/occ/macro/writeToFile" --><span class="function">writeToFile</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">path</span> <!-- a logicalPath="//apple_ref/occ/instm/includeCustomIcon //apple_ref/occ/clm/includeCustomIcon //apple_ref/occ/intfcm/includeCustomIcon //apple_ref/occ/intfm/includeCustomIcon //apple_ref/occ/func/includeCustomIcon //apple_ref/occ/ftmplt/includeCustomIcon //apple_ref/occ/defn/includeCustomIcon //apple_ref/occ/macro/includeCustomIcon" --><span class="function">includeCustomIcon</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/customIcon //apple_ref/occ/data/customIcon" --><span class="var">customIcon</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>path</code></dt><dd><p>the path for the alias file. Not the path the alias record represents.</dd>
+<dt><code>customIcon</code></dt><dd><p>inlcude custom icon if required.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value --><#result#>
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>writeToFile:</tt> writes the alias record data contained within the reciever to a Finder alias file at the path <tt>path</tt>. <tt>writeToFile:</tt> can be used to create alias files that the user can see in Finder and use. If the target file of for the alias has a custom icon or is an application then the <tt><i>customIcon</i></tt> can be used to included a custom icon for the alias identical to the target.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias(AliasFile)/writeToURL:;   name=NDAlias(AliasFile)::writeToURL: -->
+<a name="//apple_ref/occ/instm/NDAlias(AliasFile)/writeToURL:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="writeToURL:">writeToURL:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Writes an <tt>NDAlias</tt> to a Finder alias file.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/writeToURL //apple_ref/occ/clm/writeToURL //apple_ref/occ/intfcm/writeToURL //apple_ref/occ/intfm/writeToURL //apple_ref/occ/func/writeToURL //apple_ref/occ/ftmplt/writeToURL //apple_ref/occ/defn/writeToURL //apple_ref/occ/macro/writeToURL" --><span class="function">writeToURL</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/URL //apple_ref/occ/data/URL" --><span class="var">URL</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>URL</code></dt><dd><p>the file url for the alias file. Not the file url the alias record represents.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value --><#result#>
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Calls <tt>writeToFile:includeCustomIcon:</tt> with the parameter <tt><i>customIcon</i></tt> set to <tt><i>YES</i></tt>.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias(AliasFile)/writeToURL:includeCustomIcon:;   name=NDAlias(AliasFile)::writeToURL:includeCustomIcon: -->
+<a name="//apple_ref/occ/instm/NDAlias(AliasFile)/writeToURL:includeCustomIcon:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="writeToURL:includeCustomIcon:">writeToURL:includeCustomIcon:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Writes an <tt>NDAlias</tt> to a Finder alias file.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/writeToURL //apple_ref/occ/clm/writeToURL //apple_ref/occ/intfcm/writeToURL //apple_ref/occ/intfm/writeToURL //apple_ref/occ/func/writeToURL //apple_ref/occ/ftmplt/writeToURL //apple_ref/occ/defn/writeToURL //apple_ref/occ/macro/writeToURL" --><span class="function">writeToURL</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<span class="param">URL</span> <!-- a logicalPath="//apple_ref/occ/instm/includeCustomIcon //apple_ref/occ/clm/includeCustomIcon //apple_ref/occ/intfcm/includeCustomIcon //apple_ref/occ/intfm/includeCustomIcon //apple_ref/occ/func/includeCustomIcon //apple_ref/occ/ftmplt/includeCustomIcon //apple_ref/occ/defn/includeCustomIcon //apple_ref/occ/macro/includeCustomIcon" --><span class="function">includeCustomIcon</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/customIcon //apple_ref/occ/data/customIcon" --><span class="var">customIcon</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>URL</code></dt><dd><p>the file url for the alias file. Not the file url the alias record represents.</dd>
+<dt><code>customIcon</code></dt><dd><p>inlcude custom icon if required.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value --><#result#>
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>writeToURL:</tt> writes the alias record data contained within the reciever to a Finder alias file at the file url <tt>URL</tt>. <tt>writeToFile:</tt> can be used to create alias files that the user can see in Finder and use.. If the target file of for the alias has a custom icon or is an application then the <tt><i>customIcon</i></tt> can be used to included a custom icon for the alias identical to the target.
+<!-- end discussion -->
+<p></p><p>Last Updated: Wednesday, March 18, 2009
+</p></div>
+<!-- headerDoc=cat; uid=//apple_ref/occ/cat/NDAlias(AliasFile);  name=NDAlias(AliasFile)-->
+<a name="//apple_ref/occ/cat/NDAlias(AliasFile)"></a></body></html>

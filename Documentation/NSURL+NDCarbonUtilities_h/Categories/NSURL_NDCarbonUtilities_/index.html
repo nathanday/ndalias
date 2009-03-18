@@ -1,0 +1,292 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><head>
+    <title>NSURL(NDCarbonUtilities)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ascii">
+ <meta name="generator" content="HeaderDoc" />
+<style><!--
+#tocMenu {
+		display: block;
+		position:fixed;
+		top:0px;
+		left:0px;
+		width:210px;
+		height:100%;
+		background:transparent;
+}
+#bodyText {
+		margin-left: 210px;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+function hidetoc() {
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var toc = document.getElementById('tocMenu');
+		var body = document.getElementById('bodyText');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+--></script>
+<style type="text/css"><!--.keyword {background:#ffffff; color:#761550;}.template {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.function {background:#ffffff; color:#000000;}.string {background: #ffffff; color:#891315;}.preprocessor {background:#ffffff; color:#236e25}.comment {background:#ffffff; color:#236e25}.char {background: #ffffff; color:#0000ff;}.var {background:#ffffff; color:#000000;}.type {background:#ffffff; color:#761550;}.param {background:#ffffff; color:#000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}--></style></head><body bgcolor="#ffffff" onload="hidetoc();">
+<div id='tocMenu'>
+<iframe id='toc_content' name='toc_content' SRC='toc.html' width='210' height='100%' align='left' frameborder='0'>This document set is best viewed in a browser that supports iFrames.</iframe>
+</div>
+<div id='bodyText'>
+<a name="top"></a>
+<hr><table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h1><a name="NSURL(NDCarbonUtilities)">NSURL(NDCarbonUtilities)</a></h1>
+</td></tr></table><hr><p><!-- begin abstract --><p>Provides method for interacting with Carbon APIs.
+<!-- end abstract --></p>
+<p><b>Extends&nbsp;Class:</b> <!-- a logicalPath="//apple_ref/occ/cl/NSURL" -->NSURL<!-- /a --><br>
+<b>Declared In:</b> <a href="../../index.html" target="_top">NSURL+NDCarbonUtilities</a><br>
+</p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Methods for dealing with <tt>FSRef</tt>&rsquo;s and other useful Carbon stuff.
+<!-- end discussion -->
+<p></p><hr><br><h2>Methods</h2>
+<a name="HeaderDoc_methods"></a>
+<dl>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/fileSystemPathHFSStyle" target="_top">-fileSystemPathHFSStyle</a></tt></dt>
+<dd><p>Returns a HFS style path.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/finderInfoFlags:type:creator:" target="_top">-finderInfoFlags:type:creator:</a></tt></dt>
+<dd><p>Get finder info flags creator and type.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/finderLocation" target="_top">-finderLocation</a></tt></dt>
+<dd><p>Return a finder items location.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/getFSRef:" target="_top">-getFSRef:</a></tt></dt>
+<dd><p>Get a <tt>FSRef</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/getFSSpec:" target="_top">-getFSSpec:</a></tt></dt>
+<dd><p>Get a <tt>FSSpec</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/resolveAliasFile" target="_top">-resolveAliasFile</a></tt></dt>
+<dd><p>Resolve an alias file.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/setFinderInfoFlags:mask:type:creator:" target="_top">-setFinderInfoFlags:mask:type:creator:</a></tt></dt>
+<dd><p>Set finder info flags, creator and type.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/setFinderLocation:" target="_top">-setFinderLocation:</a></tt></dt>
+<dd><p>Sets the location a finder item.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/URLByDeletingLastPathComponent" target="_top">-URLByDeletingLastPathComponent</a></tt></dt>
+<dd><p>Delete last component of a url.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/NSURL(NDCarbonUtilities)/URLWithFileSystemPathHFSStyle:" target="_top">+URLWithFileSystemPathHFSStyle:</a></tt></dt>
+<dd><p>Alloc and intialize a <tt>NSURL</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/NSURL(NDCarbonUtilities)/URLWithFSRef:" target="_top">+URLWithFSRef:</a></tt></dt>
+<dd><p>Alloc and intialize a <tt>NSURL</tt>.
+</dd>
+</dl>
+<hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/fileSystemPathHFSStyle;   name=NSURL(NDCarbonUtilities)::fileSystemPathHFSStyle -->
+<a name="//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/fileSystemPathHFSStyle"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="fileSystemPathHFSStyle">fileSystemPathHFSStyle</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Returns a HFS style path.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/fileSystemPathHFSStyle //apple_ref/occ/data/fileSystemPathHFSStyle" --><span class="var">fileSystemPathHFSStyle</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A new <tt>NSString</tt> containing a HFS style path for the same file or directory as the receiver.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Returns a <tt>NSString</tt> containg a HFS style path (e.g. <tt>Macitosh HD:Users:</tt>) useful for display purposes.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/finderInfoFlags:type:creator:;   name=NSURL(NDCarbonUtilities)::finderInfoFlags:type:creator: -->
+<a name="//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/finderInfoFlags:type:creator:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="finderInfoFlags:type:creator:">finderInfoFlags:type:creator:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Get finder info flags creator and type.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/finderInfoFlags //apple_ref/occ/clm/finderInfoFlags //apple_ref/occ/intfcm/finderInfoFlags //apple_ref/occ/intfm/finderInfoFlags //apple_ref/occ/func/finderInfoFlags //apple_ref/occ/ftmplt/finderInfoFlags //apple_ref/occ/defn/finderInfoFlags //apple_ref/occ/macro/finderInfoFlags" --><span class="function">finderInfoFlags</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/UInt16 //apple_ref/occ/tdef/UInt16 //apple_ref/occ/tag/UInt16 //apple_ref/occ/econst/UInt16 //apple_ref/occ/struct/UInt16 //apple_ref/occ/clconst/UInt16 //apple_ref/occ/intf/UInt16" --><span class="type">UInt16</span><!-- /a --><span class="type">*</span>)<span class="param">flags</span> <!-- a logicalPath="//apple_ref/occ/instm/type //apple_ref/occ/clm/type //apple_ref/occ/intfcm/type //apple_ref/occ/intfm/type //apple_ref/occ/func/type //apple_ref/occ/ftmplt/type //apple_ref/occ/defn/type //apple_ref/occ/macro/type" --><span class="function">type</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/OSType //apple_ref/occ/tdef/OSType //apple_ref/occ/tag/OSType //apple_ref/occ/econst/OSType //apple_ref/occ/struct/OSType //apple_ref/occ/clconst/OSType //apple_ref/occ/intf/OSType" --><span class="type">OSType</span><!-- /a --><span class="type">*</span>)<span class="param">type</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/creator //apple_ref/occ/clm/creator //apple_ref/occ/intfcm/creator //apple_ref/occ/intfm/creator //apple_ref/occ/func/creator //apple_ref/occ/ftmplt/creator //apple_ref/occ/defn/creator //apple_ref/occ/macro/creator" --><span class="function">creator</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/OSType //apple_ref/occ/tdef/OSType //apple_ref/occ/tag/OSType //apple_ref/occ/econst/OSType //apple_ref/occ/struct/OSType //apple_ref/occ/clconst/OSType //apple_ref/occ/intf/OSType" --><span class="type">OSType</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/creator //apple_ref/occ/data/creator" --><span class="var">creator</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>flags</code></dt><dd><p>Contains finder flags on return.</dd>
+<dt><code>type</code></dt><dd><p>Contains finder type on return.</dd>
+<dt><code>creator</code></dt><dd><p>Contains creator on return.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Return <tt>YES</tt> if successful, otherwise <tt>NO</tt> and the returned values are invalid.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The bits of the finder info flag are
+</p>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>kIsOnDesk</tt></td><td>Files and folders (System 6)</td><tr>
+<tr><td align = "center"><tt>kColor</tt></td><td>Files and folders</td><tr>
+<tr><td align = "center"><tt>kIsShared</tt></td><td>Files only (Applications only)<br>
+If clear, the application needs to write to its resource fork, and therefore cannot be shared on a server</td><tr>
+<tr><td align = "center"><tt>kHasNoINITs</tt></td><td>Files only (Extensions/Control Panels only)<br>
+This file contains no INIT resource</td><tr>
+<tr><td align = "center"><tt>kHasBeenInited</tt></td><td>Files only<br>
+Clear if the file contains desktop database resources ('BNDL', 'FREF', 'open', 'kind'...) that have not been added yet. Set only by the Finder</td><tr>
+<tr><td align = "center"><tt>kHasCustomIcon</tt></td><td>Files and folders</td><tr>
+<tr><td align = "center"><tt>kIsStationery</tt></td><td>Files only</td><tr>
+<tr><td align = "center"><tt>kNameLocked</tt></td><td>Files and folders</td><tr>
+<tr><td align = "center"><tt>kHasBundle</tt></td><td>Files only</td><tr>
+<tr><td align = "center"><tt>kIsInvisible</tt></td><td>Files and folders</td><tr>
+<tr><td align = "center"><tt>kIsAlias</tt></td><td>Files only.</td><tr>
+</table>
+</blockquote>
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/finderLocation;   name=NSURL(NDCarbonUtilities)::finderLocation -->
+<a name="//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/finderLocation"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="finderLocation">finderLocation</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return a finder items location.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSPoint //apple_ref/occ/tdef/NSPoint //apple_ref/occ/tag/NSPoint //apple_ref/occ/econst/NSPoint //apple_ref/occ/struct/NSPoint //apple_ref/occ/clconst/NSPoint //apple_ref/occ/intf/NSPoint" --><span class="type">NSPoint</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/finderLocation //apple_ref/occ/data/finderLocation" --><span class="var">finderLocation</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A <tt>NSPoint</tt>
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Returns a finder items location within its parent window.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/getFSRef:;   name=NSURL(NDCarbonUtilities)::getFSRef: -->
+<a name="//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/getFSRef:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="getFSRef:">getFSRef:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Get a <tt>FSRef</tt>.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/getFSRef //apple_ref/occ/clm/getFSRef //apple_ref/occ/intfcm/getFSRef //apple_ref/occ/intfm/getFSRef //apple_ref/occ/func/getFSRef //apple_ref/occ/ftmplt/getFSRef //apple_ref/occ/defn/getFSRef //apple_ref/occ/macro/getFSRef" --><span class="function">getFSRef</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/FSRef //apple_ref/occ/tdef/FSRef //apple_ref/occ/tag/FSRef //apple_ref/occ/econst/FSRef //apple_ref/occ/struct/FSRef //apple_ref/occ/clconst/FSRef //apple_ref/occ/intf/FSRef" --><span class="type">FSRef</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/fsRef //apple_ref/occ/data/fsRef" --><span class="var">fsRef</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>fsRef</code></dt><dd><p>A pointer to a <tt>FSRef</tt> struct, to be filled by the method.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Returns <tt>YES</tt> if successful, if the method returns <tt>NO</tt> then <tt>fsRef</tt> contains garbage.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Obtain a <tt>FSRef</tt> for a file url.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/getFSSpec:;   name=NSURL(NDCarbonUtilities)::getFSSpec: -->
+<a name="//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/getFSSpec:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="getFSSpec:">getFSSpec:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Get a <tt>FSSpec</tt>.
+<!-- end abstract --></p>
+<p><b>Deprecated:</b> <p>in version 10.5<br>
+</p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/getFSSpec //apple_ref/occ/clm/getFSSpec //apple_ref/occ/intfcm/getFSSpec //apple_ref/occ/intfm/getFSSpec //apple_ref/occ/func/getFSSpec //apple_ref/occ/ftmplt/getFSSpec //apple_ref/occ/defn/getFSSpec //apple_ref/occ/macro/getFSSpec" --><span class="function">getFSSpec</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/FSSpec //apple_ref/occ/tdef/FSSpec //apple_ref/occ/tag/FSSpec //apple_ref/occ/econst/FSSpec //apple_ref/occ/struct/FSSpec //apple_ref/occ/clconst/FSSpec //apple_ref/occ/intf/FSSpec" --><span class="type">FSSpec</span><!-- /a --> <span class="type">*</span>)<span class="param">fsSpec</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>fsSpec</code></dt><dd><p>A pointer to a <tt>FSSpec</tt> struct, to be filled by the method.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Returns <tt>YES</tt> if successful, if the method returns <tt>NO</tt> then <tt>fsSpec</tt> contains garbage.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Obtain a <tt>FSSpec</tt> for a file url.
+<!-- end discussion -->
+<p></p><dl><dt><i>Availability</i></dt><dd>Introduced in Mac OS X v10.2, and deprecated in Mac OS X v10.2.
+</dd>
+</dl>
+<hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/resolveAliasFile;   name=NSURL(NDCarbonUtilities)::resolveAliasFile -->
+<a name="//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/resolveAliasFile"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="resolveAliasFile">resolveAliasFile</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Resolve an alias file.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/resolveAliasFile //apple_ref/occ/data/resolveAliasFile" --><span class="var">resolveAliasFile</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An file url <tt>NSURL</tt>.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Returns an file url <tt>NSURL</tt> refered to by the receveive if the receveive refers to an alias file. If it does not refer to an alias file the a url identical to the receveive is returned.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/setFinderInfoFlags:mask:type:creator:;   name=NSURL(NDCarbonUtilities)::setFinderInfoFlags:mask:type:creator: -->
+<a name="//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/setFinderInfoFlags:mask:type:creator:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="setFinderInfoFlags:mask:type:creator:">setFinderInfoFlags:mask:type:creator:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Set finder info flags, creator and type.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/setFinderInfoFlags //apple_ref/occ/clm/setFinderInfoFlags //apple_ref/occ/intfcm/setFinderInfoFlags //apple_ref/occ/intfm/setFinderInfoFlags //apple_ref/occ/func/setFinderInfoFlags //apple_ref/occ/ftmplt/setFinderInfoFlags //apple_ref/occ/defn/setFinderInfoFlags //apple_ref/occ/macro/setFinderInfoFlags" --><span class="function">setFinderInfoFlags</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/UInt16 //apple_ref/occ/tdef/UInt16 //apple_ref/occ/tag/UInt16 //apple_ref/occ/econst/UInt16 //apple_ref/occ/struct/UInt16 //apple_ref/occ/clconst/UInt16 //apple_ref/occ/intf/UInt16" --><span class="type">UInt16</span><!-- /a -->)<span class="param">flags</span> <!-- a logicalPath="//apple_ref/occ/instm/mask //apple_ref/occ/clm/mask //apple_ref/occ/intfcm/mask //apple_ref/occ/intfm/mask //apple_ref/occ/func/mask //apple_ref/occ/ftmplt/mask //apple_ref/occ/defn/mask //apple_ref/occ/macro/mask" --><span class="function">mask</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/UInt16 //apple_ref/occ/tdef/UInt16 //apple_ref/occ/tag/UInt16 //apple_ref/occ/econst/UInt16 //apple_ref/occ/struct/UInt16 //apple_ref/occ/clconst/UInt16 //apple_ref/occ/intf/UInt16" --><span class="type">UInt16</span><!-- /a -->)<span class="param">aMask</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/type //apple_ref/occ/clm/type //apple_ref/occ/intfcm/type //apple_ref/occ/intfm/type //apple_ref/occ/func/type //apple_ref/occ/ftmplt/type //apple_ref/occ/defn/type //apple_ref/occ/macro/type" --><span class="function">type</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/OSType //apple_ref/occ/tdef/OSType //apple_ref/occ/tag/OSType //apple_ref/occ/econst/OSType //apple_ref/occ/struct/OSType //apple_ref/occ/clconst/OSType //apple_ref/occ/intf/OSType" --><span class="type">OSType</span><!-- /a -->)<span class="param">type</span> <!-- a logicalPath="//apple_ref/occ/instm/creator //apple_ref/occ/clm/creator //apple_ref/occ/intfcm/creator //apple_ref/occ/intfm/creator //apple_ref/occ/func/creator //apple_ref/occ/ftmplt/creator //apple_ref/occ/defn/creator //apple_ref/occ/macro/creator" --><span class="function">creator</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/OSType //apple_ref/occ/tdef/OSType //apple_ref/occ/tag/OSType //apple_ref/occ/econst/OSType //apple_ref/occ/struct/OSType //apple_ref/occ/clconst/OSType //apple_ref/occ/intf/OSType" --><span class="type">OSType</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/creator //apple_ref/occ/data/creator" --><span class="var">creator</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>flags</code></dt><dd><p>Finder flags.</dd>
+<dt><code>aMask</code></dt><dd><p>Mask for Finder flags</dd>
+<dt><code>type</code></dt><dd><p>The Finder file type</dd>
+<dt><code>creator</code></dt><dd><p>The application creator code</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Returns <tt>YES</tt> if successful.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The bits of the finder info flag are
+</p>
+<blockquote>
+<table border = "1"  width = "90%">
+<thead><tr><th>Name</th><th>Description</th></tr></thead>
+<tr><td align = "center"><tt>kIsOnDesk</tt></td><td>Files and folders (System 6)</td><tr>
+<tr><td align = "center"><tt>kColor</tt></td><td>Files and folders</td><tr>
+<tr><td align = "center"><tt>kIsShared</tt></td><td>Files only (Applications only)<br>
+If clear, the application needs to write to its resource fork, and therefore cannot be shared on a server</td><tr>
+<tr><td align = "center"><tt>kHasNoINITs</tt></td><td>Files only (Extensions/Control Panels only)<br>
+This file contains no INIT resource</td><tr>
+<tr><td align = "center"><tt>kHasBeenInited</tt></td><td>Files only<br>
+Clear if the file contains desktop database resources ('BNDL', 'FREF', 'open', 'kind'...) that have not been added yet. Set only by the Finder</td><tr>
+<tr><td align = "center"><tt>kHasCustomIcon</tt></td><td>Files and folders</td><tr>
+<tr><td align = "center"><tt>kIsStationery</tt></td><td>Files only</td><tr>
+<tr><td align = "center"><tt>kNameLocked</tt></td><td>Files and folders</td><tr>
+<tr><td align = "center"><tt>kHasBundle</tt></td><td>Files only</td><tr>
+<tr><td align = "center"><tt>kIsInvisible</tt></td><td>Files and folders</td><tr>
+<tr><td align = "center"><tt>kIsAlias</tt></td><td>Files only.</td><tr>
+</table>
+</blockquote>
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/setFinderLocation:;   name=NSURL(NDCarbonUtilities)::setFinderLocation: -->
+<a name="//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/setFinderLocation:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="setFinderLocation:">setFinderLocation:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Sets the location a finder item.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/setFinderLocation //apple_ref/occ/clm/setFinderLocation //apple_ref/occ/intfcm/setFinderLocation //apple_ref/occ/intfm/setFinderLocation //apple_ref/occ/func/setFinderLocation //apple_ref/occ/ftmplt/setFinderLocation //apple_ref/occ/defn/setFinderLocation //apple_ref/occ/macro/setFinderLocation" --><span class="function">setFinderLocation</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSPoint //apple_ref/occ/tdef/NSPoint //apple_ref/occ/tag/NSPoint //apple_ref/occ/econst/NSPoint //apple_ref/occ/struct/NSPoint //apple_ref/occ/clconst/NSPoint //apple_ref/occ/intf/NSPoint" --><span class="type">NSPoint</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/location //apple_ref/occ/data/location" --><span class="var">location</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>location</code></dt><dd><p>The location</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Returns <tt>YES</tt> if successful.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Set the location of a finder item within in container.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/URLByDeletingLastPathComponent;   name=NSURL(NDCarbonUtilities)::URLByDeletingLastPathComponent -->
+<a name="//apple_ref/occ/instm/NSURL(NDCarbonUtilities)/URLByDeletingLastPathComponent"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="URLByDeletingLastPathComponent">URLByDeletingLastPathComponent</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Delete last component of a url.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/URLByDeletingLastPathComponent //apple_ref/occ/data/URLByDeletingLastPathComponent" --><span class="var">URLByDeletingLastPathComponent</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A new <tt>NSURL</tt>
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Returns a new <tt>NSURL</tt> equivelent to the receiver with the last component removed.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/NSURL(NDCarbonUtilities)/URLWithFileSystemPathHFSStyle:;   name=NSURL(NDCarbonUtilities)::URLWithFileSystemPathHFSStyle: -->
+<a name="//apple_ref/occ/clm/NSURL(NDCarbonUtilities)/URLWithFileSystemPathHFSStyle:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="URLWithFileSystemPathHFSStyle:">URLWithFileSystemPathHFSStyle:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Alloc and intialize a <tt>NSURL</tt>.
+<!-- end abstract --></p>
+<p></p><pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/URLWithFileSystemPathHFSStyle //apple_ref/occ/clm/URLWithFileSystemPathHFSStyle //apple_ref/occ/intfcm/URLWithFileSystemPathHFSStyle //apple_ref/occ/intfm/URLWithFileSystemPathHFSStyle //apple_ref/occ/func/URLWithFileSystemPathHFSStyle //apple_ref/occ/ftmplt/URLWithFileSystemPathHFSStyle //apple_ref/occ/defn/URLWithFileSystemPathHFSStyle //apple_ref/occ/macro/URLWithFileSystemPathHFSStyle" --><span class="function">URLWithFileSystemPathHFSStyle</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/hfsString //apple_ref/occ/data/hfsString" --><span class="var">hfsString</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>hfsString</code></dt><dd><p>A <tt>NSString</tt> containing a HFS style path.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A <tt>NSURL</tt> containing a file url.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Returns a file url for the file refered to by a HFS style path.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/NSURL(NDCarbonUtilities)/URLWithFSRef:;   name=NSURL(NDCarbonUtilities)::URLWithFSRef: -->
+<a name="//apple_ref/occ/clm/NSURL(NDCarbonUtilities)/URLWithFSRef:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="URLWithFSRef:">URLWithFSRef:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Alloc and intialize a <tt>NSURL</tt>.
+<!-- end abstract --></p>
+<p></p><pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/URLWithFSRef //apple_ref/occ/clm/URLWithFSRef //apple_ref/occ/intfcm/URLWithFSRef //apple_ref/occ/intfm/URLWithFSRef //apple_ref/occ/func/URLWithFSRef //apple_ref/occ/ftmplt/URLWithFSRef //apple_ref/occ/defn/URLWithFSRef //apple_ref/occ/macro/URLWithFSRef" --><span class="function">URLWithFSRef</span><!-- /a -->:(<span class="keyword">const</span> <!-- a logicalPath="//apple_ref/occ/econst/FSRef //apple_ref/occ/data/FSRef" --><span class="var">FSRef</span><!-- /a --> <span class="var">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/fsRef //apple_ref/occ/data/fsRef" --><span class="var">fsRef</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>fsRef</code></dt><dd><p>A pointer to a <tt>FSRef</tt>.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A <tt>NSURL</tt> containing a file url.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Returns a file url for the file refered to by a <tt>FSRef</tt>.
+<!-- end discussion -->
+<p></p><p>Last Updated: Wednesday, March 18, 2009
+</p></div>
+<!-- headerDoc=cat; uid=//apple_ref/occ/cat/NSURL(NDCarbonUtilities);  name=NSURL(NDCarbonUtilities)-->
+<a name="//apple_ref/occ/cat/NSURL(NDCarbonUtilities)"></a></body></html>

@@ -1,0 +1,782 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><head>
+    <title>NDAlias</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ascii">
+ <meta name="generator" content="HeaderDoc" />
+<style><!--
+#tocMenu {
+		display: block;
+		position:fixed;
+		top:0px;
+		left:0px;
+		width:210px;
+		height:100%;
+		background:transparent;
+}
+#bodyText {
+		margin-left: 210px;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+function hidetoc() {
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var toc = document.getElementById('tocMenu');
+		var body = document.getElementById('bodyText');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+--></script>
+<style type="text/css"><!--.keyword {background:#ffffff; color:#761550;}.template {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.function {background:#ffffff; color:#000000;}.string {background: #ffffff; color:#891315;}.preprocessor {background:#ffffff; color:#236e25}.comment {background:#ffffff; color:#236e25}.char {background: #ffffff; color:#0000ff;}.var {background:#ffffff; color:#000000;}.type {background:#ffffff; color:#761550;}.param {background:#ffffff; color:#000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}--></style></head><body bgcolor="#ffffff" onload="hidetoc();">
+<div id='tocMenu'>
+<iframe id='toc_content' name='toc_content' SRC='toc.html' width='210' height='100%' align='left' frameborder='0'>This document set is best viewed in a browser that supports iFrames.</iframe>
+</div>
+<div id='bodyText'>
+<a name="top"></a>
+<hr><table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h1><a name="NDAlias">NDAlias</a></h1>
+</td></tr></table><hr><p><!-- begin abstract --><p>A class to access the Alias Manager from Cocoa.
+<!-- end abstract --></p>
+<p><b>Version:</b> <p>1.3<br>
+<b>Conforms&nbsp;to:</b> <!-- a logicalPath="//apple_ref/occ/cl/pNSCoding" --><p>NSCoding<!-- /a --><br>
+<b>Superclass:</b> <!-- a logicalPath="//apple_ref/occ/cl/NSObject" -->NSObject<!-- /a --><br>
+<b>Declared In:</b> <a href="../../index.html" target="_top">NDAlias</a><br>
+</p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Your application can use an <tt>NDAlias</tt> to refer to file system objects (that is, files, directories, and volumes) in a way that does expect the file system object's path to be maintained. The user then can move or rename the file system object without your program losing track of it. This behaviour is not always desirable, for instance with library resources. But for file system objects like documents or user folders, it is what Mac OS users have come to expect.
+<!-- end discussion -->
+<p></p><hr><br><h2>Groups</h2>
+
+<h3>Obtain the aliases data</h3>
+<blockquote>
+<p></p></blockquote>
+<h4>Group members:</h4>
+<blockquote>
+<dl>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/data" target="_top" -->-data<!-- /a --></tt></dt>
+<dd><p>Returns a <tt>NSData</tt> instance for the reciever.
+</dd>
+</dl>
+</blockquote>
+<p>&nbsp;</p>
+<h3>Update the path of the alias</h3>
+<blockquote>
+<p></p></blockquote>
+<h4>Group members:</h4>
+<blockquote>
+<dl>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/setPath:" target="_top" -->-setPath:<!-- /a --></tt></dt>
+<dd><p>Updates an the reciever with a new target.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/setPath:fromPath:" target="_top" -->-setPath:fromPath:<!-- /a --></tt></dt>
+<dd><p>Updates an the reciever with a new target.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/setURL:" target="_top" -->-setURL:<!-- /a --></tt></dt>
+<dd><p>Updates an the reciever with a new target.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/setURL:fromURL:" target="_top" -->-setURL:fromURL:<!-- /a --></tt></dt>
+<dd><p>Updates an the reciever with a new target.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/doc/title:instm/NDAlias/setURL:fromURL:" target="_top" -->-setURL:fromURL:<!-- /a --></tt></dt>
+<dd><p>Updates an the reciever with a new target.
+</dd>
+</dl>
+</blockquote>
+<p>&nbsp;</p>
+<h3>Information about an alias</h3>
+<blockquote>
+<p></p></blockquote>
+<h4>Group members:</h4>
+<blockquote>
+<dl>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/allowUserInteraction" target="_top" -->-allowUserInteraction<!-- /a --></tt></dt>
+<dd><p>Option controls how the alias is resolved
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/changed" target="_top" -->-changed<!-- /a --></tt></dt>
+<dd><p>Reports whether the receiver was updated.
+</dd>
+</dl>
+</blockquote>
+<p>&nbsp;</p>
+<h3>Miscellaneous</h3>
+<blockquote>
+<p></p></blockquote>
+<h4>Group members:</h4>
+<blockquote>
+<dl>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/displayName" target="_top" -->-displayName<!-- /a --></tt></dt>
+<dd><p>Returns a <tt>NSString</tt> of the receiver's filename in the correct localized form.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/isEqualToAlias:" target="_top" -->-isEqualToAlias:<!-- /a --></tt></dt>
+<dd><p>Test alias equality
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/lastKnownName" target="_top" -->-lastKnownName<!-- /a --></tt></dt>
+<dd><p>Return name from an alias record
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/lastKnownPath" target="_top" -->-lastKnownPath<!-- /a --></tt></dt>
+<dd><p>Return path from an alias record
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/lastKnownVolumeName" target="_top" -->-lastKnownVolumeName<!-- /a --></tt></dt>
+<dd><p>Return volume from an alias record
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/resolveIfIsAliasFile:" target="_top" -->-resolveIfIsAliasFile:<!-- /a --></tt></dt>
+<dd><p>Resolve alias file target.
+</dd>
+</dl>
+</blockquote>
+<p>&nbsp;</p>
+<h3>Setting the way the alias is resolved</h3>
+<blockquote>
+<p></p></blockquote>
+<h4>Group members:</h4>
+<blockquote>
+<dl>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/setAllowUserInteraction:" target="_top" -->-setAllowUserInteraction:<!-- /a --></tt></dt>
+<dd><p>Option controls how the alias is resolved
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/setTryFileIDFirst:" target="_top" -->-setTryFileIDFirst:<!-- /a --></tt></dt>
+<dd><p>Option controls how the alias is resolved
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/tryFileIDFirst" target="_top" -->-tryFileIDFirst<!-- /a --></tt></dt>
+<dd><p>Option controls how the alias is resolved
+</dd>
+</dl>
+</blockquote>
+<p>&nbsp;</p>
+<h3>Obtain the path the alias points to.</h3>
+<blockquote>
+<p></p></blockquote>
+<h4>Group members:</h4>
+<blockquote>
+<dl>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/DEPRECATED_ATTRIBUTE" target="_top" -->-DEPRECATED_ATTRIBUTE<!-- /a --></tt></dt>
+<dd></dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/path" target="_top" -->-path<!-- /a --></tt></dt>
+<dd><p>Returns the single most likely target for the receiver.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/URL" target="_top" -->-URL<!-- /a --></tt></dt>
+<dd><p>Returns the single most likely target for the receiver.
+</dd>
+</dl>
+</blockquote>
+<p>&nbsp;</p>
+<h3>Creating an alias</h3>
+<blockquote>
+<p></p></blockquote>
+<h4>Group members:</h4>
+<blockquote>
+<dl>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/clm/NDAlias/aliasWithData:" target="_top" -->+aliasWithData:<!-- /a --></tt></dt>
+<dd><p>Creates and initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/clm/NDAlias/aliasWithFSRef:" target="_top" -->+aliasWithFSRef:<!-- /a --></tt></dt>
+<dd><p>Creates and initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/clm/NDAlias/aliasWithPath:" target="_top" -->+aliasWithPath:<!-- /a --></tt></dt>
+<dd><p>Creates and initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/clm/NDAlias/aliasWithPath:fromPath:" target="_top" -->+aliasWithPath:fromPath:<!-- /a --></tt></dt>
+<dd><p>Creates and initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/clm/NDAlias/aliasWithURL:" target="_top" -->+aliasWithURL:<!-- /a --></tt></dt>
+<dd><p>Creates and initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/clm/NDAlias/aliasWithURL:fromURL:" target="_top" -->+aliasWithURL:fromURL:<!-- /a --></tt></dt>
+<dd><p>Creates and initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/initWithData:" target="_top" -->-initWithData:<!-- /a --></tt></dt>
+<dd><p>Initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/initWithFSRef:" target="_top" -->-initWithFSRef:<!-- /a --></tt></dt>
+<dd><p>Initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/initWithPath:" target="_top" -->-initWithPath:<!-- /a --></tt></dt>
+<dd><p>Initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/initWithPath:fromPath:" target="_top" -->-initWithPath:fromPath:<!-- /a --></tt></dt>
+<dd><p>Initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/doc/title:instm/NDAlias/initWithPath:fromURL:" target="_top" -->-initWithPath:fromURL:<!-- /a --></tt></dt>
+<dd><p>Initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/initWithURL:" target="_top" -->-initWithURL:<!-- /a --></tt></dt>
+<dd><p>Initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/initWithURL:fromURL:" target="_top" -->-initWithURL:fromURL:<!-- /a --></tt></dt>
+<dd><p>Initalises an <tt>NDAlias</tt>.
+</dd>
+</dl>
+</blockquote>
+<hr><h2>Methods</h2>
+<a name="HeaderDoc_methods"></a>
+<dl>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/NDAlias/aliasWithData:" target="_top">+aliasWithData:</a></tt></dt>
+<dd><p>Creates and initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/NDAlias/aliasWithFSRef:" target="_top">+aliasWithFSRef:</a></tt></dt>
+<dd><p>Creates and initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/NDAlias/aliasWithPath:" target="_top">+aliasWithPath:</a></tt></dt>
+<dd><p>Creates and initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/NDAlias/aliasWithPath:fromPath:" target="_top">+aliasWithPath:fromPath:</a></tt></dt>
+<dd><p>Creates and initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/NDAlias/aliasWithURL:" target="_top">+aliasWithURL:</a></tt></dt>
+<dd><p>Creates and initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/NDAlias/aliasWithURL:fromURL:" target="_top">+aliasWithURL:fromURL:</a></tt></dt>
+<dd><p>Creates and initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/allowUserInteraction" target="_top">-allowUserInteraction</a></tt></dt>
+<dd><p>Option controls how the alias is resolved
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/changed" target="_top">-changed</a></tt></dt>
+<dd><p>Reports whether the receiver was updated.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/data" target="_top">-data</a></tt></dt>
+<dd><p>Returns a <tt>NSData</tt> instance for the reciever.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/DEPRECATED_ATTRIBUTE" target="_top">-DEPRECATED_ATTRIBUTE</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/displayName" target="_top">-displayName</a></tt></dt>
+<dd><p>Returns a <tt>NSString</tt> of the receiver's filename in the correct localized form.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/initWithData:" target="_top">-initWithData:</a></tt></dt>
+<dd><p>Initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/initWithFSRef:" target="_top">-initWithFSRef:</a></tt></dt>
+<dd><p>Initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/initWithPath:" target="_top">-initWithPath:</a></tt></dt>
+<dd><p>Initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/initWithPath:fromPath:" target="_top">-initWithPath:fromPath:</a></tt></dt>
+<dd><p>Initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/doc/title:instm/NDAlias/initWithPath:fromURL:" target="_top">-initWithPath:fromURL:</a></tt></dt>
+<dd><p>Initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/initWithURL:" target="_top">-initWithURL:</a></tt></dt>
+<dd><p>Initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/initWithURL:fromURL:" target="_top">-initWithURL:fromURL:</a></tt></dt>
+<dd><p>Initalises an <tt>NDAlias</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/isEqualToAlias:" target="_top">-isEqualToAlias:</a></tt></dt>
+<dd><p>Test alias equality
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/lastKnownName" target="_top">-lastKnownName</a></tt></dt>
+<dd><p>Return name from an alias record
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/lastKnownPath" target="_top">-lastKnownPath</a></tt></dt>
+<dd><p>Return path from an alias record
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/lastKnownVolumeName" target="_top">-lastKnownVolumeName</a></tt></dt>
+<dd><p>Return volume from an alias record
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/path" target="_top">-path</a></tt></dt>
+<dd><p>Returns the single most likely target for the receiver.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/resolveIfIsAliasFile:" target="_top">-resolveIfIsAliasFile:</a></tt></dt>
+<dd><p>Resolve alias file target.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/setAllowUserInteraction:" target="_top">-setAllowUserInteraction:</a></tt></dt>
+<dd><p>Option controls how the alias is resolved
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/setPath:" target="_top">-setPath:</a></tt></dt>
+<dd><p>Updates an the reciever with a new target.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/setPath:fromPath:" target="_top">-setPath:fromPath:</a></tt></dt>
+<dd><p>Updates an the reciever with a new target.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/setTryFileIDFirst:" target="_top">-setTryFileIDFirst:</a></tt></dt>
+<dd><p>Option controls how the alias is resolved
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/setURL:" target="_top">-setURL:</a></tt></dt>
+<dd><p>Updates an the reciever with a new target.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/setURL:fromURL:" target="_top">-setURL:fromURL:</a></tt></dt>
+<dd><p>Updates an the reciever with a new target.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/doc/title:instm/NDAlias/setURL:fromURL:" target="_top">-setURL:fromURL:</a></tt></dt>
+<dd><p>Updates an the reciever with a new target.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/tryFileIDFirst" target="_top">-tryFileIDFirst</a></tt></dt>
+<dd><p>Option controls how the alias is resolved
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDAlias/URL" target="_top">-URL</a></tt></dt>
+<dd><p>Returns the single most likely target for the receiver.
+</dd>
+</dl>
+<hr><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/NDAlias/aliasWithData:;   name=NDAlias::aliasWithData: -->
+<a name="//apple_ref/occ/clm/NDAlias/aliasWithData:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="aliasWithData:">aliasWithData:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Creates and initalises an <tt>NDAlias</tt>.
+<!-- end abstract --></p>
+<p></p><pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/aliasWithData //apple_ref/occ/clm/aliasWithData //apple_ref/occ/intfcm/aliasWithData //apple_ref/occ/intfm/aliasWithData //apple_ref/occ/func/aliasWithData //apple_ref/occ/ftmplt/aliasWithData //apple_ref/occ/defn/aliasWithData //apple_ref/occ/macro/aliasWithData" --><span class="function">aliasWithData</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSData //apple_ref/occ/tdef/NSData //apple_ref/occ/tag/NSData //apple_ref/occ/econst/NSData //apple_ref/occ/struct/NSData //apple_ref/occ/clconst/NSData //apple_ref/occ/intf/NSData" --><span class="type">NSData</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/data //apple_ref/occ/data/data" --><span class="var">data</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>data</code></dt><dd><p>The <tt>NSData</tt> instances that contains the data returned previously from the method <tt>data</tt>.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A NDAlias instance, returns <tt>nil</tt> if <tt>NDAlias</tt> creation fails.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>aliasWithData:</tt> creates an <tt>NDAlias</tt> that describes the specified target. <tt>aliasWithData:</tt> creates the <tt>NDAlias</tt> from the data that was returned from the method <tt>data</tt>
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/NDAlias/aliasWithFSRef:;   name=NDAlias::aliasWithFSRef: -->
+<a name="//apple_ref/occ/clm/NDAlias/aliasWithFSRef:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="aliasWithFSRef:">aliasWithFSRef:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Creates and initalises an <tt>NDAlias</tt>.
+<!-- end abstract --></p>
+<p></p><pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/aliasWithFSRef //apple_ref/occ/clm/aliasWithFSRef //apple_ref/occ/intfcm/aliasWithFSRef //apple_ref/occ/intfm/aliasWithFSRef //apple_ref/occ/func/aliasWithFSRef //apple_ref/occ/ftmplt/aliasWithFSRef //apple_ref/occ/defn/aliasWithFSRef //apple_ref/occ/macro/aliasWithFSRef" --><span class="function">aliasWithFSRef</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/FSRef //apple_ref/occ/tdef/FSRef //apple_ref/occ/tag/FSRef //apple_ref/occ/econst/FSRef //apple_ref/occ/struct/FSRef //apple_ref/occ/clconst/FSRef //apple_ref/occ/intf/FSRef" --><span class="type">FSRef</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/aFSRef //apple_ref/occ/data/aFSRef" --><span class="var">aFSRef</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>aFSRef</code></dt><dd><p>An <tt>FSRef</tt> instance that points to the object to make an alias of.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A NDAlias instance, returns <tt>nil</tt> if <tt>NDAlias</tt> creation fails.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>aliasWithFSRef:</tt> creates an <tt>NDAlias</tt> that describes the specified target. <tt>aliasWithFSRef:</tt> creates the <tt>NDAlias</tt> from the provided FSRef.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/NDAlias/aliasWithPath:;   name=NDAlias::aliasWithPath: -->
+<a name="//apple_ref/occ/clm/NDAlias/aliasWithPath:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="aliasWithPath:">aliasWithPath:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Creates and initalises an <tt>NDAlias</tt>.
+<!-- end abstract --></p>
+<p></p><pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/aliasWithPath //apple_ref/occ/clm/aliasWithPath //apple_ref/occ/intfcm/aliasWithPath //apple_ref/occ/intfm/aliasWithPath //apple_ref/occ/func/aliasWithPath //apple_ref/occ/ftmplt/aliasWithPath //apple_ref/occ/defn/aliasWithPath //apple_ref/occ/macro/aliasWithPath" --><span class="function">aliasWithPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/path //apple_ref/occ/data/path" --><span class="var">path</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>path</code></dt><dd><p>the path for the target of the alias.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An <tt>NDAlias</tt> instance, returns <tt>nil</tt> if <tt>NDAlias</tt> creation fails.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>aliasWithPath:</tt> creates an <tt>NDAlias</tt> that contains only the minimum information necessary to describe the target: the target name, the parent directory ID, the volume name and creation date, and the volume mounting information. The <tt>aliasWithPath:</tt> method uses the standard alias record data structure, but it fills in only parts of the record.
+</p>
+<p>The methods <tt>URL</tt> and <tt>path</tt> never update a minimal alias record.</p>
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/NDAlias/aliasWithPath:fromPath:;   name=NDAlias::aliasWithPath:fromPath: -->
+<a name="//apple_ref/occ/clm/NDAlias/aliasWithPath:fromPath:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="aliasWithPath:fromPath:">aliasWithPath:fromPath:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Creates and initalises an <tt>NDAlias</tt>.
+<!-- end abstract --></p>
+<p></p><pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/aliasWithPath //apple_ref/occ/clm/aliasWithPath //apple_ref/occ/intfcm/aliasWithPath //apple_ref/occ/intfm/aliasWithPath //apple_ref/occ/func/aliasWithPath //apple_ref/occ/ftmplt/aliasWithPath //apple_ref/occ/defn/aliasWithPath //apple_ref/occ/macro/aliasWithPath" --><span class="function">aliasWithPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">path</span> <!-- a logicalPath="//apple_ref/occ/instm/fromPath //apple_ref/occ/clm/fromPath //apple_ref/occ/intfcm/fromPath //apple_ref/occ/intfm/fromPath //apple_ref/occ/func/fromPath //apple_ref/occ/ftmplt/fromPath //apple_ref/occ/defn/fromPath //apple_ref/occ/macro/fromPath" --><span class="function">fromPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/fromPath //apple_ref/occ/data/fromPath" --><span class="var">fromPath</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>URL</code></dt><dd><p>the file url for the target of the alias.</dd>
+<dt><code>fromPath</code></dt><dd><p>The starting point for a relative path, to be used later in a relative search. The two file or directory url's, <tt>fromPath</tt> and <tt>URL</tt>, must reside on the same volume.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A NDAlias instance, returns <tt>nil</tt> if <tt>NDAlias</tt> creation fails.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>aliasWithPath:fromPath:</tt> creates an <tt>NDAlias</tt> that describes the specified target. <tt>aliasWithPath:fromPath:</tt> always records the name and file or directory ID of the target, its creation date, the parent directory name and ID, and the volume name and creation date. It also records the full pathname of the target and a collection of other information relevant to locating the target, verifying the target, and mounting the target's volume, if necessary. <tt>aliasWithPath:fromPath:</tt> also stores relative path information as well by supplying a starting point for a relative path.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/NDAlias/aliasWithURL:;   name=NDAlias::aliasWithURL: -->
+<a name="//apple_ref/occ/clm/NDAlias/aliasWithURL:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="aliasWithURL:">aliasWithURL:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Creates and initalises an <tt>NDAlias</tt>.
+<!-- end abstract --></p>
+<p></p><pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/aliasWithURL //apple_ref/occ/clm/aliasWithURL //apple_ref/occ/intfcm/aliasWithURL //apple_ref/occ/intfm/aliasWithURL //apple_ref/occ/func/aliasWithURL //apple_ref/occ/ftmplt/aliasWithURL //apple_ref/occ/defn/aliasWithURL //apple_ref/occ/macro/aliasWithURL" --><span class="function">aliasWithURL</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/URL //apple_ref/occ/data/URL" --><span class="var">URL</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>URL</code></dt><dd><p>the file url for the target of the alias.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An <tt>NDAlias</tt> instance, returns <tt>nil</tt> if <tt>NDAlias</tt> creation fails.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>aliasWithURL:</tt> creates an <tt>NDAlias</tt> that contains only the minimum information necessary to describe the target: the target name, the parent directory ID, the volume name and creation date, and the volume mounting information. The <tt>aliasWithURL:</tt> method uses the standard alias record data structure, but it fills in only parts of the record.
+</p>
+<p>The methods <tt>URL</tt> and <tt>path</tt> never update a minimal alias record.</p>
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/NDAlias/aliasWithURL:fromURL:;   name=NDAlias::aliasWithURL:fromURL: -->
+<a name="//apple_ref/occ/clm/NDAlias/aliasWithURL:fromURL:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="aliasWithURL:fromURL:">aliasWithURL:fromURL:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Creates and initalises an <tt>NDAlias</tt>.
+<!-- end abstract --></p>
+<p></p><pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/aliasWithURL //apple_ref/occ/clm/aliasWithURL //apple_ref/occ/intfcm/aliasWithURL //apple_ref/occ/intfm/aliasWithURL //apple_ref/occ/func/aliasWithURL //apple_ref/occ/ftmplt/aliasWithURL //apple_ref/occ/defn/aliasWithURL //apple_ref/occ/macro/aliasWithURL" --><span class="function">aliasWithURL</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<span class="param">URL</span> <!-- a logicalPath="//apple_ref/occ/instm/fromURL //apple_ref/occ/clm/fromURL //apple_ref/occ/intfcm/fromURL //apple_ref/occ/intfm/fromURL //apple_ref/occ/func/fromURL //apple_ref/occ/ftmplt/fromURL //apple_ref/occ/defn/fromURL //apple_ref/occ/macro/fromURL" --><span class="function">fromURL</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/fromURL //apple_ref/occ/data/fromURL" --><span class="var">fromURL</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>URL</code></dt><dd><p>the file url for the target of the alias.</dd>
+<dt><code>fromURL</code></dt><dd><p>The starting point for a relative path, to be used later in a relative search. The two file or directory url's, <tt>fromURL</tt> and <tt>URL</tt>, must reside on the same volume.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An <tt>NDAlias</tt> instance, returns <tt>nil</tt> if <tt>NDAlias</tt> creation fails.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>aliasWithURL:fromURL:</tt> creates an <tt>NDAlias</tt> that describes the specified target. <tt>aliasWithURL:fromURL:</tt> always records the name and file or directory ID of the target, its creation date, the parent directory name and ID, and the volume name and creation date. It also records the full pathname of the target and a collection of other information relevant to locating the target, verifying the target, and mounting the target's volume, if necessary. <tt>aliasWithURL:fromURL:</tt> also stores relative path information as well by supplying a starting point for a relative path.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/allowUserInteraction;   name=NDAlias::allowUserInteraction -->
+<a name="//apple_ref/occ/instm/NDAlias/allowUserInteraction"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="allowUserInteraction">allowUserInteraction</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Option controls how the alias is resolved
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/allowUserInteraction //apple_ref/occ/data/allowUserInteraction" --><span class="var">allowUserInteraction</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Returns <tt>YES</tt> if user interaction is allowed.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Gets wether the OS may present a user interface when resolving the receiver. By default, as of version 1.3, user interaction is not allowed. In previous versions, the default was to allow user interaction.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/changed;   name=NDAlias::changed -->
+<a name="//apple_ref/occ/instm/NDAlias/changed"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="changed">changed</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Reports whether the receiver was updated.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/changed //apple_ref/occ/data/changed" --><span class="var">changed</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value --><tt>YES</tt> if the receiver was updated, <tt>NO</tt> if it was not updated.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>changed</tt> indicates whether the receiver was updated because it contained some outdated information about the target. If it the receiver is updated, <tt>YES</tt> is returned. Otherwise, it return <tt>NO</tt>. (<tt>URL</tt> and <tt>path</tt> never update an <tt>NDAlias</tt> that was created with no relative path.)
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/data;   name=NDAlias::data -->
+<a name="//apple_ref/occ/instm/NDAlias/data"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="data">data</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Returns a <tt>NSData</tt> instance for the reciever.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSData //apple_ref/occ/tdef/NSData //apple_ref/occ/tag/NSData //apple_ref/occ/econst/NSData //apple_ref/occ/struct/NSData //apple_ref/occ/clconst/NSData //apple_ref/occ/intf/NSData" --><span class="type">NSData</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/data //apple_ref/occ/data/data" --><span class="var">data</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Returns an <tt>NSData</tt> instance.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>data</tt> returns the contents of the recievers as an <tt>NSData</tt>, this can be used for archiving purposes though <tt>NDAlias</tt> does implement the <tt>NSCoding</tt> protocol.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/DEPRECATED_ATTRIBUTE;   name=NDAlias::DEPRECATED_ATTRIBUTE -->
+<a name="//apple_ref/occ/instm/NDAlias/DEPRECATED_ATTRIBUTE"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="DEPRECATED_ATTRIBUTE">DEPRECATED_ATTRIBUTE</a></h3>
+</td></tr></table><hr><p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<span class="param">url</span> <!-- a logicalPath="//apple_ref/occ/econst/DEPRECATED_ATTRIBUTE //apple_ref/occ/data/DEPRECATED_ATTRIBUTE" --><span class="var">DEPRECATED_ATTRIBUTE</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>This method is deprecated.  Use -URL instead.  Why?  For consistency with Cocoa classes, which spell it in caps.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/displayName;   name=NDAlias::displayName -->
+<a name="//apple_ref/occ/instm/NDAlias/displayName"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="displayName">displayName</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Returns a <tt>NSString</tt> of the receiver's filename in the correct localized form.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/displayName //apple_ref/occ/data/displayName" --><span class="var">displayName</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Returns an <tt>NSString</tt> instance.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>displayName</tt> returns the filename in the correct localized form, taking into account ':' <-> '/' transformations and localized display names.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/initWithData:;   name=NDAlias::initWithData: -->
+<a name="//apple_ref/occ/instm/NDAlias/initWithData:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="initWithData:">initWithData:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Initalises an <tt>NDAlias</tt>.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/initWithData //apple_ref/occ/clm/initWithData //apple_ref/occ/intfcm/initWithData //apple_ref/occ/intfm/initWithData //apple_ref/occ/func/initWithData //apple_ref/occ/ftmplt/initWithData //apple_ref/occ/defn/initWithData //apple_ref/occ/macro/initWithData" --><span class="function">initWithData</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSData //apple_ref/occ/tdef/NSData //apple_ref/occ/tag/NSData //apple_ref/occ/econst/NSData //apple_ref/occ/struct/NSData //apple_ref/occ/clconst/NSData //apple_ref/occ/intf/NSData" --><span class="type">NSData</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/data //apple_ref/occ/data/data" --><span class="var">data</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>data</code></dt><dd><p>The <tt>NSData</tt> instances that contains the data returned previously from the method <tt>data</tt>.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An initalised <tt>NDAlias</tt>, returns <tt>nil</tt> if initialisation fails.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>initWithData:</tt> initalises an <tt>NDAlias</tt> that describes the specified target. <tt>initWithData:</tt> creates the <tt>NDAlias</tt> from the data that was returned from the method <tt>data</tt>
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/initWithFSRef:;   name=NDAlias::initWithFSRef: -->
+<a name="//apple_ref/occ/instm/NDAlias/initWithFSRef:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="initWithFSRef:">initWithFSRef:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Initalises an <tt>NDAlias</tt>.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/initWithFSRef //apple_ref/occ/clm/initWithFSRef //apple_ref/occ/intfcm/initWithFSRef //apple_ref/occ/intfm/initWithFSRef //apple_ref/occ/func/initWithFSRef //apple_ref/occ/ftmplt/initWithFSRef //apple_ref/occ/defn/initWithFSRef //apple_ref/occ/macro/initWithFSRef" --><span class="function">initWithFSRef</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/FSRef //apple_ref/occ/tdef/FSRef //apple_ref/occ/tag/FSRef //apple_ref/occ/econst/FSRef //apple_ref/occ/struct/FSRef //apple_ref/occ/clconst/FSRef //apple_ref/occ/intf/FSRef" --><span class="type">FSRef</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/aFSRef //apple_ref/occ/data/aFSRef" --><span class="var">aFSRef</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>aFSRef</code></dt><dd><p>An <tt>FSRef</tt> instance that points to the object to make an alias of.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An initalised <tt>NDAlias</tt>, returns <tt>nil</tt> if initialisation fails.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>initWithFSRef:</tt> initalises an <tt>NDAlias</tt> that describes the specified target. <tt>initWithFSRef:</tt> creates the <tt>NDAlias</tt> from the provided FSRef.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/initWithPath:;   name=NDAlias::initWithPath: -->
+<a name="//apple_ref/occ/instm/NDAlias/initWithPath:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="initWithPath:">initWithPath:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Initalises an <tt>NDAlias</tt>.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/initWithPath //apple_ref/occ/clm/initWithPath //apple_ref/occ/intfcm/initWithPath //apple_ref/occ/intfm/initWithPath //apple_ref/occ/func/initWithPath //apple_ref/occ/ftmplt/initWithPath //apple_ref/occ/defn/initWithPath //apple_ref/occ/macro/initWithPath" --><span class="function">initWithPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/path //apple_ref/occ/data/path" --><span class="var">path</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>path</code></dt><dd><p>the path for the target of the alias.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An initalised <tt>NDAlias</tt>, returns <tt>nil</tt> if initialisation fails.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>initWithPath:</tt> initalises an <tt>NDAlias</tt> that contains only the minimum information necessary to describe the target: the target name, the parent directory ID, the volume name and creation date, and the volume mounting information. The <tt>initWithPath:</tt> method uses the standard alias record data structure, but it fills in only parts of the record.
+</p>
+<p>The methods <tt>URL</tt> and <tt>path</tt> never update a minimal alias record.</p>
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/initWithPath:fromPath:;   name=NDAlias::initWithPath:fromPath: -->
+<a name="//apple_ref/occ/instm/NDAlias/initWithPath:fromPath:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="initWithPath:fromPath:">initWithPath:fromPath:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Initalises an <tt>NDAlias</tt>.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/initWithPath //apple_ref/occ/clm/initWithPath //apple_ref/occ/intfcm/initWithPath //apple_ref/occ/intfm/initWithPath //apple_ref/occ/func/initWithPath //apple_ref/occ/ftmplt/initWithPath //apple_ref/occ/defn/initWithPath //apple_ref/occ/macro/initWithPath" --><span class="function">initWithPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">path</span> <!-- a logicalPath="//apple_ref/occ/instm/fromPath //apple_ref/occ/clm/fromPath //apple_ref/occ/intfcm/fromPath //apple_ref/occ/intfm/fromPath //apple_ref/occ/func/fromPath //apple_ref/occ/ftmplt/fromPath //apple_ref/occ/defn/fromPath //apple_ref/occ/macro/fromPath" --><span class="function">fromPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/fromPath //apple_ref/occ/data/fromPath" --><span class="var">fromPath</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>path</code></dt><dd><p>the file url for the target of the alias.</dd>
+<dt><code>fromPath</code></dt><dd><p>The starting point for a relative path, to be used later in a relative search. The two file or directory url's, <tt>fromPath</tt> and <tt>path</tt>, must reside on the same volume.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An initalised <tt>NDAlias</tt>, returns <tt>nil</tt> if initialisation fails.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>initWithPath:fromPath:</tt> initalises an <tt>NDAlias</tt> that describes the specified target. <tt>initWithPath:fromPath:</tt> always records the name and file or directory ID of the target, its creation date, the parent directory name and ID, and the volume name and creation date. It also records the full pathname of the target and a collection of other information relevant to locating the target, verifying the target, and mounting the target's volume, if necessary. <tt>initWithPath:fromPath:</tt> also stores relative path information as well by supplying a starting point for a relative path.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=title:instm;  uid=//apple_ref/doc/title:instm/NDAlias/initWithPath:fromURL:;   name=NDAlias::initWithPath:fromURL: -->
+<a name="//apple_ref/doc/title:instm/NDAlias/initWithPath:fromURL:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="initWithPath:fromURL:">initWithPath:fromURL:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Initalises an <tt>NDAlias</tt>.
+<!-- end abstract --></p>
+<p></p><b>See Also:</b><blockquote><dl>
+<dt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/initWithURL:fromURL:" --><p>initWithURL:fromURL:<!-- /a --></dt><dd></dd></dl></blockquote>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/initWithURL //apple_ref/occ/clm/initWithURL //apple_ref/occ/intfcm/initWithURL //apple_ref/occ/intfm/initWithURL //apple_ref/occ/func/initWithURL //apple_ref/occ/ftmplt/initWithURL //apple_ref/occ/defn/initWithURL //apple_ref/occ/macro/initWithURL" --><span class="function">initWithURL</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<span class="param">URL</span> <!-- a logicalPath="//apple_ref/occ/instm/fromURL //apple_ref/occ/clm/fromURL //apple_ref/occ/intfcm/fromURL //apple_ref/occ/intfm/fromURL //apple_ref/occ/func/fromURL //apple_ref/occ/ftmplt/fromURL //apple_ref/occ/defn/fromURL //apple_ref/occ/macro/fromURL" --><span class="function">fromURL</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/fromURL //apple_ref/occ/data/fromURL" --><span class="var">fromURL</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>URL</code></dt><dd><p>the file url for the target of the alias.</dd>
+<dt><code>fromURL</code></dt><dd><p>The starting point for a relative path, to be used later in a relative search. The two file or directory url's, <tt>fromURL</tt> and <tt>URL</tt>, must reside on the same volume.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An initalised <tt>NDAlias</tt>, returns <tt>nil</tt> if initialisation fails.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>initWithPath:fromURL:</tt> initalises an <tt>NDAlias</tt> that describes the specified target. <tt>initWithPath:fromURL:</tt> always records the name and file or directory ID of the target, its creation date, the parent directory name and ID, and the volume name and creation date. It also records the full pathname of the target and a collection of other information relevant to locating the target, verifying the target, and mounting the target's volume, if necessary. <tt>initWithPath:fromURL:</tt> also stores relative path information as well by supplying a starting point for a relative path.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/initWithURL:;   name=NDAlias::initWithURL: -->
+<a name="//apple_ref/occ/instm/NDAlias/initWithURL:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="initWithURL:">initWithURL:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Initalises an <tt>NDAlias</tt>.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/initWithURL //apple_ref/occ/clm/initWithURL //apple_ref/occ/intfcm/initWithURL //apple_ref/occ/intfm/initWithURL //apple_ref/occ/func/initWithURL //apple_ref/occ/ftmplt/initWithURL //apple_ref/occ/defn/initWithURL //apple_ref/occ/macro/initWithURL" --><span class="function">initWithURL</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/URL //apple_ref/occ/data/URL" --><span class="var">URL</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>URL</code></dt><dd><p>the file url for the target of the alias.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An <tt>NDAlias</tt> instance, returns <tt>nil</tt> if <tt>NDAlias</tt> creation fails.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>initWithURL:</tt> initalises an <tt>NDAlias</tt> that contains only the minimum information necessary to describe the target: the target name, the parent directory ID, the volume name and creation date, and the volume mounting information. The <tt>initWithURL:</tt> method uses the standard alias record data structure, but it fills in only parts of the record.
+</p>
+<p>The methods <tt>URL</tt> and <tt>path</tt> never update a minimal alias record.</p>
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/initWithURL:fromURL:;   name=NDAlias::initWithURL:fromURL: -->
+<a name="//apple_ref/occ/instm/NDAlias/initWithURL:fromURL:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="initWithURL:fromURL:">initWithURL:fromURL:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Initalises an <tt>NDAlias</tt>.
+<!-- end abstract --></p>
+<p></p><b>See Also:</b><blockquote><dl>
+<dt><!-- a logicalPath="//apple_ref/doc/title:instm/NDAlias/initWithPath:fromURL:" --><p>initWithPath:fromURL:<!-- /a --></dt><dd></dd></dl></blockquote>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/initWithURL //apple_ref/occ/clm/initWithURL //apple_ref/occ/intfcm/initWithURL //apple_ref/occ/intfm/initWithURL //apple_ref/occ/func/initWithURL //apple_ref/occ/ftmplt/initWithURL //apple_ref/occ/defn/initWithURL //apple_ref/occ/macro/initWithURL" --><span class="function">initWithURL</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<span class="param">URL</span> <!-- a logicalPath="//apple_ref/occ/instm/fromURL //apple_ref/occ/clm/fromURL //apple_ref/occ/intfcm/fromURL //apple_ref/occ/intfm/fromURL //apple_ref/occ/func/fromURL //apple_ref/occ/ftmplt/fromURL //apple_ref/occ/defn/fromURL //apple_ref/occ/macro/fromURL" --><span class="function">fromURL</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/fromURL //apple_ref/occ/data/fromURL" --><span class="var">fromURL</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>URL</code></dt><dd><p>the file url for the target of the alias.</dd>
+<dt><code>fromURL</code></dt><dd><p>The starting point for a relative path, to be used later in a relative search. The two file or directory url's, <tt>fromURL</tt> and <tt>URL</tt>, must reside on the same volume.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>initWithPath:fromURL:</tt> initalises an <tt>NDAlias</tt> that describes the specified target. <tt>initWithPath:fromURL:</tt> always records the name and file or directory ID of the target, its creation date, the parent directory name and ID, and the volume name and creation date. It also records the full pathname of the target and a collection of other information relevant to locating the target, verifying the target, and mounting the target's volume, if necessary. <tt>initWithPath:fromURL:</tt> also stores relative path information as well by supplying a starting point for a relative path.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/isEqualToAlias:;   name=NDAlias::isEqualToAlias: -->
+<a name="//apple_ref/occ/instm/NDAlias/isEqualToAlias:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="isEqualToAlias:">isEqualToAlias:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Test alias equality
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/isEqualToAlias //apple_ref/occ/clm/isEqualToAlias //apple_ref/occ/intfcm/isEqualToAlias //apple_ref/occ/intfm/isEqualToAlias //apple_ref/occ/func/isEqualToAlias //apple_ref/occ/ftmplt/isEqualToAlias //apple_ref/occ/defn/isEqualToAlias //apple_ref/occ/macro/isEqualToAlias" --><span class="function">isEqualToAlias</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/otherObject //apple_ref/occ/data/otherObject" --><span class="var">otherObject</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Returns YES if the receiver is equal to the passed object. Two NDAliases are defined as equal if and only if they resolve to equal FSRefs.  Alias resolution is performed on both aliases, if there is any error, NO is returned.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/lastKnownName;   name=NDAlias::lastKnownName -->
+<a name="//apple_ref/occ/instm/NDAlias/lastKnownName"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="lastKnownName">lastKnownName</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return name from an alias record
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/lastKnownName //apple_ref/occ/data/lastKnownName" --><span class="var">lastKnownName</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>This method returns the name from the alias record. The information is gathered only from the alias record, so it may not match what is on disk. No disk input/output is performed.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/lastKnownPath;   name=NDAlias::lastKnownPath -->
+<a name="//apple_ref/occ/instm/NDAlias/lastKnownPath"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="lastKnownPath">lastKnownPath</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return path from an alias record
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/lastKnownPath //apple_ref/occ/data/lastKnownPath" --><span class="var">lastKnownPath</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>This method returns the path from the alias record. The information is gathered only from the alias record, so it may not match what is on disk. No disk input/output is performed.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/lastKnownVolumeName;   name=NDAlias::lastKnownVolumeName -->
+<a name="//apple_ref/occ/instm/NDAlias/lastKnownVolumeName"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="lastKnownVolumeName">lastKnownVolumeName</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return volume from an alias record
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/lastKnownVolumeName //apple_ref/occ/data/lastKnownVolumeName" --><span class="var">lastKnownVolumeName</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value --><#result#>
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>This method returns the volume from the alias record. The information is gathered only from the alias record, so it may not match what is on disk. No disk input/output is performed.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/path;   name=NDAlias::path -->
+<a name="//apple_ref/occ/instm/NDAlias/path"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="path">path</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Returns the single most likely target for the receiver.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/path //apple_ref/occ/data/path" --><span class="var">path</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A path <tt>NSString</tt> to the target of the receiver. <tt>nil</tt> is returned if no target could be found.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>path</tt> performs a fast search for the target of the receiver. If the resolution is successful, <tt>path</tt> returns a path <tt>NSString</tt> for the target file system object, updates the receiver if necessary, and reports (through the method <tt>changed</tt>) whether the receiver was updated. If the target is on an unmounted AppleShare volume, <tt>path</tt> automatically mounts the volume. If the target is on an unmounted ejectable volume, <tt>path</tt> asks the user to insert the volume.
+</p>
+<p>After it identifies a target, <tt>path</tt> compares some key information about the target with the information in the receiver. If the information differs, <tt>path</tt> updates the receiver to match the target.</p>
+<p>The <tt>path</tt> method displays the standard dialog boxes when it needs input from the user, such as a name and password for mounting a remote volume. The user can cancel the resolution through these dialog boxes.</p>
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/resolveIfIsAliasFile:;   name=NDAlias::resolveIfIsAliasFile: -->
+<a name="//apple_ref/occ/instm/NDAlias/resolveIfIsAliasFile:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="resolveIfIsAliasFile:">resolveIfIsAliasFile:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Resolve alias file target.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NDAlias //apple_ref/occ/tdef/NDAlias //apple_ref/occ/tag/NDAlias //apple_ref/occ/econst/NDAlias //apple_ref/occ/struct/NDAlias //apple_ref/occ/clconst/NDAlias //apple_ref/occ/intf/NDAlias" --><span class="type">NDAlias</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/resolveIfIsAliasFile //apple_ref/occ/clm/resolveIfIsAliasFile //apple_ref/occ/intfcm/resolveIfIsAliasFile //apple_ref/occ/intfm/resolveIfIsAliasFile //apple_ref/occ/func/resolveIfIsAliasFile //apple_ref/occ/ftmplt/resolveIfIsAliasFile //apple_ref/occ/defn/resolveIfIsAliasFile //apple_ref/occ/macro/resolveIfIsAliasFile" --><span class="function">resolveIfIsAliasFile</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/wasSuccessful //apple_ref/occ/data/wasSuccessful" --><span class="var">wasSuccessful</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A new NDAlias or the reserver
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>If the receiver points to an alias file and it can be resolved, returns a new <tt>NDAlias</tt> to the original; else returns itself. wasSuccessful will be set to NO if some kind of error occured, such as the receiver being an alias file but unresolvable. If this is not of interest, you may pass NULL.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/setAllowUserInteraction:;   name=NDAlias::setAllowUserInteraction: -->
+<a name="//apple_ref/occ/instm/NDAlias/setAllowUserInteraction:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="setAllowUserInteraction:">setAllowUserInteraction:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Option controls how the alias is resolved
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/setAllowUserInteraction //apple_ref/occ/clm/setAllowUserInteraction //apple_ref/occ/intfcm/setAllowUserInteraction //apple_ref/occ/intfm/setAllowUserInteraction //apple_ref/occ/func/setAllowUserInteraction //apple_ref/occ/ftmplt/setAllowUserInteraction //apple_ref/occ/defn/setAllowUserInteraction //apple_ref/occ/macro/setAllowUserInteraction" --><span class="function">setAllowUserInteraction</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/flag //apple_ref/occ/data/flag" --><span class="var">flag</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>flag</code></dt><dd><p><tt>YES</tt> to stop any user interaction.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Sets wether the OS may present a user interface when resolving the receiver. By default, as of version 1.3, user interaction is not allowed. In previous versions, the default was to allow user interaction.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/setPath:;   name=NDAlias::setPath: -->
+<a name="//apple_ref/occ/instm/NDAlias/setPath:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="setPath:">setPath:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Updates an the reciever with a new target.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/setPath //apple_ref/occ/clm/setPath //apple_ref/occ/intfcm/setPath //apple_ref/occ/intfm/setPath //apple_ref/occ/func/setPath //apple_ref/occ/ftmplt/setPath //apple_ref/occ/defn/setPath //apple_ref/occ/macro/setPath" --><span class="function">setPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/path //apple_ref/occ/data/path" --><span class="var">path</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>path</code></dt><dd><p>the path for the target of the reciever.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Returns <tt>YES</tt> if setting the target succeeded, otherwise returns <tt>NO</tt>.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>setPath:</tt> rebuilds the entire recievers alias record .
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/setPath:fromPath:;   name=NDAlias::setPath:fromPath: -->
+<a name="//apple_ref/occ/instm/NDAlias/setPath:fromPath:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="setPath:fromPath:">setPath:fromPath:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Updates an the reciever with a new target.
+<!-- end abstract --></p>
+<p></p><b>See Also:</b><blockquote><dl>
+<dt><!-- a logicalPath="//apple_ref/doc/title:instm/NDAlias/setURL:fromURL:" --><p>setURL:fromURL:<!-- /a --></dt><dd></dd></dl></blockquote>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/setPath //apple_ref/occ/clm/setPath //apple_ref/occ/intfcm/setPath //apple_ref/occ/intfm/setPath //apple_ref/occ/func/setPath //apple_ref/occ/ftmplt/setPath //apple_ref/occ/defn/setPath //apple_ref/occ/macro/setPath" --><span class="function">setPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">path</span> <!-- a logicalPath="//apple_ref/occ/instm/fromPath //apple_ref/occ/clm/fromPath //apple_ref/occ/intfcm/fromPath //apple_ref/occ/intfm/fromPath //apple_ref/occ/func/fromPath //apple_ref/occ/ftmplt/fromPath //apple_ref/occ/defn/fromPath //apple_ref/occ/macro/fromPath" --><span class="function">fromPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/fromPath //apple_ref/occ/data/fromPath" --><span class="var">fromPath</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>path</code></dt><dd><p>the path for the target of the reciever.</dd>
+<dt><code>fromPath</code></dt><dd><p>The starting point for a relative path, to be used later in a relative search. The two file or directory paths, <tt>fromPath</tt> and <tt>path</tt>, must reside on the same volume.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>setURL:fromURL:</tt> rebuilds the entire recievers alias record .
+</p>
+<p>The <tt>setURL:fromURL:</tt> function always creates a complete alias record. When you use <tt>setURL:fromURL:</tt> to update a minimal alias record, you convert the minimal record to a complete record.</p>
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/setTryFileIDFirst:;   name=NDAlias::setTryFileIDFirst: -->
+<a name="//apple_ref/occ/instm/NDAlias/setTryFileIDFirst:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="setTryFileIDFirst:">setTryFileIDFirst:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Option controls how the alias is resolved
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/setTryFileIDFirst //apple_ref/occ/clm/setTryFileIDFirst //apple_ref/occ/intfcm/setTryFileIDFirst //apple_ref/occ/intfm/setTryFileIDFirst //apple_ref/occ/func/setTryFileIDFirst //apple_ref/occ/ftmplt/setTryFileIDFirst //apple_ref/occ/defn/setTryFileIDFirst //apple_ref/occ/macro/setTryFileIDFirst" --><span class="function">setTryFileIDFirst</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/flag //apple_ref/occ/data/flag" --><span class="var">flag</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>flag</code></dt><dd><p><tt>YES</tt> to resolve the alias by trying file ID first, <tt>NO</tt> to try path first.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Search for the alias target using file IDs before searching using the path. By default search by path occurs first.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/setURL:;   name=NDAlias::setURL: -->
+<a name="//apple_ref/occ/instm/NDAlias/setURL:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="setURL:">setURL:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Updates an the reciever with a new target.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/setURL //apple_ref/occ/clm/setURL //apple_ref/occ/intfcm/setURL //apple_ref/occ/intfm/setURL //apple_ref/occ/func/setURL //apple_ref/occ/ftmplt/setURL //apple_ref/occ/defn/setURL //apple_ref/occ/macro/setURL" --><span class="function">setURL</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/URL //apple_ref/occ/data/URL" --><span class="var">URL</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>URL</code></dt><dd><p>the file url for the target of the alias.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Returns <tt>YES</tt> if setting the target succeeded, otherwise returns <tt>NO</tt>.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>setURL:</tt> rebuilds the entire recievers alias record .
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/setURL:fromURL:;   name=NDAlias::setURL:fromURL: -->
+<a name="//apple_ref/occ/instm/NDAlias/setURL:fromURL:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="setURL:fromURL:">setURL:fromURL:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Updates an the reciever with a new target.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/setURL //apple_ref/occ/clm/setURL //apple_ref/occ/intfcm/setURL //apple_ref/occ/intfm/setURL //apple_ref/occ/func/setURL //apple_ref/occ/ftmplt/setURL //apple_ref/occ/defn/setURL //apple_ref/occ/macro/setURL" --><span class="function">setURL</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<span class="param">URL</span> <!-- a logicalPath="//apple_ref/occ/instm/fromURL //apple_ref/occ/clm/fromURL //apple_ref/occ/intfcm/fromURL //apple_ref/occ/intfm/fromURL //apple_ref/occ/func/fromURL //apple_ref/occ/ftmplt/fromURL //apple_ref/occ/defn/fromURL //apple_ref/occ/macro/fromURL" --><span class="function">fromURL</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/fromURL //apple_ref/occ/data/fromURL" --><span class="var">fromURL</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>URL</code></dt><dd><p>the file url for the target of the reciever.</dd>
+<dt><code>fromURL</code></dt><dd><p>The starting point for a relative path, to be used later in a relative search. The two file or directory url's, <tt>fromURL</tt> and <tt>URL</tt>, must reside on the same volume.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Returns <tt>YES</tt> if setting the target succeeded, otherwise returns <tt>NO</tt>.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>setURL:fromURL:</tt> rebuilds the entire recievers alias record .
+</p>
+<p>The <tt>setURL:fromURL:</tt> function always creates a complete alias record. When you use <tt>setURL:fromURL:</tt> to update a minimal alias record, you convert the minimal record to a complete record.</p>
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=title:instm;  uid=//apple_ref/doc/title:instm/NDAlias/setURL:fromURL:;   name=NDAlias::setURL:fromURL: -->
+<a name="//apple_ref/doc/title:instm/NDAlias/setURL:fromURL:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="setURL:fromURL:">setURL:fromURL:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Updates an the reciever with a new target.
+<!-- end abstract --></p>
+<p></p><b>See Also:</b><blockquote><dl>
+<dt><!-- a logicalPath="//apple_ref/occ/instm/NDAlias/setPath:fromPath:" --><p>setPath:fromPath:<!-- /a --></dt><dd></dd></dl></blockquote>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/setPath //apple_ref/occ/clm/setPath //apple_ref/occ/intfcm/setPath //apple_ref/occ/intfm/setPath //apple_ref/occ/func/setPath //apple_ref/occ/ftmplt/setPath //apple_ref/occ/defn/setPath //apple_ref/occ/macro/setPath" --><span class="function">setPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">path</span> <!-- a logicalPath="//apple_ref/occ/instm/fromPath //apple_ref/occ/clm/fromPath //apple_ref/occ/intfcm/fromPath //apple_ref/occ/intfm/fromPath //apple_ref/occ/func/fromPath //apple_ref/occ/ftmplt/fromPath //apple_ref/occ/defn/fromPath //apple_ref/occ/macro/fromPath" --><span class="function">fromPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/fromPath //apple_ref/occ/data/fromPath" --><span class="var">fromPath</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>path</code></dt><dd><p>the path for the target of the reciever.</dd>
+<dt><code>fromPath</code></dt><dd><p>The starting point for a relative path, to be used later in a relative search. The two file or directory paths, <tt>fromPath</tt> and <tt>path</tt>, must reside on the same volume.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Returns <tt>YES</tt> if setting the target succeeded, otherwise returns <tt>NO</tt>.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The method <tt>setURL:fromURL:</tt> rebuilds the entire recievers alias record .
+</p>
+<p>The <tt>setURL:fromURL:</tt> function always creates a complete alias record. When you use <tt>setURL:fromURL:</tt> to update a minimal alias record, you convert the minimal record to a complete record.</p>
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/tryFileIDFirst;   name=NDAlias::tryFileIDFirst -->
+<a name="//apple_ref/occ/instm/NDAlias/tryFileIDFirst"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="tryFileIDFirst">tryFileIDFirst</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Option controls how the alias is resolved
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/tryFileIDFirst //apple_ref/occ/data/tryFileIDFirst" --><span class="var">tryFileIDFirst</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value --><tt>YES</tt> to resolve the alias by trying file ID first, <tt>NO</tt> to try path first.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Search for the alias target using file IDs before searching using the path. By default search by path occurs first.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDAlias/URL;   name=NDAlias::URL -->
+<a name="//apple_ref/occ/instm/NDAlias/URL"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="URL">URL</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Returns the single most likely target for the receiver.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/URL //apple_ref/occ/data/URL" --><span class="var">URL</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A file <tt>NSURL</tt> to the target of the receiver. <tt>nil</tt> is returned if no target could be found.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>The <tt>URL</tt> method performs a fast search for the target of the receiver. If the resolution is successful, <tt>URL</tt> returns a file <tt>NSURL</tt> for the target file system object, updates the receiver if necessary, and reports (through the method <tt>changed</tt>) whether the receiver was updated. If the target is on an unmounted AppleShare volume, <tt>URL</tt> automatically mounts the volume. If the target is on an unmounted ejectable volume, <tt>URL</tt> asks the user to insert the volume.
+</p>
+<p>After it identifies a target, <tt>URL</tt> compares some key information about the target with the information in the receiver. If the information differs, <tt>URL</tt> updates the receiver to match the target.</p>
+<p>The <tt>URL</tt> method displays the standard dialog boxes when it needs input from the user, such as a name and password for mounting a remote volume. The user can cancel the resolution through these dialog boxes.</p>
+<!-- end discussion -->
+<p></p><p>Last Updated: Wednesday, March 18, 2009
+</p></div>
+<!-- headerDoc=cl; uid=//apple_ref/occ/cl/NDAlias;  name=NDAlias-->
+<a name="//apple_ref/occ/cl/NDAlias"></a></body></html>

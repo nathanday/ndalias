@@ -1,0 +1,559 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><head>
+    <title>NDResourceFork</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ascii">
+ <meta name="generator" content="HeaderDoc" />
+<style><!--
+#tocMenu {
+		display: block;
+		position:fixed;
+		top:0px;
+		left:0px;
+		width:210px;
+		height:100%;
+		background:transparent;
+}
+#bodyText {
+		margin-left: 210px;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+function hidetoc() {
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var toc = document.getElementById('tocMenu');
+		var body = document.getElementById('bodyText');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+--></script>
+<style type="text/css"><!--.keyword {background:#ffffff; color:#761550;}.template {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.function {background:#ffffff; color:#000000;}.string {background: #ffffff; color:#891315;}.preprocessor {background:#ffffff; color:#236e25}.comment {background:#ffffff; color:#236e25}.char {background: #ffffff; color:#0000ff;}.var {background:#ffffff; color:#000000;}.type {background:#ffffff; color:#761550;}.param {background:#ffffff; color:#000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}--></style></head><body bgcolor="#ffffff" onload="hidetoc();">
+<div id='tocMenu'>
+<iframe id='toc_content' name='toc_content' SRC='toc.html' width='210' height='100%' align='left' frameborder='0'>This document set is best viewed in a browser that supports iFrames.</iframe>
+</div>
+<div id='bodyText'>
+<a name="top"></a>
+<hr><table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h1><a name="NDResourceFork">NDResourceFork</a></h1>
+</td></tr></table><hr><p><!-- begin abstract --><p>A class to access manipulate resource forks from Cocoa.
+<!-- end abstract --></p>
+<p><b>Superclass:</b> <!-- a logicalPath="//apple_ref/occ/cl/NSObject" -->NSObject<!-- /a --><br>
+<b>Declared In:</b> <a href="../../index.html" target="_top">NDResourceFork</a><br>
+</p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p><tt>NDResourceFork</tt> allows your cocoa application create, delete, open, read, modify, and write resources; get information about them. A resource is data of any kind stored in a defined format in a file's resource fork. On intialization, <tt>NDResourceFork</tt> open the resource fork and then closes the resource for when it is deallocated.
+<!-- end discussion -->
+<p></p><hr><br><h2>Methods</h2>
+<a name="HeaderDoc_methods"></a>
+<dl>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDResourceFork/addData:type:Id:name:" target="_top">-addData:type:Id:name:</a></tt></dt>
+<dd><p>Adds a resource to the receivers resource file.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDResourceFork/addData:type:name:" target="_top">-addData:type:name:</a></tt></dt>
+<dd><p>Adds a resource to the receivers resource file.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDResourceFork/closeFile" target="_top">-closeFile</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDResourceFork/dataForEntireResourceFork" target="_top">-dataForEntireResourceFork</a></tt></dt>
+<dd><p>Reads the receivers entire resource data.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDResourceFork/dataForType:Id:" target="_top">-dataForType:Id:</a></tt></dt>
+<dd><p>Gets resource data for a resource in the receivers resource file.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDResourceFork/dataForType:named:" target="_top">-dataForType:named:</a></tt></dt>
+<dd><p>Gets resource data for a resource in the receivers resource file.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDResourceFork/everyResourceType" target="_top">-everyResourceType</a></tt></dt>
+<dd><p>Gets every resource type available in the receivers resource file.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDResourceFork/everyResourceType_DONTLINK_1" target="_top">-everyResourceType</a></tt></dt>
+<dd><p>Gets every resource type available in the receivers resource file.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDResourceFork/getAttributeFlags:forResourceType:Id:" target="_top">-getAttributeFlags:forResourceType:Id:</a></tt></dt>
+<dd><p>Gets a resource's attributes.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDResourceFork/getId:ofResourceType:named:" target="_top">-getId:ofResourceType:named:</a></tt></dt>
+<dd><p>Gets a named resource's resource id.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDResourceFork/initForPermission:atPath:" target="_top">-initForPermission:atPath:</a></tt></dt>
+<dd><p>Initalises a <tt>NDResourceFork</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDResourceFork/initForPermission:atURL:" target="_top">-initForPermission:atURL:</a></tt></dt>
+<dd><p>Initalises a <tt>NDResourceFork</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDResourceFork/initForReadingAtPath:" target="_top">-initForReadingAtPath:</a></tt></dt>
+<dd><p>Initalises a <tt>NDResourceFork</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDResourceFork/initForReadingAtURL:" target="_top">-initForReadingAtURL:</a></tt></dt>
+<dd><p>Initalises a <tt>NDResourceFork</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/doc/title:instm/NDResourceFork/initForReadingAtURL:" target="_top">-initForReadingAtURL:</a></tt></dt>
+<dd><p>Initalises a <tt>NDResourceFork</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDResourceFork/initForWritingAtPath:" target="_top">-initForWritingAtPath:</a></tt></dt>
+<dd><p>Initalises a <tt>NDResourceFork</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDResourceFork/initForWritingAtURL:" target="_top">-initForWritingAtURL:</a></tt></dt>
+<dd><p>Initalises a <tt>NDResourceFork</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDResourceFork/nameOfResourceType:Id:" target="_top">-nameOfResourceType:Id:</a></tt></dt>
+<dd><p>Gets a resource's resource name.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDResourceFork/removeType:Id:" target="_top">-removeType:Id:</a></tt></dt>
+<dd><p>Removes a resource's entry from the receivers resource file.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/NDResourceFork/resourceForkForReadingAtPath:" target="_top">+resourceForkForReadingAtPath:</a></tt></dt>
+<dd><p>Creates and initalises a <tt>NDResourceFork</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/NDResourceFork/resourceForkForReadingAtURL:" target="_top">+resourceForkForReadingAtURL:</a></tt></dt>
+<dd><p>Creates and initalises a <tt>NDResourceFork</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/NDResourceFork/resourceForkForWritingAtPath:" target="_top">+resourceForkForWritingAtPath:</a></tt></dt>
+<dd><p>Creates and initalises a <tt>NDResourceFork</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/NDResourceFork/resourceForkForWritingAtURL:" target="_top">+resourceForkForWritingAtURL:</a></tt></dt>
+<dd><p>Creates and initalises a <tt>NDResourceFork</tt>.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDResourceFork/resourceTypeEnumerator" target="_top">-resourceTypeEnumerator</a></tt></dt>
+<dd><p>Get a enumerator for every resource type.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDResourceFork/setAttributeFlags:forResourceType:Id:" target="_top">-setAttributeFlags:forResourceType:Id:</a></tt></dt>
+<dd><p>Sets a resource's attributes.
+</dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/NDResourceFork/writeEntireResourceFork:" target="_top">-writeEntireResourceFork:</a></tt></dt>
+<dd><p>Writes complete resource data to the receivers resource fork.
+</dd>
+</dl>
+<hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDResourceFork/addData:type:Id:name:;   name=NDResourceFork::addData:type:Id:name: -->
+<a name="//apple_ref/occ/instm/NDResourceFork/addData:type:Id:name:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="addData:type:Id:name:">addData:type:Id:name:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Adds a resource to the receivers resource file.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/addData //apple_ref/occ/clm/addData //apple_ref/occ/intfcm/addData //apple_ref/occ/intfm/addData //apple_ref/occ/func/addData //apple_ref/occ/ftmplt/addData //apple_ref/occ/defn/addData //apple_ref/occ/macro/addData" --><span class="function">addData</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSData //apple_ref/occ/tdef/NSData //apple_ref/occ/tag/NSData //apple_ref/occ/econst/NSData //apple_ref/occ/struct/NSData //apple_ref/occ/clconst/NSData //apple_ref/occ/intf/NSData" --><span class="type">NSData</span><!-- /a --> <span class="type">*</span>)<span class="param">data</span> <!-- a logicalPath="//apple_ref/occ/instm/type //apple_ref/occ/clm/type //apple_ref/occ/intfcm/type //apple_ref/occ/intfm/type //apple_ref/occ/func/type //apple_ref/occ/ftmplt/type //apple_ref/occ/defn/type //apple_ref/occ/macro/type" --><span class="function">type</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/ResType //apple_ref/occ/tdef/ResType //apple_ref/occ/tag/ResType //apple_ref/occ/econst/ResType //apple_ref/occ/struct/ResType //apple_ref/occ/clconst/ResType //apple_ref/occ/intf/ResType" --><span class="type">ResType</span><!-- /a -->)<span class="param">type</span> <!-- a logicalPath="//apple_ref/occ/instm/Id //apple_ref/occ/clm/Id //apple_ref/occ/intfcm/Id //apple_ref/occ/intfm/Id //apple_ref/occ/func/Id //apple_ref/occ/ftmplt/Id //apple_ref/occ/defn/Id //apple_ref/occ/macro/Id" --><span class="function">Id</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/ResID //apple_ref/occ/tdef/ResID //apple_ref/occ/tag/ResID //apple_ref/occ/econst/ResID //apple_ref/occ/struct/ResID //apple_ref/occ/clconst/ResID //apple_ref/occ/intf/ResID" --><span class="type">ResID</span><!-- /a -->)<span class="param">ID</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/name //apple_ref/occ/clm/name //apple_ref/occ/intfcm/name //apple_ref/occ/intfm/name //apple_ref/occ/func/name //apple_ref/occ/ftmplt/name //apple_ref/occ/defn/name //apple_ref/occ/macro/name" --><span class="function">name</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/name //apple_ref/occ/data/name" --><span class="var">name</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>data</code></dt><dd><p>An <tt>NSData</tt> object containing the data to be added as a resource to the receivers resource file.</dd>
+<dt><code>type</code></dt><dd><p>The resource type of the resource to be added.</dd>
+<dt><code>ID</code></dt><dd><p>The resource ID of the resource to be added.</dd>
+<dt><code>name</code></dt><dd><p>The name of the resource to be added.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Returns <tt>YES</tt> if the resource was successfully added, otherwise it returns <tt>NO</tt>.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p><tt>addData:type:name:</tt> doesn't verify whether the resource ID you pass in the parameter <tt><i>ID</i></tt> is already assigned to another resource of the same type. You should use the methods <tt>addData:type:name:</tt> or <tt>dataForType:named:</tt> to get a unique resource ID when adding a resource . <tt>addData:type:Id:named:</tt> returns <tt>YES</tt> on success
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDResourceFork/addData:type:name:;   name=NDResourceFork::addData:type:name: -->
+<a name="//apple_ref/occ/instm/NDResourceFork/addData:type:name:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="addData:type:name:">addData:type:name:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Adds a resource to the receivers resource file.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/addData //apple_ref/occ/clm/addData //apple_ref/occ/intfcm/addData //apple_ref/occ/intfm/addData //apple_ref/occ/func/addData //apple_ref/occ/ftmplt/addData //apple_ref/occ/defn/addData //apple_ref/occ/macro/addData" --><span class="function">addData</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSData //apple_ref/occ/tdef/NSData //apple_ref/occ/tag/NSData //apple_ref/occ/econst/NSData //apple_ref/occ/struct/NSData //apple_ref/occ/clconst/NSData //apple_ref/occ/intf/NSData" --><span class="type">NSData</span><!-- /a --> <span class="type">*</span>)<span class="param">data</span> <!-- a logicalPath="//apple_ref/occ/instm/type //apple_ref/occ/clm/type //apple_ref/occ/intfcm/type //apple_ref/occ/intfm/type //apple_ref/occ/func/type //apple_ref/occ/ftmplt/type //apple_ref/occ/defn/type //apple_ref/occ/macro/type" --><span class="function">type</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/ResType //apple_ref/occ/tdef/ResType //apple_ref/occ/tag/ResType //apple_ref/occ/econst/ResType //apple_ref/occ/struct/ResType //apple_ref/occ/clconst/ResType //apple_ref/occ/intf/ResType" --><span class="type">ResType</span><!-- /a -->)<span class="param">type</span> <!-- a logicalPath="//apple_ref/occ/instm/name //apple_ref/occ/clm/name //apple_ref/occ/intfcm/name //apple_ref/occ/intfm/name //apple_ref/occ/func/name //apple_ref/occ/ftmplt/name //apple_ref/occ/defn/name //apple_ref/occ/macro/name" --><span class="function">name</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/name //apple_ref/occ/data/name" --><span class="var">name</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>data</code></dt><dd><p>An <tt>NSData</tt> object containing the data to be added as a resource to the receivers resource file.</dd>
+<dt><code>type</code></dt><dd><p>The resource type of the resource to be added.</dd>
+<dt><code>name</code></dt><dd><p>The name of the resource to be added.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Returns <tt>YES</tt> if the resource was successfully added, otherwise it returns <tt>NO</tt>.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p><tt>addData:type:name:</tt> uses an unique resource ID when adding a resource . <tt>addData:type:Id:named:</tt> returns <tt>YES</tt> on success
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDResourceFork/closeFile;   name=NDResourceFork::closeFile -->
+<a name="//apple_ref/occ/instm/NDResourceFork/closeFile"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="closeFile">closeFile</a></h3>
+</td></tr></table><hr><p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/closeFile //apple_ref/occ/data/closeFile" --><span class="var">closeFile</span><!-- /a -->; </pre>
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDResourceFork/dataForEntireResourceFork;   name=NDResourceFork::dataForEntireResourceFork -->
+<a name="//apple_ref/occ/instm/NDResourceFork/dataForEntireResourceFork"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="dataForEntireResourceFork">dataForEntireResourceFork</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Reads the receivers entire resource data.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSData //apple_ref/occ/tdef/NSData //apple_ref/occ/tag/NSData //apple_ref/occ/econst/NSData //apple_ref/occ/struct/NSData //apple_ref/occ/clconst/NSData //apple_ref/occ/intf/NSData" --><span class="type">NSData</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/dataForEntireResourceFork //apple_ref/occ/data/dataForEntireResourceFork" --><span class="var">dataForEntireResourceFork</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A <tt>NSData</tt> object containing the resources data.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p><tt>dataForEntireResourceFork</tt> returns a <tt>NSData</tt> object that contains the entire contents of the resource fork. <tt>dataForEntireResourceFork</tt> and it's conpanion method <tt>writeEntireResourceFork</tt> can be used for duplicating the resource fork for on file to the resource fork of another. <tt>dataForEntireResourceFork</tt> can also be used to convert a resource stored in a files resource fork into a resource stored in a data fork, simple by using the <tt>NSData</tt> methods <tt>writeToFile:atomically:</tt> or <tt>writeToURL:atomically:</tt>.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDResourceFork/dataForType:Id:;   name=NDResourceFork::dataForType:Id: -->
+<a name="//apple_ref/occ/instm/NDResourceFork/dataForType:Id:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="dataForType:Id:">dataForType:Id:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Gets resource data for a resource in the receivers resource file.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSData //apple_ref/occ/tdef/NSData //apple_ref/occ/tag/NSData //apple_ref/occ/econst/NSData //apple_ref/occ/struct/NSData //apple_ref/occ/clconst/NSData //apple_ref/occ/intf/NSData" --><span class="type">NSData</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/dataForType //apple_ref/occ/clm/dataForType //apple_ref/occ/intfcm/dataForType //apple_ref/occ/intfm/dataForType //apple_ref/occ/func/dataForType //apple_ref/occ/ftmplt/dataForType //apple_ref/occ/defn/dataForType //apple_ref/occ/macro/dataForType" --><span class="function">dataForType</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/ResType //apple_ref/occ/tdef/ResType //apple_ref/occ/tag/ResType //apple_ref/occ/econst/ResType //apple_ref/occ/struct/ResType //apple_ref/occ/clconst/ResType //apple_ref/occ/intf/ResType" --><span class="type">ResType</span><!-- /a -->)<span class="param">type</span> <!-- a logicalPath="//apple_ref/occ/instm/Id //apple_ref/occ/clm/Id //apple_ref/occ/intfcm/Id //apple_ref/occ/intfm/Id //apple_ref/occ/func/Id //apple_ref/occ/ftmplt/Id //apple_ref/occ/defn/Id //apple_ref/occ/macro/Id" --><span class="function">Id</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/ResID //apple_ref/occ/tdef/ResID //apple_ref/occ/tag/ResID //apple_ref/occ/econst/ResID //apple_ref/occ/struct/ResID //apple_ref/occ/clconst/ResID //apple_ref/occ/intf/ResID" --><span class="type">ResID</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/ID //apple_ref/occ/data/ID" --><span class="var">ID</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>type</code></dt><dd><p>The resource type of the resource which you wish to retrieve data.</dd>
+<dt><code>ID</code></dt><dd><p>An integer that uniquely identifies the resource which you wish to retrieve data.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Returns an <tt>NSData</tt> object if successful otherwise returns nil.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p><tt>dataForType:Id:</tt> searches the receivers resource file's resource map in memory for the specified resource.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDResourceFork/dataForType:named:;   name=NDResourceFork::dataForType:named: -->
+<a name="//apple_ref/occ/instm/NDResourceFork/dataForType:named:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="dataForType:named:">dataForType:named:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Gets resource data for a resource in the receivers resource file.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSData //apple_ref/occ/tdef/NSData //apple_ref/occ/tag/NSData //apple_ref/occ/econst/NSData //apple_ref/occ/struct/NSData //apple_ref/occ/clconst/NSData //apple_ref/occ/intf/NSData" --><span class="type">NSData</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/dataForType //apple_ref/occ/clm/dataForType //apple_ref/occ/intfcm/dataForType //apple_ref/occ/intfm/dataForType //apple_ref/occ/func/dataForType //apple_ref/occ/ftmplt/dataForType //apple_ref/occ/defn/dataForType //apple_ref/occ/macro/dataForType" --><span class="function">dataForType</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/ResType //apple_ref/occ/tdef/ResType //apple_ref/occ/tag/ResType //apple_ref/occ/econst/ResType //apple_ref/occ/struct/ResType //apple_ref/occ/clconst/ResType //apple_ref/occ/intf/ResType" --><span class="type">ResType</span><!-- /a -->)<span class="param">type</span> <!-- a logicalPath="//apple_ref/occ/instm/named //apple_ref/occ/clm/named //apple_ref/occ/intfcm/named //apple_ref/occ/intfm/named //apple_ref/occ/func/named //apple_ref/occ/ftmplt/named //apple_ref/occ/defn/named //apple_ref/occ/macro/named" --><span class="function">named</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/name //apple_ref/occ/data/name" --><span class="var">name</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>type</code></dt><dd><p>The resource type of the resource which you wish to retrieve data.</dd>
+<dt><code>name</code></dt><dd><p>A name that uniquely identifies the resource which you wish to retrieve data. Strings passed in this parameter are case-sensitive.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Returns an <tt>NSData</tt> object if successful otherwise returns nil.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p><tt>dataForType:Id:</tt> searches the receivers resource file's resource map in memory for the specified resource.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDResourceFork/everyResourceType;   name=NDResourceFork::everyResourceType -->
+<a name="//apple_ref/occ/instm/NDResourceFork/everyResourceType"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="everyResourceType">everyResourceType</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Gets every resource type available in the receivers resource file.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/everyResourceType //apple_ref/occ/data/everyResourceType" --><span class="var">everyResourceType</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A <tt>NSArray</tt> of <tt>NSNumber</tt>s containing <tt>ResType</tt>s.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p><tt>everyResourceType</tt> returns an <tt>NSArray</tt> of <tt>NSNumber</tt>s each containing a <tt>unsigned long</tt>  or <tt>ResType</tt>s.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDResourceFork/everyResourceType_DONTLINK_1;   name=NDResourceFork::everyResourceType -->
+<a name="//apple_ref/occ/instm/NDResourceFork/everyResourceType_DONTLINK_1"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="everyResourceType">everyResourceType</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Gets every resource type available in the receivers resource file.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/everyResourceType //apple_ref/occ/data/everyResourceType" --><span class="var">everyResourceType</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A <tt>NSArray</tt> of <tt>NSNumber</tt>s containing <tt>ResType</tt>s.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p><tt>everyResourceType</tt> returns an <tt>NSArray</tt> of <tt>NSNumber</tt>s each containing a <tt>unsigned long</tt>  or <tt>ResType</tt>s.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDResourceFork/getAttributeFlags:forResourceType:Id:;   name=NDResourceFork::getAttributeFlags:forResourceType:Id: -->
+<a name="//apple_ref/occ/instm/NDResourceFork/getAttributeFlags:forResourceType:Id:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="getAttributeFlags:forResourceType:Id:">getAttributeFlags:forResourceType:Id:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Gets a resource's attributes.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/getAttributeFlags //apple_ref/occ/clm/getAttributeFlags //apple_ref/occ/intfcm/getAttributeFlags //apple_ref/occ/intfm/getAttributeFlags //apple_ref/occ/func/getAttributeFlags //apple_ref/occ/ftmplt/getAttributeFlags //apple_ref/occ/defn/getAttributeFlags //apple_ref/occ/macro/getAttributeFlags" --><span class="function">getAttributeFlags</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/ResAttributes //apple_ref/occ/tdef/ResAttributes //apple_ref/occ/tag/ResAttributes //apple_ref/occ/econst/ResAttributes //apple_ref/occ/struct/ResAttributes //apple_ref/occ/clconst/ResAttributes //apple_ref/occ/intf/ResAttributes" --><span class="type">ResAttributes</span><!-- /a --><span class="type">*</span>)<span class="param">attributes</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/forResourceType //apple_ref/occ/clm/forResourceType //apple_ref/occ/intfcm/forResourceType //apple_ref/occ/intfm/forResourceType //apple_ref/occ/func/forResourceType //apple_ref/occ/ftmplt/forResourceType //apple_ref/occ/defn/forResourceType //apple_ref/occ/macro/forResourceType" --><span class="function">forResourceType</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/ResType //apple_ref/occ/tdef/ResType //apple_ref/occ/tag/ResType //apple_ref/occ/econst/ResType //apple_ref/occ/struct/ResType //apple_ref/occ/clconst/ResType //apple_ref/occ/intf/ResType" --><span class="type">ResType</span><!-- /a -->)<span class="param">type</span> <!-- a logicalPath="//apple_ref/occ/instm/Id //apple_ref/occ/clm/Id //apple_ref/occ/intfcm/Id //apple_ref/occ/intfm/Id //apple_ref/occ/func/Id //apple_ref/occ/ftmplt/Id //apple_ref/occ/defn/Id //apple_ref/occ/macro/Id" --><span class="function">Id</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/ResID //apple_ref/occ/tdef/ResID //apple_ref/occ/tag/ResID //apple_ref/occ/econst/ResID //apple_ref/occ/struct/ResID //apple_ref/occ/clconst/ResID //apple_ref/occ/intf/ResID" --><span class="type">ResID</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/ID //apple_ref/occ/data/ID" --><span class="var">ID</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>attributes</code></dt><dd><p>A pointer to an <tt>ResAttributes</tt> that on return contains the resources attributes, if the returned value is <tt>YES</tt>.</dd>
+<dt><code>type</code></dt><dd><p>The resource type of the resource for which you wish to retrieve the attributes.</dd>
+<dt><code>ID</code></dt><dd><p>An integer that uniquely identifies the resource for which you wish to retrieve the attributes.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A <tt>YES</tt> if retrieval was successful.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Returns the attributes for a resource in a pointer  to a <tt>ResAttributes</tt> and returns <tt>YES</tt> if retrieval of the attributes is succeeded. If <tt>getAttributeFlags:forResourceType:Id:</tt> returns <tt>NO</tt> then the value returned through the pointer <tt><i>attributes</i></tt> is garabage.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDResourceFork/getId:ofResourceType:named:;   name=NDResourceFork::getId:ofResourceType:named: -->
+<a name="//apple_ref/occ/instm/NDResourceFork/getId:ofResourceType:named:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="getId:ofResourceType:named:">getId:ofResourceType:named:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Gets a named resource's resource id.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/getId //apple_ref/occ/clm/getId //apple_ref/occ/intfcm/getId //apple_ref/occ/intfm/getId //apple_ref/occ/func/getId //apple_ref/occ/ftmplt/getId //apple_ref/occ/defn/getId //apple_ref/occ/macro/getId" --><span class="function">getId</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/ResID //apple_ref/occ/tdef/ResID //apple_ref/occ/tag/ResID //apple_ref/occ/econst/ResID //apple_ref/occ/struct/ResID //apple_ref/occ/clconst/ResID //apple_ref/occ/intf/ResID" --><span class="type">ResID</span><!-- /a --> <span class="type">*</span>)<span class="param">ID</span> <!-- a logicalPath="//apple_ref/occ/instm/ofResourceType //apple_ref/occ/clm/ofResourceType //apple_ref/occ/intfcm/ofResourceType //apple_ref/occ/intfm/ofResourceType //apple_ref/occ/func/ofResourceType //apple_ref/occ/ftmplt/ofResourceType //apple_ref/occ/defn/ofResourceType //apple_ref/occ/macro/ofResourceType" --><span class="function">ofResourceType</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/ResType //apple_ref/occ/tdef/ResType //apple_ref/occ/tag/ResType //apple_ref/occ/econst/ResType //apple_ref/occ/struct/ResType //apple_ref/occ/clconst/ResType //apple_ref/occ/intf/ResType" --><span class="type">ResType</span><!-- /a -->)<span class="param">type</span> <!-- a logicalPath="//apple_ref/occ/instm/named //apple_ref/occ/clm/named //apple_ref/occ/intfcm/named //apple_ref/occ/intfm/named //apple_ref/occ/func/named //apple_ref/occ/ftmplt/named //apple_ref/occ/defn/named //apple_ref/occ/macro/named" --><span class="function">named</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/name //apple_ref/occ/data/name" --><span class="var">name</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>ID</code></dt><dd><p>A pointer to an <tt>ResID</tt> that on return contains the resources id, if the returned value is <tt>YES</tt>.</dd>
+<dt><code>type</code></dt><dd><p>The resource type of the resource for which you wish to retrieve the id.</dd>
+<dt><code>name</code></dt><dd><p>The resource name of the resource for which you wish to retrieve the id.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A <tt>YES</tt> if retrieval was successful.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Returns a resources id in a pointer to a <tt>ResID</tt> and returns <tt>YES</tt> if retrieval of the id is succeeded. If <tt>getId:ofResourceType:named:</tt> returns <tt>NO</tt> then the value returned through the pointer <tt><i>ID</i></tt> is garabage.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDResourceFork/initForPermission:atPath:;   name=NDResourceFork::initForPermission:atPath: -->
+<a name="//apple_ref/occ/instm/NDResourceFork/initForPermission:atPath:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="initForPermission:atPath:">initForPermission:atPath:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Initalises a <tt>NDResourceFork</tt>.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/initForPermission //apple_ref/occ/clm/initForPermission //apple_ref/occ/intfcm/initForPermission //apple_ref/occ/intfm/initForPermission //apple_ref/occ/func/initForPermission //apple_ref/occ/ftmplt/initForPermission //apple_ref/occ/defn/initForPermission //apple_ref/occ/macro/initForPermission" --><span class="function">initForPermission</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/char //apple_ref/occ/tdef/char //apple_ref/occ/tag/char //apple_ref/occ/econst/char //apple_ref/occ/struct/char //apple_ref/occ/clconst/char //apple_ref/occ/intf/char" --><span class="type">char</span><!-- /a -->)<span class="param">permission</span> <!-- a logicalPath="//apple_ref/occ/instm/atPath //apple_ref/occ/clm/atPath //apple_ref/occ/intfcm/atPath //apple_ref/occ/intfm/atPath //apple_ref/occ/func/atPath //apple_ref/occ/ftmplt/atPath //apple_ref/occ/defn/atPath //apple_ref/occ/macro/atPath" --><span class="function">atPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/path //apple_ref/occ/data/path" --><span class="var">path</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>permission</code></dt><dd><p>read/write permissions for the opened resource fork.</dd>
+<dt><code>path</code></dt><dd><p>A path specifying the name and location of the file whose resource fork is to be opened.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An initialized <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or initalization failed.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Intializes the receiver and opens a resource fork for reading and/or writting using the path. If write permission is specified, then an empty resource fork created before hand if it does not already exists. The receivers resource fork is closed when the receiver is deallocated. Possible permission values are as follows;
+</p>
+<blockquote>
+<table border=0 cellpadding=4>
+<tr><td width=80 valign=top><tt>fsCurPerm</tt></td>
+<td>Requests whatever permissions are currently allowed. If write access in unavailable (because the file is locked or the file is already open with write permission), then read permission is granted. Otherwise read/write permission is granted.</td></tr>
+<tr><td valign=top><tt>fsRdPerm</tt></td>
+<td>Requests permission to read the file.</td></tr>
+<tr><td valign=top><tt>fsWrPerm</tt></td>
+<td>Requests permission to write to the file. If write permission is granted, no other access paths are granted write permission. Note, however, that the File Manager does not support write-only access to a file. Thus, <tt>fsWrPerm</tt> is synonymous with <tt>fsRdWrPerm</tt> .</td></tr>
+<tr><td valign=top><tt>fsRdWrPerm</tt></td>
+<td>Requests exclusive read and write permission. If exclusive read/ write permission is granted, no other users are granted permission to write to the file. Other users may, however, be granted permission to read the file.</td></tr>
+<tr><td valign=top><tt>fsRdWrShPerm</tt></td>
+<td>Requests shared read and write permission. Shared read/ write permission allows mutliple access paths for reading and writing. This is safe only if there is some way of locking portions of the file before writing to them. Use the functions <tt>PBLockRangeSync</tt> and <tt>PBUnlockRangeSync</tt> to lock and unlock ranges of bytes within a file. On Mac OS 8 and 9, these functions are supported only on remotely mounted volumes, or on local volumes that are shareable on the network. You should check that range locking is available before requesting shared read/ write permission.  On Mac OS X, range locking is available on all volumes.</td></tr>
+<tr><td valign=top><tt>fsRdDenyPerm</tt></td>
+<td>Requests that any other paths be prevented from having read access. A path cannot be opened if you request read permission (with the <tt>fsRdPerm</tt> constant) but some other path has requested deny-read access. Similarly, the path cannot be opened if you request deny-read permission, but some other path already has read access. This constant is used with the <tt>PBHOpenDenySync</tt> and <tt>PBHOpenRFDenySync</tt> functions.</td></tr>
+<tr><td valign=top><tt>fsWrDenyPerm</tt></td>
+<td>Requests that any other paths be prevented from having write access. A path cannot be opened if you request write permission (with the <tt>fsWrPerm</tt> constant) but some other path has requested deny-write access. Similarly, the path cannot be opened if you request deny-write permission, but some other path already has write access. This constant is used with the <tt>PBHOpenDenySync</tt> and <tt>PBHOpenRFDenySync</tt> functions.</td></tr>
+</table>
+</blockquote>
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDResourceFork/initForPermission:atURL:;   name=NDResourceFork::initForPermission:atURL: -->
+<a name="//apple_ref/occ/instm/NDResourceFork/initForPermission:atURL:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="initForPermission:atURL:">initForPermission:atURL:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Initalises a <tt>NDResourceFork</tt>.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/initForPermission //apple_ref/occ/clm/initForPermission //apple_ref/occ/intfcm/initForPermission //apple_ref/occ/intfm/initForPermission //apple_ref/occ/func/initForPermission //apple_ref/occ/ftmplt/initForPermission //apple_ref/occ/defn/initForPermission //apple_ref/occ/macro/initForPermission" --><span class="function">initForPermission</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/char //apple_ref/occ/tdef/char //apple_ref/occ/tag/char //apple_ref/occ/econst/char //apple_ref/occ/struct/char //apple_ref/occ/clconst/char //apple_ref/occ/intf/char" --><span class="type">char</span><!-- /a -->)<span class="param">permission</span> <!-- a logicalPath="//apple_ref/occ/instm/atURL //apple_ref/occ/clm/atURL //apple_ref/occ/intfcm/atURL //apple_ref/occ/intfm/atURL //apple_ref/occ/func/atURL //apple_ref/occ/ftmplt/atURL //apple_ref/occ/defn/atURL //apple_ref/occ/macro/atURL" --><span class="function">atURL</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/URL //apple_ref/occ/data/URL" --><span class="var">URL</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>permission</code></dt><dd><p>read/write permissions for the opened resource fork.</dd>
+<dt><code>URL</code></dt><dd><p>A file url specifying the name and location of the file whose resource fork is to be opened.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An initialized <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or initalization failed.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Intializes the receiver and opens a resource fork for reading and/or writting using the file url. If write permission is specified, then an empty resource fork created before hand if it does not already exists.  The receivers resource fork is closed when the receiver is deallocated.Possible permission values are as follows;
+</p>
+<blockquote>
+<table border=0 cellpadding=4>
+<tr><td width=80 valign=top><tt>fsCurPerm</tt></td>
+<td>Requests whatever permissions are currently allowed. If write access in unavailable (because the file is locked or the file is already open with write permission), then read permission is granted. Otherwise read/write permission is granted.</td></tr>
+<tr><td valign=top><tt>fsRdPerm</tt></td>
+<td>Requests permission to read the file.</td></tr>
+<tr><td valign=top><tt>fsWrPerm</tt></td>
+<td>Requests permission to write to the file. If write permission is granted, no other access paths are granted write permission. Note, however, that the File Manager does not support write-only access to a file. Thus, <tt>fsWrPerm</tt> is synonymous with <tt>fsRdWrPerm</tt> .</td></tr>
+<tr><td valign=top><tt>fsRdWrPerm</tt></td>
+<td>Requests exclusive read and write permission. If exclusive read/ write permission is granted, no other users are granted permission to write to the file. Other users may, however, be granted permission to read the file.</td></tr>
+<tr><td valign=top><tt>fsRdWrShPerm</tt></td>
+<td>Requests shared read and write permission. Shared read/ write permission allows mutliple access paths for reading and writing. This is safe only if there is some way of locking portions of the file before writing to them. Use the functions <tt>PBLockRangeSync</tt> and <tt>PBUnlockRangeSync</tt> to lock and unlock ranges of bytes within a file. On Mac OS 8 and 9, these functions are supported only on remotely mounted volumes, or on local volumes that are shareable on the network. You should check that range locking is available before requesting shared read/ write permission.  On Mac OS X, range locking is available on all volumes.</td></tr>
+<tr><td valign=top><tt>fsRdDenyPerm</tt></td>
+<td>Requests that any other paths be prevented from having read access. A path cannot be opened if you request read permission (with the <tt>fsRdPerm</tt> constant) but some other path has requested deny-read access. Similarly, the path cannot be opened if you request deny-read permission, but some other path already has read access. This constant is used with the <tt>PBHOpenDenySync</tt> and <tt>PBHOpenRFDenySync</tt> functions.</td></tr>
+<tr><td valign=top><tt>fsWrDenyPerm</tt></td>
+<td>Requests that any other paths be prevented from having write access. A path cannot be opened if you request write permission (with the <tt>fsWrPerm</tt> constant) but some other path has requested deny-write access. Similarly, the path cannot be opened if you request deny-write permission, but some other path already has write access. This constant is used with the <tt>PBHOpenDenySync</tt> and <tt>PBHOpenRFDenySync</tt> functions.</td></tr>
+</table>
+</blockquote>
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDResourceFork/initForReadingAtPath:;   name=NDResourceFork::initForReadingAtPath: -->
+<a name="//apple_ref/occ/instm/NDResourceFork/initForReadingAtPath:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="initForReadingAtPath:">initForReadingAtPath:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Initalises a <tt>NDResourceFork</tt>.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/initForReadingAtPath //apple_ref/occ/clm/initForReadingAtPath //apple_ref/occ/intfcm/initForReadingAtPath //apple_ref/occ/intfm/initForReadingAtPath //apple_ref/occ/func/initForReadingAtPath //apple_ref/occ/ftmplt/initForReadingAtPath //apple_ref/occ/defn/initForReadingAtPath //apple_ref/occ/macro/initForReadingAtPath" --><span class="function">initForReadingAtPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/path //apple_ref/occ/data/path" --><span class="var">path</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>path</code></dt><dd><p>A path specifying the name and location of the file whose resource fork is to be opened.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An initialized <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or initalization failed.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Intializes the receiver and opens a resource fork for reading using the path. The receivers resource fork is closed when the receiver is deallocated.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDResourceFork/initForReadingAtURL:;   name=NDResourceFork::initForReadingAtURL: -->
+<a name="//apple_ref/occ/instm/NDResourceFork/initForReadingAtURL:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="initForReadingAtURL:">initForReadingAtURL:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Initalises a <tt>NDResourceFork</tt>.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/initForReadingAtURL //apple_ref/occ/clm/initForReadingAtURL //apple_ref/occ/intfcm/initForReadingAtURL //apple_ref/occ/intfm/initForReadingAtURL //apple_ref/occ/func/initForReadingAtURL //apple_ref/occ/ftmplt/initForReadingAtURL //apple_ref/occ/defn/initForReadingAtURL //apple_ref/occ/macro/initForReadingAtURL" --><span class="function">initForReadingAtURL</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/URL //apple_ref/occ/data/URL" --><span class="var">URL</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>URL</code></dt><dd><p>A file url specifying the name and location of the file whose resource fork is to be opened. The receivers resource fork is closed when the receiver is deallocated.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An initialized <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or initalization failed.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Intializes the receiver and opens a resource fork for reading using the file url.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=title:instm;  uid=//apple_ref/doc/title:instm/NDResourceFork/initForReadingAtURL:;   name=NDResourceFork::initForReadingAtURL: -->
+<a name="//apple_ref/doc/title:instm/NDResourceFork/initForReadingAtURL:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="initForReadingAtURL:">initForReadingAtURL:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Initalises a <tt>NDResourceFork</tt>.
+<!-- end abstract --></p>
+<p></p><b>See Also:</b><blockquote><dl>
+<dt><!-- a logicalPath="//apple_ref/occ/instm/NDResourceFork/initForWritingAtURL:" --><p>initForWritingAtURL:<!-- /a --></dt><dd></dd></dl></blockquote>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/initForWritingAtURL //apple_ref/occ/clm/initForWritingAtURL //apple_ref/occ/intfcm/initForWritingAtURL //apple_ref/occ/intfm/initForWritingAtURL //apple_ref/occ/func/initForWritingAtURL //apple_ref/occ/ftmplt/initForWritingAtURL //apple_ref/occ/defn/initForWritingAtURL //apple_ref/occ/macro/initForWritingAtURL" --><span class="function">initForWritingAtURL</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/URL //apple_ref/occ/data/URL" --><span class="var">URL</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>URL</code></dt><dd><p>A file url specifying the name and location of the file whose resource fork is to be opened.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An initialized <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or initalization failed.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Intializes the receiver and opens a resource fork for writting, creating it before hand if it does not already exists, using the file url. The receivers resource fork is closed when the receiver is deallocated.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDResourceFork/initForWritingAtPath:;   name=NDResourceFork::initForWritingAtPath: -->
+<a name="//apple_ref/occ/instm/NDResourceFork/initForWritingAtPath:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="initForWritingAtPath:">initForWritingAtPath:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Initalises a <tt>NDResourceFork</tt>.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/initForWritingAtPath //apple_ref/occ/clm/initForWritingAtPath //apple_ref/occ/intfcm/initForWritingAtPath //apple_ref/occ/intfm/initForWritingAtPath //apple_ref/occ/func/initForWritingAtPath //apple_ref/occ/ftmplt/initForWritingAtPath //apple_ref/occ/defn/initForWritingAtPath //apple_ref/occ/macro/initForWritingAtPath" --><span class="function">initForWritingAtPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/path //apple_ref/occ/data/path" --><span class="var">path</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>path</code></dt><dd><p>A path specifying the name and location of the file whose resource fork is to be opened.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An initialized <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or initalization failed.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Intializes the receiver and opens a resource fork for writting, creating it before hand if it does not already exists, using the path. The receivers resource fork is closed when the receiver is deallocated.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDResourceFork/initForWritingAtURL:;   name=NDResourceFork::initForWritingAtURL: -->
+<a name="//apple_ref/occ/instm/NDResourceFork/initForWritingAtURL:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="initForWritingAtURL:">initForWritingAtURL:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Initalises a <tt>NDResourceFork</tt>.
+<!-- end abstract --></p>
+<p></p><b>See Also:</b><blockquote><dl>
+<dt><!-- a logicalPath="//apple_ref/doc/title:instm/NDResourceFork/initForReadingAtURL:" --><p>initForReadingAtURL:<!-- /a --></dt><dd></dd></dl></blockquote>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/initForWritingAtURL //apple_ref/occ/clm/initForWritingAtURL //apple_ref/occ/intfcm/initForWritingAtURL //apple_ref/occ/intfm/initForWritingAtURL //apple_ref/occ/func/initForWritingAtURL //apple_ref/occ/ftmplt/initForWritingAtURL //apple_ref/occ/defn/initForWritingAtURL //apple_ref/occ/macro/initForWritingAtURL" --><span class="function">initForWritingAtURL</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/URL //apple_ref/occ/data/URL" --><span class="var">URL</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>URL</code></dt><dd><p>A file url specifying the name and location of the file whose resource fork is to be opened.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Intializes the receiver and opens a resource fork for writting, creating it before hand if it does not already exists, using the file url. The receivers resource fork is closed when the receiver is deallocated.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDResourceFork/nameOfResourceType:Id:;   name=NDResourceFork::nameOfResourceType:Id: -->
+<a name="//apple_ref/occ/instm/NDResourceFork/nameOfResourceType:Id:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="nameOfResourceType:Id:">nameOfResourceType:Id:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Gets a resource's resource name.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/nameOfResourceType //apple_ref/occ/clm/nameOfResourceType //apple_ref/occ/intfcm/nameOfResourceType //apple_ref/occ/intfm/nameOfResourceType //apple_ref/occ/func/nameOfResourceType //apple_ref/occ/ftmplt/nameOfResourceType //apple_ref/occ/defn/nameOfResourceType //apple_ref/occ/macro/nameOfResourceType" --><span class="function">nameOfResourceType</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/ResType //apple_ref/occ/tdef/ResType //apple_ref/occ/tag/ResType //apple_ref/occ/econst/ResType //apple_ref/occ/struct/ResType //apple_ref/occ/clconst/ResType //apple_ref/occ/intf/ResType" --><span class="type">ResType</span><!-- /a -->)<span class="param">type</span> <!-- a logicalPath="//apple_ref/occ/instm/Id //apple_ref/occ/clm/Id //apple_ref/occ/intfcm/Id //apple_ref/occ/intfm/Id //apple_ref/occ/func/Id //apple_ref/occ/ftmplt/Id //apple_ref/occ/defn/Id //apple_ref/occ/macro/Id" --><span class="function">Id</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/ResID //apple_ref/occ/tdef/ResID //apple_ref/occ/tag/ResID //apple_ref/occ/econst/ResID //apple_ref/occ/struct/ResID //apple_ref/occ/clconst/ResID //apple_ref/occ/intf/ResID" --><span class="type">ResID</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/ID //apple_ref/occ/data/ID" --><span class="var">ID</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>type</code></dt><dd><p>The resource type of the resource for which you wish to retrieve the name.</dd>
+<dt><code>ID</code></dt><dd><p>An integer that uniquely identifies the resource for which you wish to retrieve the name.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An <tt>NSString</tt> containing the resources name.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Returns a resources name as an <tt>NSString</tt>.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDResourceFork/removeType:Id:;   name=NDResourceFork::removeType:Id: -->
+<a name="//apple_ref/occ/instm/NDResourceFork/removeType:Id:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="removeType:Id:">removeType:Id:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Removes a resource's entry from the receivers resource file.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/removeType //apple_ref/occ/clm/removeType //apple_ref/occ/intfcm/removeType //apple_ref/occ/intfm/removeType //apple_ref/occ/func/removeType //apple_ref/occ/ftmplt/removeType //apple_ref/occ/defn/removeType //apple_ref/occ/macro/removeType" --><span class="function">removeType</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/ResType //apple_ref/occ/tdef/ResType //apple_ref/occ/tag/ResType //apple_ref/occ/econst/ResType //apple_ref/occ/struct/ResType //apple_ref/occ/clconst/ResType //apple_ref/occ/intf/ResType" --><span class="type">ResType</span><!-- /a -->)<span class="param">type</span> <!-- a logicalPath="//apple_ref/occ/instm/Id //apple_ref/occ/clm/Id //apple_ref/occ/intfcm/Id //apple_ref/occ/intfm/Id //apple_ref/occ/func/Id //apple_ref/occ/ftmplt/Id //apple_ref/occ/defn/Id //apple_ref/occ/macro/Id" --><span class="function">Id</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/ResID //apple_ref/occ/tdef/ResID //apple_ref/occ/tag/ResID //apple_ref/occ/econst/ResID //apple_ref/occ/struct/ResID //apple_ref/occ/clconst/ResID //apple_ref/occ/intf/ResID" --><span class="type">ResID</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/ID //apple_ref/occ/data/ID" --><span class="var">ID</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>type</code></dt><dd><p>The resource type of the resource which you wish to remove.</dd>
+<dt><code>ID</code></dt><dd><p>An integer that uniquely identifies the resource which you wish to remove.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Returns <tt>YES</tt> if the resource was successfully removed, otherwise if returns <tt>NO</tt>.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>If the <tt>resProtected</tt> attribute for the resource is set, <tt>removeType:Id:</tt> does nothing, and returns <tt>NO</tt>.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/NDResourceFork/resourceForkForReadingAtPath:;   name=NDResourceFork::resourceForkForReadingAtPath: -->
+<a name="//apple_ref/occ/clm/NDResourceFork/resourceForkForReadingAtPath:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="resourceForkForReadingAtPath:">resourceForkForReadingAtPath:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Creates and initalises a <tt>NDResourceFork</tt>.
+<!-- end abstract --></p>
+<p></p><pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/resourceForkForReadingAtPath //apple_ref/occ/clm/resourceForkForReadingAtPath //apple_ref/occ/intfcm/resourceForkForReadingAtPath //apple_ref/occ/intfm/resourceForkForReadingAtPath //apple_ref/occ/func/resourceForkForReadingAtPath //apple_ref/occ/ftmplt/resourceForkForReadingAtPath //apple_ref/occ/defn/resourceForkForReadingAtPath //apple_ref/occ/macro/resourceForkForReadingAtPath" --><span class="function">resourceForkForReadingAtPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/path //apple_ref/occ/data/path" --><span class="var">path</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>path</code></dt><dd><p>A path specifying the name and location of the file whose resource fork is to be opened.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or Create and initalise failed.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Creates and intializes a <tt>NDResourceFork</tt> and opens a resource fork for reading using the path. The receivers resource fork is closed when the receiver is deallocated.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/NDResourceFork/resourceForkForReadingAtURL:;   name=NDResourceFork::resourceForkForReadingAtURL: -->
+<a name="//apple_ref/occ/clm/NDResourceFork/resourceForkForReadingAtURL:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="resourceForkForReadingAtURL:">resourceForkForReadingAtURL:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Creates and initalises a <tt>NDResourceFork</tt>.
+<!-- end abstract --></p>
+<p></p><pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/resourceForkForReadingAtURL //apple_ref/occ/clm/resourceForkForReadingAtURL //apple_ref/occ/intfcm/resourceForkForReadingAtURL //apple_ref/occ/intfm/resourceForkForReadingAtURL //apple_ref/occ/func/resourceForkForReadingAtURL //apple_ref/occ/ftmplt/resourceForkForReadingAtURL //apple_ref/occ/defn/resourceForkForReadingAtURL //apple_ref/occ/macro/resourceForkForReadingAtURL" --><span class="function">resourceForkForReadingAtURL</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/URL //apple_ref/occ/data/URL" --><span class="var">URL</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>URL</code></dt><dd><p>A file url specifying the name and location of the file whose resource fork is to be opened.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or Create and initalise failed.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Creates and intializes a <tt>NDResourceFork</tt> and opens a resource fork for reading using the file url.. The <tt>NDResourceFork</tt> resource fork is closed when the receiver is deallocated.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/NDResourceFork/resourceForkForWritingAtPath:;   name=NDResourceFork::resourceForkForWritingAtPath: -->
+<a name="//apple_ref/occ/clm/NDResourceFork/resourceForkForWritingAtPath:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="resourceForkForWritingAtPath:">resourceForkForWritingAtPath:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Creates and initalises a <tt>NDResourceFork</tt>.
+<!-- end abstract --></p>
+<p></p><pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/resourceForkForWritingAtPath //apple_ref/occ/clm/resourceForkForWritingAtPath //apple_ref/occ/intfcm/resourceForkForWritingAtPath //apple_ref/occ/intfm/resourceForkForWritingAtPath //apple_ref/occ/func/resourceForkForWritingAtPath //apple_ref/occ/ftmplt/resourceForkForWritingAtPath //apple_ref/occ/defn/resourceForkForWritingAtPath //apple_ref/occ/macro/resourceForkForWritingAtPath" --><span class="function">resourceForkForWritingAtPath</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/path //apple_ref/occ/data/path" --><span class="var">path</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>path</code></dt><dd><p>A path specifying the name and location of the file whose resource fork is to be opened.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or Create and initalise failed.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Creates and intializes a <tt>NDResourceFork</tt>r and opens a resource fork for writting, creating it before hand if it does not already exists, using the path. The receivers resource fork is closed when the receiver is deallocated.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/NDResourceFork/resourceForkForWritingAtURL:;   name=NDResourceFork::resourceForkForWritingAtURL: -->
+<a name="//apple_ref/occ/clm/NDResourceFork/resourceForkForWritingAtURL:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="resourceForkForWritingAtURL:">resourceForkForWritingAtURL:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Creates and initalises a <tt>NDResourceFork</tt>.
+<!-- end abstract --></p>
+<p></p><pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/resourceForkForWritingAtURL //apple_ref/occ/clm/resourceForkForWritingAtURL //apple_ref/occ/intfcm/resourceForkForWritingAtURL //apple_ref/occ/intfm/resourceForkForWritingAtURL //apple_ref/occ/func/resourceForkForWritingAtURL //apple_ref/occ/ftmplt/resourceForkForWritingAtURL //apple_ref/occ/defn/resourceForkForWritingAtURL //apple_ref/occ/macro/resourceForkForWritingAtURL" --><span class="function">resourceForkForWritingAtURL</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSURL //apple_ref/occ/tdef/NSURL //apple_ref/occ/tag/NSURL //apple_ref/occ/econst/NSURL //apple_ref/occ/struct/NSURL //apple_ref/occ/clconst/NSURL //apple_ref/occ/intf/NSURL" --><span class="type">NSURL</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/URL //apple_ref/occ/data/URL" --><span class="var">URL</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>URL</code></dt><dd><p>A file url specifying the name and location of the file whose resource fork is to be opened.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or Create and initalise failed.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Creates and intializes a <tt>NDResourceFork</tt> and opens a resource fork for writting, creating it before hand if it does not already exists, using the file url. The <tt>NDResourceFork</tt> resource fork is closed when the receiver is deallocated.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDResourceFork/resourceTypeEnumerator;   name=NDResourceFork::resourceTypeEnumerator -->
+<a name="//apple_ref/occ/instm/NDResourceFork/resourceTypeEnumerator"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="resourceTypeEnumerator">resourceTypeEnumerator</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Get a enumerator for every resource type.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSEnumerator //apple_ref/occ/tdef/NSEnumerator //apple_ref/occ/tag/NSEnumerator //apple_ref/occ/econst/NSEnumerator //apple_ref/occ/struct/NSEnumerator //apple_ref/occ/clconst/NSEnumerator //apple_ref/occ/intf/NSEnumerator" --><span class="type">NSEnumerator</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/resourceTypeEnumerator //apple_ref/occ/data/resourceTypeEnumerator" --><span class="var">resourceTypeEnumerator</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->The <tt>NSEnumerator</tt>.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Returns a <tt>NSEnumerator</tt> which will return a <tt>NSNumber</tt> resource type.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDResourceFork/setAttributeFlags:forResourceType:Id:;   name=NDResourceFork::setAttributeFlags:forResourceType:Id: -->
+<a name="//apple_ref/occ/instm/NDResourceFork/setAttributeFlags:forResourceType:Id:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="setAttributeFlags:forResourceType:Id:">setAttributeFlags:forResourceType:Id:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Sets a resource's attributes.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/setAttributeFlags //apple_ref/occ/clm/setAttributeFlags //apple_ref/occ/intfcm/setAttributeFlags //apple_ref/occ/intfm/setAttributeFlags //apple_ref/occ/func/setAttributeFlags //apple_ref/occ/ftmplt/setAttributeFlags //apple_ref/occ/defn/setAttributeFlags //apple_ref/occ/macro/setAttributeFlags" --><span class="function">setAttributeFlags</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/ResAttributes //apple_ref/occ/tdef/ResAttributes //apple_ref/occ/tag/ResAttributes //apple_ref/occ/econst/ResAttributes //apple_ref/occ/struct/ResAttributes //apple_ref/occ/clconst/ResAttributes //apple_ref/occ/intf/ResAttributes" --><span class="type">ResAttributes</span><!-- /a -->)<span class="param">attributes</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/forResourceType //apple_ref/occ/clm/forResourceType //apple_ref/occ/intfcm/forResourceType //apple_ref/occ/intfm/forResourceType //apple_ref/occ/func/forResourceType //apple_ref/occ/ftmplt/forResourceType //apple_ref/occ/defn/forResourceType //apple_ref/occ/macro/forResourceType" --><span class="function">forResourceType</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/ResType //apple_ref/occ/tdef/ResType //apple_ref/occ/tag/ResType //apple_ref/occ/econst/ResType //apple_ref/occ/struct/ResType //apple_ref/occ/clconst/ResType //apple_ref/occ/intf/ResType" --><span class="type">ResType</span><!-- /a -->)<span class="param">type</span> <!-- a logicalPath="//apple_ref/occ/instm/Id //apple_ref/occ/clm/Id //apple_ref/occ/intfcm/Id //apple_ref/occ/intfm/Id //apple_ref/occ/func/Id //apple_ref/occ/ftmplt/Id //apple_ref/occ/defn/Id //apple_ref/occ/macro/Id" --><span class="function">Id</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/ResID //apple_ref/occ/tdef/ResID //apple_ref/occ/tag/ResID //apple_ref/occ/econst/ResID //apple_ref/occ/struct/ResID //apple_ref/occ/clconst/ResID //apple_ref/occ/intf/ResID" --><span class="type">ResID</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/ID //apple_ref/occ/data/ID" --><span class="var">ID</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>attributes</code></dt><dd><p>A <tt>ResAttributes</tt> that contains the resources attributes to be set.</dd>
+<dt><code>type</code></dt><dd><p>The resource type of the resource for which you wish to set the attributes.</dd>
+<dt><code>ID</code></dt><dd><p>An integer that uniquely identifies the resource for which you wish to set the attributes.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A <tt>YES</tt> if <tt>setAttributeFlags:forResourceType:Id:</tt> was successful in setting the resources attributes.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Set the attributes for a resource in <tt><i>attributes</i></tt> and returns <tt>YES</tt> if setting of the attributes is succeeded.
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDResourceFork/writeEntireResourceFork:;   name=NDResourceFork::writeEntireResourceFork: -->
+<a name="//apple_ref/occ/instm/NDResourceFork/writeEntireResourceFork:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="writeEntireResourceFork:">writeEntireResourceFork:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Writes complete resource data to the receivers resource fork.
+<!-- end abstract --></p>
+<p></p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/writeEntireResourceFork //apple_ref/occ/clm/writeEntireResourceFork //apple_ref/occ/intfcm/writeEntireResourceFork //apple_ref/occ/intfm/writeEntireResourceFork //apple_ref/occ/func/writeEntireResourceFork //apple_ref/occ/ftmplt/writeEntireResourceFork //apple_ref/occ/defn/writeEntireResourceFork //apple_ref/occ/macro/writeEntireResourceFork" --><span class="function">writeEntireResourceFork</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSData //apple_ref/occ/tdef/NSData //apple_ref/occ/tag/NSData //apple_ref/occ/econst/NSData //apple_ref/occ/struct/NSData //apple_ref/occ/clconst/NSData //apple_ref/occ/intf/NSData" --><span class="type">NSData</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/data //apple_ref/occ/data/data" --><span class="var">data</span><!-- /a -->; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>data</code></dt><dd><p>The complete resource data in a <tt>NSData</tt> object.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Returns <tt>YES</tt> if writting was successful, returns <tt>NO</tt> otherwise.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p><tt>writeEntireResourceFork:</tt> writes the data in the <tt>NSData</tt> object out the the recievers resource fork. <tt>writeEntireResourceFork</tt> and it's conpanion method <tt>dataForEntireResourceFork</tt> can be used for duplicating the resource fork for on file to the resource fork of another. <tt>writeEntireResourceFork:</tt> can also be used to convert a resource stored in a files data fork into a resource stored in a files resource fork, simple by creating the <tt>NSData</tt> object with the methods <tt>dataWithContentsOfFile</tt> or <tt>dataWithContentsOfURL:</tt>.
+<!-- end discussion -->
+<p></p><p>Last Updated: Wednesday, March 18, 2009
+</p></div>
+<!-- headerDoc=cl; uid=//apple_ref/occ/cl/NDResourceFork;  name=NDResourceFork-->
+<a name="//apple_ref/occ/cl/NDResourceFork"></a></body></html>
