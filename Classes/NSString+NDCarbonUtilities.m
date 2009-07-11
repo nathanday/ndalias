@@ -146,7 +146,7 @@
 #endif
 	const unsigned int	kPascalStringLen = 256;
 	NSMutableData		* theData = [NSMutableData dataWithCapacity:kPascalStringLen];
-	return [self getPascalString:(StringPtr)[theData mutableBytes] length:kPascalStringLen] ? [theData bytes] : NULL;
+	return [self getPascalString:(StringPtr)[theData mutableBytes] length:kPascalStringLen] ? (const char *)[theData bytes] : NULL;
 }
 
 /*
