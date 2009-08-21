@@ -2,7 +2,7 @@
 	NSSavePanel+NDAlias.h
 
 	Created by Sean McBride on 18.08.07 under a MIT-style license. 
-	Copyright (c) 2008 Nathan Day
+	Copyright (c) 2008-2009 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -53,7 +53,10 @@
 - (void)setDirectoryAlias:(NDAlias*)alias
 {
 	NSString* fullPath = [alias path];
-	[self setDirectory:fullPath];
+	if (fullPath != nil)
+	{
+		[self setDirectory:fullPath];
+	}
 }
 
 @end
