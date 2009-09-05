@@ -2,7 +2,7 @@
 	NDAlias.m
 
 	Created by Nathan Day on 07.02.02 under a MIT-style license.
-	Copyright (c) 2008 Nathan Day
+	Copyright (c) 2008-2009 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -90,16 +90,30 @@
 {
 	if( aPath && [[NSFileManager defaultManager] fileExistsAtPath:aPath] )
 	{
-		if( aFromPath && [[NSFileManager defaultManager] fileExistsAtPath:aFromPath] )
-			return [self initWithURL:[NSURL fileURLWithPath:aPath] fromURL:[NSURL fileURLWithPath:aFromPath]];
+		if( aFromPath )
+		{
+			if( [[NSFileManager defaultManager] fileExistsAtPath:aFromPath] )
+			{
+				self = [self initWithURL:[NSURL fileURLWithPath:aPath] fromURL:[NSURL fileURLWithPath:aFromPath]];
+			}
+			else
+			{
+				[super dealloc];
+				self = nil;
+			}
+		}
 		else
-			return [self initWithURL:[NSURL fileURLWithPath:aPath] fromURL:nil];
+		{
+			self = [self initWithURL:[NSURL fileURLWithPath:aPath] fromURL:nil];
+		}
 	}
 	else
 	{
-		[self release];
-		return nil;
+		[super dealloc];
+		self = nil;
 	}
+	
+	return self;
 }
 
 /*
@@ -130,7 +144,7 @@
 		}
 		else
 		{
-			[self release];
+			[super dealloc];
 			self = nil;
 		}
 	}
@@ -197,7 +211,7 @@
 	}
 	else
 	{
-		[self release];
+		[super dealloc];
 		self = nil;
 	}
 
@@ -221,7 +235,10 @@
 - (void)dealloc
 {
 	if ( aliasHandle )
+	{
 		DisposeHandle( (Handle)aliasHandle );
+		aliasHandle = NULL;
+	}
 	[super dealloc];
 }
 
@@ -232,9 +249,12 @@
  */
 - (void)finalize
 {
-	/* Important: finalize methods must be thread-safe!  DisposeHandle() is threadsafe since 10.3. */
+	/* Important: finalize methods must be threadsafe!  DisposeHandle() is threadsafe since 10.3. */
 	if ( aliasHandle )
+	{
 		DisposeHandle( (Handle)aliasHandle );
+		aliasHandle = NULL;
+	}
 	[super finalize];
 }
 

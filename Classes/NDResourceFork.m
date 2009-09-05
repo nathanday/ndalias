@@ -2,7 +2,7 @@
 	NDResourceFork.h category
 
 	Created by Nathan Day on 05.12.01 under a MIT-style license. 
-	Copyright (c) 2008 Nathan Day
+	Copyright (c) 2008-2009 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -211,6 +211,7 @@ BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aType, NSSt
 		[self closeFile];
 		NSLog (@"NDAlias ERROR: you neglected to call closeFile: before disposing this NDResourceFork");
 	}
+	fileReference = 0;
 	[super dealloc];
 }
 
@@ -226,6 +227,7 @@ BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aType, NSSt
 		// Note: all finalize methods must be thread-safe!  Thus we cannot call closeFile here because it calls CloseResFile() which, along with the rest of the Resource Manager, is not thread-safe.  
 		NSLog (@"NDAlias ERROR: you neglected to call closeFile: before disposing this NDResourceFork");
 	}
+	fileReference = 0;
 	[super finalize];
 }
 

@@ -7,31 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08FB77A2FE84155DC02AAC07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.m */; settings = {ATTRIBUTES = (); }; };
-		D827C765057753A20079FE16 /* NDResourceFork+OtherSorces.h in Headers */ = {isa = PBXBuildFile; fileRef = D827C75D057753A20079FE16 /* NDResourceFork+OtherSorces.h */; };
-		D827C766057753A20079FE16 /* NSURL+NDCarbonUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D827C75E057753A20079FE16 /* NSURL+NDCarbonUtilities.m */; };
-		D827C767057753A20079FE16 /* NDResourceFork+OtherSorces.m in Sources */ = {isa = PBXBuildFile; fileRef = D827C75F057753A20079FE16 /* NDResourceFork+OtherSorces.m */; };
-		D827C768057753A20079FE16 /* NDResourceFork.m in Sources */ = {isa = PBXBuildFile; fileRef = D827C760057753A20079FE16 /* NDResourceFork.m */; };
-		D827C769057753A20079FE16 /* NDResourceFork.h in Headers */ = {isa = PBXBuildFile; fileRef = D827C761057753A20079FE16 /* NDResourceFork.h */; };
-		D827C76C057753A20079FE16 /* NSURL+NDCarbonUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = D827C764057753A20079FE16 /* NSURL+NDCarbonUtilities.h */; };
-		D8456F2F0CD34692007C2879 /* NSPathControl+NDAlias.m in Sources */ = {isa = PBXBuildFile; fileRef = D8456F2B0CD34692007C2879 /* NSPathControl+NDAlias.m */; };
-		D8456F300CD34692007C2879 /* NSPathControl+NDAlias.h in Headers */ = {isa = PBXBuildFile; fileRef = D8456F2C0CD34692007C2879 /* NSPathControl+NDAlias.h */; };
-		D8456F310CD34692007C2879 /* NSOpenPanel+NDAlias.h in Headers */ = {isa = PBXBuildFile; fileRef = D8456F2D0CD34692007C2879 /* NSOpenPanel+NDAlias.h */; };
-		D8456F320CD34692007C2879 /* NSOpenPanel+NDAlias.m in Sources */ = {isa = PBXBuildFile; fileRef = D8456F2E0CD34692007C2879 /* NSOpenPanel+NDAlias.m */; };
-		D85465180DC1A01D000A9B73 /* NDSDKCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = D85465170DC1A01D000A9B73 /* NDSDKCompatibility.h */; };
-		D85FA542064E1B47007E27E5 /* NSString+NDCarbonUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D85FA540064E1B47007E27E5 /* NSString+NDCarbonUtilities.m */; };
-		D85FA543064E1B47007E27E5 /* NSString+NDCarbonUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = D85FA541064E1B47007E27E5 /* NSString+NDCarbonUtilities.h */; };
-		F5523BBC039C4288014779E5 /* NDAlias+AliasFile.h in Headers */ = {isa = PBXBuildFile; fileRef = F5523BBA039C4288014779E5 /* NDAlias+AliasFile.h */; };
-		F5523BBD039C4288014779E5 /* NDAlias+AliasFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F5523BBB039C4288014779E5 /* NDAlias+AliasFile.m */; };
-		F57B516C036D23160120B2EF /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57B50C7036D23150120B2EF /* Carbon.framework */; };
-		F57B516D036D23160120B2EF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57B50C8036D23150120B2EF /* Cocoa.framework */; };
-		F5F4C346021259DF012EA7CD /* NDAlias.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F4C344021259DF012EA7CD /* NDAlias.h */; };
-		F5F4C347021259DF012EA7CD /* NDAlias.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F4C345021259DF012EA7CD /* NDAlias.m */; };
+		1451D4231052CFD400AEDF28 /* NDAlias.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F4C344021259DF012EA7CD /* NDAlias.h */; };
+		1451D4241052CFD400AEDF28 /* NDAlias+AliasFile.h in Headers */ = {isa = PBXBuildFile; fileRef = F5523BBA039C4288014779E5 /* NDAlias+AliasFile.h */; };
+		1451D4251052CFD400AEDF28 /* NDResourceFork+OtherSorces.h in Headers */ = {isa = PBXBuildFile; fileRef = D827C75D057753A20079FE16 /* NDResourceFork+OtherSorces.h */; };
+		1451D4261052CFD400AEDF28 /* NDResourceFork.h in Headers */ = {isa = PBXBuildFile; fileRef = D827C761057753A20079FE16 /* NDResourceFork.h */; };
+		1451D4271052CFD400AEDF28 /* NSURL+NDCarbonUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = D827C764057753A20079FE16 /* NSURL+NDCarbonUtilities.h */; };
+		1451D4281052CFD400AEDF28 /* NSString+NDCarbonUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = D85FA541064E1B47007E27E5 /* NSString+NDCarbonUtilities.h */; };
+		1451D4291052CFD400AEDF28 /* NSPathControl+NDAlias.h in Headers */ = {isa = PBXBuildFile; fileRef = D8456F2C0CD34692007C2879 /* NSPathControl+NDAlias.h */; };
+		1451D42A1052CFD400AEDF28 /* NSOpenPanel+NDAlias.h in Headers */ = {isa = PBXBuildFile; fileRef = D8456F2D0CD34692007C2879 /* NSOpenPanel+NDAlias.h */; };
+		1451D42B1052CFD400AEDF28 /* NDSDKCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = D85465170DC1A01D000A9B73 /* NDSDKCompatibility.h */; };
+		1451D42D1052CFD400AEDF28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.m */; settings = {ATTRIBUTES = (); }; };
+		1451D42E1052CFD400AEDF28 /* NDAlias.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F4C345021259DF012EA7CD /* NDAlias.m */; };
+		1451D42F1052CFD400AEDF28 /* NDAlias+AliasFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F5523BBB039C4288014779E5 /* NDAlias+AliasFile.m */; };
+		1451D4301052CFD400AEDF28 /* NSURL+NDCarbonUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D827C75E057753A20079FE16 /* NSURL+NDCarbonUtilities.m */; };
+		1451D4311052CFD400AEDF28 /* NDResourceFork+OtherSorces.m in Sources */ = {isa = PBXBuildFile; fileRef = D827C75F057753A20079FE16 /* NDResourceFork+OtherSorces.m */; };
+		1451D4321052CFD400AEDF28 /* NDResourceFork.m in Sources */ = {isa = PBXBuildFile; fileRef = D827C760057753A20079FE16 /* NDResourceFork.m */; };
+		1451D4331052CFD400AEDF28 /* NSString+NDCarbonUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D85FA540064E1B47007E27E5 /* NSString+NDCarbonUtilities.m */; };
+		1451D4341052CFD400AEDF28 /* NSPathControl+NDAlias.m in Sources */ = {isa = PBXBuildFile; fileRef = D8456F2B0CD34692007C2879 /* NSPathControl+NDAlias.m */; };
+		1451D4351052CFD400AEDF28 /* NSOpenPanel+NDAlias.m in Sources */ = {isa = PBXBuildFile; fileRef = D8456F2E0CD34692007C2879 /* NSOpenPanel+NDAlias.m */; };
+		1451D4381052CFD400AEDF28 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57B50C8036D23150120B2EF /* Cocoa.framework */; };
+		1451D4651052D15900AEDF28 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1451D4641052D15900AEDF28 /* CoreServices.framework */; };
+		1451D48A1052D36800AEDF28 /* NSSavePanel+NDAlias.h in Headers */ = {isa = PBXBuildFile; fileRef = 1451D4881052D36800AEDF28 /* NSSavePanel+NDAlias.h */; };
+		1451D48B1052D36800AEDF28 /* NSSavePanel+NDAlias.m in Sources */ = {isa = PBXBuildFile; fileRef = 1451D4891052D36800AEDF28 /* NSSavePanel+NDAlias.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		034768E6FF38A76511DB9C8B /* NDAliasesURLProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = NDAliasesURLProject; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FB7796FE84155DC02AAC07 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1451D43E1052CFD400AEDF28 /* NDAliasesURLProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NDAliasesURLProject; sourceTree = BUILT_PRODUCTS_DIR; };
+		1451D4641052D15900AEDF28 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		1451D4881052D36800AEDF28 /* NSSavePanel+NDAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSavePanel+NDAlias.h"; sourceTree = "<group>"; };
+		1451D4891052D36800AEDF28 /* NSSavePanel+NDAlias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSavePanel+NDAlias.m"; sourceTree = "<group>"; };
 		D827C75D057753A20079FE16 /* NDResourceFork+OtherSorces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NDResourceFork+OtherSorces.h"; sourceTree = "<group>"; };
 		D827C75E057753A20079FE16 /* NSURL+NDCarbonUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+NDCarbonUtilities.m"; sourceTree = "<group>"; };
 		D827C75F057753A20079FE16 /* NDResourceFork+OtherSorces.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NDResourceFork+OtherSorces.m"; sourceTree = "<group>"; };
@@ -47,7 +52,6 @@
 		D85FA541064E1B47007E27E5 /* NSString+NDCarbonUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NDCarbonUtilities.h"; sourceTree = "<group>"; };
 		F5523BBA039C4288014779E5 /* NDAlias+AliasFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NDAlias+AliasFile.h"; sourceTree = "<group>"; };
 		F5523BBB039C4288014779E5 /* NDAlias+AliasFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NDAlias+AliasFile.m"; sourceTree = "<group>"; };
-		F57B50C7036D23150120B2EF /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		F57B50C8036D23150120B2EF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		F581985F03D7AC41017F59BF /* Notes about the AliasFile category.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Notes about the AliasFile category.rtf"; sourceTree = "<group>"; };
 		F5F4C344021259DF012EA7CD /* NDAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAlias.h; sourceTree = "<group>"; };
@@ -55,12 +59,12 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		08FB77A3FE84155DC02AAC07 /* Frameworks */ = {
+		1451D4361052CFD400AEDF28 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F57B516C036D23160120B2EF /* Carbon.framework in Frameworks */,
-				F57B516D036D23160120B2EF /* Cocoa.framework in Frameworks */,
+				1451D4381052CFD400AEDF28 /* Cocoa.framework in Frameworks */,
+				1451D4651052D15900AEDF28 /* CoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +95,7 @@
 		08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				F57B50C7036D23150120B2EF /* Carbon.framework */,
+				1451D4641052D15900AEDF28 /* CoreServices.framework */,
 				F57B50C8036D23150120B2EF /* Cocoa.framework */,
 			);
 			name = "External Frameworks and Libraries";
@@ -100,7 +104,7 @@
 		1AB674ADFE9D54B511CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				034768E6FF38A76511DB9C8B /* NDAliasesURLProject */,
+				1451D43E1052CFD400AEDF28 /* NDAliasesURLProject */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,6 +135,8 @@
 				D8456F2B0CD34692007C2879 /* NSPathControl+NDAlias.m */,
 				D8456F2D0CD34692007C2879 /* NSOpenPanel+NDAlias.h */,
 				D8456F2E0CD34692007C2879 /* NSOpenPanel+NDAlias.m */,
+				1451D4881052D36800AEDF28 /* NSSavePanel+NDAlias.h */,
+				1451D4891052D36800AEDF28 /* NSSavePanel+NDAlias.m */,
 				D85465170DC1A01D000A9B73 /* NDSDKCompatibility.h */,
 			);
 			path = Classes;
@@ -139,23 +145,46 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		08FB77A0FE84155DC02AAC07 /* Headers */ = {
+		1451D4221052CFD400AEDF28 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5F4C346021259DF012EA7CD /* NDAlias.h in Headers */,
-				F5523BBC039C4288014779E5 /* NDAlias+AliasFile.h in Headers */,
-				D827C765057753A20079FE16 /* NDResourceFork+OtherSorces.h in Headers */,
-				D827C769057753A20079FE16 /* NDResourceFork.h in Headers */,
-				D827C76C057753A20079FE16 /* NSURL+NDCarbonUtilities.h in Headers */,
-				D85FA543064E1B47007E27E5 /* NSString+NDCarbonUtilities.h in Headers */,
-				D8456F300CD34692007C2879 /* NSPathControl+NDAlias.h in Headers */,
-				D8456F310CD34692007C2879 /* NSOpenPanel+NDAlias.h in Headers */,
-				D85465180DC1A01D000A9B73 /* NDSDKCompatibility.h in Headers */,
+				1451D4231052CFD400AEDF28 /* NDAlias.h in Headers */,
+				1451D4241052CFD400AEDF28 /* NDAlias+AliasFile.h in Headers */,
+				1451D4251052CFD400AEDF28 /* NDResourceFork+OtherSorces.h in Headers */,
+				1451D4261052CFD400AEDF28 /* NDResourceFork.h in Headers */,
+				1451D4271052CFD400AEDF28 /* NSURL+NDCarbonUtilities.h in Headers */,
+				1451D4281052CFD400AEDF28 /* NSString+NDCarbonUtilities.h in Headers */,
+				1451D4291052CFD400AEDF28 /* NSPathControl+NDAlias.h in Headers */,
+				1451D42A1052CFD400AEDF28 /* NSOpenPanel+NDAlias.h in Headers */,
+				1451D42B1052CFD400AEDF28 /* NDSDKCompatibility.h in Headers */,
+				1451D48A1052D36800AEDF28 /* NSSavePanel+NDAlias.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1451D4211052CFD400AEDF28 /* NDAliasesURLProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1451D43A1052CFD400AEDF28 /* Build configuration list for PBXNativeTarget "NDAliasesURLProject" */;
+			buildPhases = (
+				1451D4221052CFD400AEDF28 /* Headers */,
+				1451D42C1052CFD400AEDF28 /* Sources */,
+				1451D4361052CFD400AEDF28 /* Frameworks */,
+				1451D4391052CFD400AEDF28 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NDAliasesURLProject;
+			productInstallPath = "$(HOME)/bin";
+			productName = NDAliasesURLProject;
+			productReference = 1451D43E1052CFD400AEDF28 /* NDAliasesURLProject */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
@@ -167,13 +196,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				08FB779FFE84155DC02AAC07 /* NDAliasesURLProject */,
+				1451D4211052CFD400AEDF28 /* NDAliasesURLProject */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXRezBuildPhase section */
-		08FB77A5FE84155DC02AAC07 /* Rez */ = {
+		1451D4391052CFD400AEDF28 /* Rez */ = {
 			isa = PBXRezBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -183,45 +212,27 @@
 /* End PBXRezBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		08FB77A1FE84155DC02AAC07 /* Sources */ = {
+		1451D42C1052CFD400AEDF28 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08FB77A2FE84155DC02AAC07 /* main.m in Sources */,
-				F5F4C347021259DF012EA7CD /* NDAlias.m in Sources */,
-				F5523BBD039C4288014779E5 /* NDAlias+AliasFile.m in Sources */,
-				D827C766057753A20079FE16 /* NSURL+NDCarbonUtilities.m in Sources */,
-				D827C767057753A20079FE16 /* NDResourceFork+OtherSorces.m in Sources */,
-				D827C768057753A20079FE16 /* NDResourceFork.m in Sources */,
-				D85FA542064E1B47007E27E5 /* NSString+NDCarbonUtilities.m in Sources */,
-				D8456F2F0CD34692007C2879 /* NSPathControl+NDAlias.m in Sources */,
-				D8456F320CD34692007C2879 /* NSOpenPanel+NDAlias.m in Sources */,
+				1451D42D1052CFD400AEDF28 /* main.m in Sources */,
+				1451D42E1052CFD400AEDF28 /* NDAlias.m in Sources */,
+				1451D42F1052CFD400AEDF28 /* NDAlias+AliasFile.m in Sources */,
+				1451D4301052CFD400AEDF28 /* NSURL+NDCarbonUtilities.m in Sources */,
+				1451D4311052CFD400AEDF28 /* NDResourceFork+OtherSorces.m in Sources */,
+				1451D4321052CFD400AEDF28 /* NDResourceFork.m in Sources */,
+				1451D4331052CFD400AEDF28 /* NSString+NDCarbonUtilities.m in Sources */,
+				1451D4341052CFD400AEDF28 /* NSPathControl+NDAlias.m in Sources */,
+				1451D4351052CFD400AEDF28 /* NSOpenPanel+NDAlias.m in Sources */,
+				1451D48B1052D36800AEDF28 /* NSSavePanel+NDAlias.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXToolTarget section */
-		08FB779FFE84155DC02AAC07 /* NDAliasesURLProject */ = {
-			isa = PBXToolTarget;
-			buildConfigurationList = D815D1A4089105AA00F44775 /* Build configuration list for PBXToolTarget "NDAliasesURLProject" */;
-			buildPhases = (
-				08FB77A0FE84155DC02AAC07 /* Headers */,
-				08FB77A1FE84155DC02AAC07 /* Sources */,
-				08FB77A3FE84155DC02AAC07 /* Frameworks */,
-				08FB77A5FE84155DC02AAC07 /* Rez */,
-			);
-			dependencies = (
-			);
-			name = NDAliasesURLProject;
-			productInstallPath = "$(HOME)/bin";
-			productName = NDAliasesURLProject;
-			productReference = 034768E6FF38A76511DB9C8B /* NDAliasesURLProject */;
-		};
-/* End PBXToolTarget section */
-
 /* Begin XCBuildConfiguration section */
-		D815D1A5089105AA00F44775 /* Development */ = {
+		1451D43B1052CFD400AEDF28 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
@@ -248,7 +259,7 @@
 			};
 			name = Development;
 		};
-		D815D1A6089105AA00F44775 /* Deployment */ = {
+		1451D43C1052CFD400AEDF28 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -272,7 +283,7 @@
 			};
 			name = Deployment;
 		};
-		D815D1A7089105AA00F44775 /* Default */ = {
+		1451D43D1052CFD400AEDF28 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "";
@@ -296,33 +307,33 @@
 		D815D1A9089105AA00F44775 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
 			};
 			name = Development;
 		};
 		D815D1AA089105AA00F44775 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
 			};
 			name = Deployment;
 		};
 		D815D1AB089105AA00F44775 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
 			};
 			name = Default;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D815D1A4089105AA00F44775 /* Build configuration list for PBXToolTarget "NDAliasesURLProject" */ = {
+		1451D43A1052CFD400AEDF28 /* Build configuration list for PBXNativeTarget "NDAliasesURLProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D815D1A5089105AA00F44775 /* Development */,
-				D815D1A6089105AA00F44775 /* Deployment */,
-				D815D1A7089105AA00F44775 /* Default */,
+				1451D43B1052CFD400AEDF28 /* Development */,
+				1451D43C1052CFD400AEDF28 /* Deployment */,
+				1451D43D1052CFD400AEDF28 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Default;

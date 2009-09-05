@@ -2,7 +2,7 @@
 	NSString+NDCarbonUtilities.m
 
 	Created by Nathan Day on 03.08.02 under a MIT-style license. 
-	Copyright (c) 2008 Nathan Day
+	Copyright (c) 2008-2009 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -103,16 +103,16 @@
 	FSRef			theRef;
 	Boolean			theIsTargetFolder,
 					theWasAliased;
-	NSString		* theResolvedAlias = nil;;
+	NSString		* theResolvedAlias = nil;
 
-	[self getFSRef:&theRef];
+	BOOL			theSuccess = [self getFSRef:&theRef];
 
-	if( (FSResolveAliasFile( &theRef, YES, &theIsTargetFolder, &theWasAliased ) == noErr) )
+	if (theSuccess && FSResolveAliasFileWithMountFlags( &theRef, true, &theIsTargetFolder, &theWasAliased, 0 ) == noErr)
 	{
 		theResolvedAlias = (theWasAliased) ? [NSString stringWithFSRef:&theRef] : self;
 	}
 
-	return theResolvedAlias ? theResolvedAlias : self;
+	return theResolvedAlias;
 }
 
 /*

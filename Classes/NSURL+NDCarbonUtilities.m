@@ -2,7 +2,7 @@
 	NSURL+NDCarbonUtilities.m
 
 	Created by Nathan Day on 05.12.01 under a MIT-style license. 
-	Copyright (c) 2008 Nathan Day
+	Copyright (c) 2008-2009 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -78,6 +78,7 @@
 /*
 	- URLByDeletingLastPathComponent
  */
+#if (MAC_OS_X_VERSION_MIN_REQUIRED >= 1060)
 - (NSURL *)URLByDeletingLastPathComponent
 {
 	CFURLRef theURL = CFURLCreateCopyDeletingLastPathComponent( kCFAllocatorDefault, (CFURLRef)self);
@@ -85,6 +86,7 @@
 	/* To support GC and non-GC, we need this contortion. */
 	return [NSMakeCollectable(theURL) autorelease];
 }
+#endif
 
 /*
 	- fileSystemPathHFSStyle
@@ -103,13 +105,13 @@
 - (NSURL *)resolveAliasFile
 {
 	FSRef			theRef;
-	Boolean		theIsTargetFolder,
+	Boolean			theIsTargetFolder,
 					theWasAliased;
-	NSURL			* theResolvedAlias = nil;;
+	NSURL			* theResolvedAlias = nil;
 
-	[self getFSRef:&theRef];
+	BOOL			theSuccess = [self getFSRef:&theRef];
 
-	if( (FSResolveAliasFile ( &theRef, YES, &theIsTargetFolder, &theWasAliased ) == noErr) )
+	if (theSuccess && FSResolveAliasFileWithMountFlags ( &theRef, true, &theIsTargetFolder, &theWasAliased, 0 ) == noErr)
 	{
 		theResolvedAlias = (theWasAliased) ? [NSURL URLWithFSRef:&theRef] : self;
 	}
@@ -161,7 +163,7 @@
  */
 - (BOOL)setFinderInfoFlags:(UInt16)aFlags mask:(UInt16)aMask type:(OSType)aType creator:(OSType)aCreator
 {
-	BOOL				theResult = NO;
+	BOOL			theResult = NO;
 	FSRef			theFSRef;
 	FSCatalogInfo	theInfo;
 
@@ -183,7 +185,7 @@
  */
 - (BOOL)setFinderLocation:(NSPoint)aLocation
 {
-	BOOL				theResult = NO;
+	BOOL			theResult = NO;
 	FSRef			theFSRef;
 	FSCatalogInfo	theInfo;
 
@@ -206,7 +208,9 @@
 - (BOOL)hasCustomIcon
 {
 	UInt16	theFlags;
-	return [self finderInfoFlags:&theFlags type:NULL creator:NULL] == YES && (theFlags & kHasCustomIcon) != 0;
+	BOOL	theSuccess = [self finderInfoFlags:&theFlags type:NULL creator:NULL];
+	
+	return theSuccess && (theFlags & kHasCustomIcon) != 0;
 }
 
 @end

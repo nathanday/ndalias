@@ -38,11 +38,20 @@
 - (NDAlias *)directoryAlias
 {
 	NDAlias *			anAlias = nil;
+	
+#if (MAC_OS_X_VERSION_MIN_REQUIRED >= 1060)
+	NSURL *				directory = [self directoryURL];
+	if (directory != nil)
+	{
+		anAlias = [NDAlias aliasWithURL:directory];
+	}
+#else
 	NSString *			directory = [self directory];
 	if (directory != nil)
 	{
 		anAlias = [NDAlias aliasWithPath:directory];
 	}
+#endif
 	
 	return anAlias;
 }
@@ -52,11 +61,19 @@
  */
 - (void)setDirectoryAlias:(NDAlias*)alias
 {
+#if (MAC_OS_X_VERSION_MIN_REQUIRED >= 1060)
+	NSURL* url = [alias URL];
+	if (url != nil)
+	{
+		[self setDirectoryURL:url];
+	}
+#else
 	NSString* fullPath = [alias path];
 	if (fullPath != nil)
 	{
 		[self setDirectory:fullPath];
 	}
+#endif
 }
 
 @end

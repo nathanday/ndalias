@@ -2,7 +2,7 @@
 	NDAlias.h
 
 	Created by Nathan Day on 05.12.01 under a MIT-style license.
-	Copyright (c) 2008 Nathan Day
+	Copyright (c) 2008-2009 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -214,6 +214,15 @@
  */
 
 /*!
+	@method getFSRef:
+	@abstract Get a <tt>FSRef</tt> for the receiver.
+	@discussion Initializes an <tt>FSRef</tt>.
+	@param fsRef a pointer to a <tt>FSRef</tt>.
+	@result Returns <tt>YES</tt> if the method was successful, if the function returns <tt>NO</tt> then the <tt>FSRef</tt> pointed to by <tt>fsRef</tt> is garbage.
+  */
+- (BOOL)getFSRef:(FSRef *)aFsRef;
+
+/*!
 	This method is deprecated.  Use -URL instead.  Why?  For consistency with Cocoa classes, which spell it in caps.
   */
 - (NSURL *)url DEPRECATED_ATTRIBUTE;
@@ -336,6 +345,6 @@
 	@abstract Test alias equality
 	@discussion Returns YES if the receiver is equal to the passed object. Two NDAliases are defined as equal if and only if they resolve to equal FSRefs.  Alias resolution is performed on both aliases, if there is any error, NO is returned.
   */
-- (BOOL)isEqualToAlias:(id)otherObject;
+- (BOOL)isEqualToAlias:(id)anOtherObject;
 
 @end
