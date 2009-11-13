@@ -65,18 +65,24 @@
 	return [[[self alloc] initWithPath:aPath fromPath:aFromPath] autorelease];
 }
 
+/*
+	aliasWithData:
+ */
 + (id)aliasWithData:(NSData *)aData
 {
 	return [[[self alloc] initWithData:aData] autorelease];
 }
 
+/*
+	aliasWithFSRef:
+ */
 + (id)aliasWithFSRef:(FSRef *)aFSRef
 {
 	return [[[self alloc] initWithFSRef:aFSRef] autorelease];
 }
 
 /*
-	initWithPath:fromPath:
+	initWithPath:
  */
 - (id)initWithPath:(NSString *)aPath
 {
@@ -227,8 +233,6 @@
 	[anEncoder encodeDataObject:[self data]];
 }
 
-#ifndef __OBJC_GC__
-
 /*
 	dealloc
  */
@@ -241,8 +245,6 @@
 	}
 	[super dealloc];
 }
-
-#else
 
 /*
 	finalize
@@ -257,8 +259,6 @@
 	}
 	[super finalize];
 }
-
-#endif
 
 /*
 	-setAllowUserInteraction:
@@ -409,6 +409,20 @@
 }
 
 /*
+	debugDescription
+ */
+- (NSString *)debugDescription
+{
+	NSString* str = [NSString stringWithFormat:@"aliasHandle %p, changed %d, mountFlags %x, lastKnownPath %@",
+					 aliasHandle,
+					 changed,
+					 mountFlags,
+					 [self lastKnownPath]];
+	
+	return str;
+}
+
+/*
 	data
  */
 - (NSData *)data
@@ -528,9 +542,9 @@
  */
 - (BOOL)isEqualToAlias:(id)anOtherObject
 {
-	/* Two NDAliases are defined as equal if and only if they resolve to equal FSRefs */
-	BOOL		theEqual = NO;
-	if ([anOtherObject isKindOfClass:[NDAlias class]])
+	/* Two NDAliases are defined as equal if they are the exact same object or if they resolve to equal FSRefs */
+	BOOL		theEqual = (anOtherObject == self);
+	if (!theEqual && [anOtherObject isKindOfClass:[NDAlias class]])
 	{
 		FSRef		theFSRef1,
 					theFSRef2;
@@ -543,6 +557,95 @@
 	}
 
 	return theEqual;
+}
+
+/*
+	isAliasCollectionResolvable:
+ */
++ (BOOL)isAliasCollectionResolvable:(NSObject<NSFastEnumeration>*)aCollection
+{
+	BOOL resolvable = NO;
+	
+	FSRef ref;
+	for (NDAlias* alias in aCollection)
+	{
+		resolvable = [alias getFSRef:&ref];
+		if (!resolvable)
+		{
+			break;
+		}
+	}
+	
+	return resolvable;
+}
+
+/*
+	isAliasCollection:equalToAliasCollection:
+ */
++ (BOOL)isAliasCollection:(id)aCollection1 equalToAliasCollection:(id)aCollection2
+{
+	BOOL collectionsMatch = NO;
+	
+	// The cast is merely to silence a compiler warning, either NSSet or NSArray is acceptable (or in fact anything that responds to 'count' and conforms to NSFastEnumeration).
+	if ([(NSArray*)aCollection1 count] == [(NSArray*)aCollection2 count])
+	{
+		collectionsMatch = YES;
+		for (NDAlias* alias1 in aCollection1)
+		{
+			BOOL foundAlias1 = NO;
+			for (NDAlias* alias2 in aCollection2)
+			{
+				if ([alias1 isEqualToAlias:alias2])
+				{
+					foundAlias1 = YES;
+					break;
+				}
+			}
+			if (!foundAlias1)
+			{
+				collectionsMatch = NO;
+				break;
+			}
+		}
+	}
+	
+	return collectionsMatch;
+}
+
+/*
+	arrayOfAliasesFromArrayOfData:
+ */
++ (NSArray*)arrayOfAliasesFromArrayOfData:(NSArray*)aDataArray
+{
+	NSMutableArray* array = [NSMutableArray array];
+	for (NSData* aliasData in aDataArray)
+	{
+		NDAlias* alias = [NDAlias aliasWithData:aliasData];
+		if (alias)
+		{
+			[array addObject:alias];
+		}
+	}
+	
+	return array;
+}
+
+/*
+	arrayOfDataFromArrayOfAliases:
+ */
++ (NSArray*)arrayOfDataFromArrayOfAliases:(NSArray*)anAliasArray
+{
+	NSMutableArray* array = [NSMutableArray array];
+	for (NDAlias* alias in anAliasArray)
+	{
+		NSData* data = [alias data];
+		if (data)
+		{
+			[array addObject:data];
+		}
+	}
+	
+	return array;
 }
 
 @end

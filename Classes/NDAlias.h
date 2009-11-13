@@ -43,6 +43,7 @@
  */
 @interface NDAlias : NSObject <NSCoding>
 {
+@private
 	AliasHandle		aliasHandle;
 	Boolean			changed;
 	unsigned long	mountFlags;
@@ -346,5 +347,33 @@
 	@discussion Returns YES if the receiver is equal to the passed object. Two NDAliases are defined as equal if and only if they resolve to equal FSRefs.  Alias resolution is performed on both aliases, if there is any error, NO is returned.
   */
 - (BOOL)isEqualToAlias:(id)anOtherObject;
+
+/*!
+	@method isAliasCollectionResolvable:
+	@abstract Tests if all NDAliases in the collection (ex: NSArray or NSSet) can be resolved.
+	@discussion Returns YES if and only if each alias can be resolved, returns NO otherwise.
+  */
++ (BOOL)isAliasCollectionResolvable:(NSObject<NSFastEnumeration>*)aCollection;
+
+/*!
+	@method isAliasCollection:equalToAliasCollection:
+	@abstract Tests if two collections (NSArray or NSSet) of NDAliases are the same.
+	@discussion Returns YES if and only if each collection has the same number of items and each item of one collection matches (according to isEqualToAlias:) an item in the other collection.
+  */
++ (BOOL)isAliasCollection:(id)aCollection1 equalToAliasCollection:(id)aCollection2;
+
+/*!
+	@method arrayOfAliasesFromArrayOfData:
+	@abstract Returns an NSArray of NDAliases from the given NSArray of NSData.
+	@discussion The given NSData is expected to be an archived NDAlias.  Never returns nil; but, if errors occur, may return less items (down to 0) than the given array.
+  */
++ (NSArray*)arrayOfAliasesFromArrayOfData:(NSArray*)aDataArray;
+
+/*!
+	@method arrayOfDataFromArrayOfAliases:
+	@abstract Returns an NSArray of NSData from the given NSArray of NDAlias.
+	@discussion The created NSData are archived NDAliases.  Never returns nil; but, if errors occur, may return less items (down to 0) than the given array.
+  */
++ (NSArray*)arrayOfDataFromArrayOfAliases:(NSArray*)anAliasArray;
 
 @end
