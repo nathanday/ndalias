@@ -54,6 +54,7 @@ OSType aliasOSTypeFor( NSURL * aURL );
 
 	self = [self initWithData:[theResourcFork dataForType:formAlias Id:aliasRecordId]];
 
+	[theResourcFork closeFile];
 	[theResourcFork release];
 
 	return self;
@@ -66,6 +67,7 @@ OSType aliasOSTypeFor( NSURL * aURL );
 
 	self = [self initWithData:[theResourcFork dataForType:formAlias Id:aliasRecordId]];
 
+	[theResourcFork closeFile];
 	[theResourcFork release];
 
 	return self;
@@ -135,6 +137,9 @@ OSType aliasOSTypeFor( NSURL * aURL );
 		}
 	}
 
+#ifdef __OBJC_GC__
+	[theResourcFork closeFile];
+#endif
 	[theResourcFork release];
 	return theSuccess;
 }
