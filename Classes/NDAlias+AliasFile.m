@@ -137,9 +137,7 @@ OSType aliasOSTypeFor( NSURL * aURL );
 		}
 	}
 
-#ifdef __OBJC_GC__
 	[theResourcFork closeFile];
-#endif
 	[theResourcFork release];
 	return theSuccess;
 }
