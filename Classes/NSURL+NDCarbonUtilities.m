@@ -78,7 +78,7 @@
 /*
 	- URLByDeletingLastPathComponent
  */
-#if (MAC_OS_X_VERSION_MIN_REQUIRED >= 1060)
+#if (MAC_OS_X_VERSION_MIN_REQUIRED < 1060)
 - (NSURL *)URLByDeletingLastPathComponent
 {
 	CFURLRef theURL = CFURLCreateCopyDeletingLastPathComponent( kCFAllocatorDefault, (CFURLRef)self);
