@@ -191,7 +191,14 @@
 			isa = PBXProject;
 			buildConfigurationList = D815D1A8089105AA00F44775 /* Build configuration list for PBXProject "NDAlias" */;
 			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 08FB7794FE84155DC02AAC07 /* NDAliasesURLProject */;
 			projectDirPath = "";
 			projectRoot = "";

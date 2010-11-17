@@ -105,9 +105,9 @@ void testCreatingAliasFileFor( NSString * aFilePath )
 
 void testReadingAliasFile( NSString * aAliasPath )
 {
-	NDAlias		* theNewAlias;
+	NDAlias		* theNewAlias = [NDAlias aliasWithContentsOfFile:aAliasPath];
 	
-	if( theNewAlias = [NDAlias aliasWithContentsOfFile:aAliasPath] )
+	if( theNewAlias )
 	{
 		printf("Here is the original for %s.\n", [aAliasPath fileSystemRepresentation]);
 		[[NSWorkspace sharedWorkspace] selectFile:[theNewAlias path] inFileViewerRootedAtPath:@""];

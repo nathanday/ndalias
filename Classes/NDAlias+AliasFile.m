@@ -2,7 +2,7 @@
 	NDAlias+AliasFile.m category
 
 	Created by Nathan Day on 05.12.01 under a MIT-style license. 
-	Copyright (c) 2008 Nathan Day
+	Copyright (c) 2008-2010 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -49,26 +49,26 @@ OSType aliasOSTypeFor( NSURL * aURL );
 
 - (id)initWithContentsOfFile:(NSString *)aPath
 {
-	NDResourceFork		* theResourcFork;
-	theResourcFork = [[NDResourceFork alloc] initForReadingAtPath:aPath];
+	NDResourceFork		* theResourceFork;
+	theResourceFork = [[NDResourceFork alloc] initForReadingAtPath:aPath];
 
-	self = [self initWithData:[theResourcFork dataForType:formAlias Id:aliasRecordId]];
+	self = [self initWithData:[theResourceFork dataForType:formAlias Id:aliasRecordId]];
 
-	[theResourcFork closeFile];
-	[theResourcFork release];
+	[theResourceFork closeFile];
+	[theResourceFork release];
 
 	return self;
 }
 
 - (id)initWithContentsOfURL:(NSURL *)aURL
 {
-	NDResourceFork		* theResourcFork;
-	theResourcFork = [[NDResourceFork alloc] initForReadingAtURL:aURL];
+	NDResourceFork		* theResourceFork;
+	theResourceFork = [[NDResourceFork alloc] initForReadingAtURL:aURL];
 
-	self = [self initWithData:[theResourcFork dataForType:formAlias Id:aliasRecordId]];
+	self = [self initWithData:[theResourceFork dataForType:formAlias Id:aliasRecordId]];
 
-	[theResourcFork closeFile];
-	[theResourcFork release];
+	[theResourceFork closeFile];
+	[theResourceFork release];
 
 	return self;
 }
@@ -91,10 +91,10 @@ OSType aliasOSTypeFor( NSURL * aURL );
 - (BOOL)writeToURL:(NSURL *)aURL includeCustomIcon:(BOOL)aCustomIcon
 {
 	BOOL				theSuccess;
-	NDResourceFork		* theResourcFork;
+	NDResourceFork		* theResourceFork;
 	
-	theResourcFork = [[NDResourceFork alloc] initForWritingAtURL:aURL];
-	theSuccess = [theResourcFork addData:[self data] type:formAlias Id:aliasRecordId name:@"created by NDAlias"];
+	theResourceFork = [[NDResourceFork alloc] initForWritingAtURL:aURL];
+	theSuccess = [theResourceFork addData:[self data] type:formAlias Id:aliasRecordId name:@"created by NDAlias"];
 
 	if( theSuccess )
 	{
@@ -128,7 +128,7 @@ OSType aliasOSTypeFor( NSURL * aURL );
 			
 			theIconFamilyData = [NDResourceFork iconFamilyDataForURL:theTargetURL];
 			
-			if( [theResourcFork addData:theIconFamilyData type:kIconFamilyType Id:kCustomIconResource name:@""] )
+			if( [theResourceFork addData:theIconFamilyData type:kIconFamilyType Id:kCustomIconResource name:@""] )
 				[aURL setFinderInfoFlags:kIsAlias | kHasCustomIcon mask:kIsAlias | kHasCustomIcon type:theAliasType creator:theAliasCreator];
 		}
 		else
@@ -137,8 +137,8 @@ OSType aliasOSTypeFor( NSURL * aURL );
 		}
 	}
 
-	[theResourcFork closeFile];
-	[theResourcFork release];
+	[theResourceFork closeFile];
+	[theResourceFork release];
 	return theSuccess;
 }
 

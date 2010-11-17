@@ -2,7 +2,7 @@
 	NSURL+NDCarbonUtilities.m
 
 	Created by Nathan Day on 05.12.01 under a MIT-style license. 
-	Copyright (c) 2008-2009 Nathan Day
+	Copyright (c) 2008-2010 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -143,17 +143,17 @@
 /*
 	- finderLocation
  */
-- (NSPoint)finderLocation
+- (Point)finderLocation
 {
 	FSRef			theFSRef;
 	FSCatalogInfo	theInfo;
-	NSPoint			thePoint = NSMakePoint( 0, 0 );
+	Point			thePoint = { 0, 0 };
 
 	if( [self getFSRef:&theFSRef] && FSGetCatalogInfo( &theFSRef, kFSCatInfoFinderInfo, &theInfo, NULL, NULL, NULL) == noErr )
 	{
 		FileInfo*	theFileInfo = (FileInfo*)(&theInfo.finderInfo);
-		thePoint = NSMakePoint(theFileInfo->location.h, theFileInfo->location.v );
- 	}
+		thePoint = theFileInfo->location;
+	}
 
 	return thePoint;
 }
@@ -183,7 +183,7 @@
 /*
 	- setFinderLocation:
  */
-- (BOOL)setFinderLocation:(NSPoint)aLocation
+- (BOOL)setFinderLocation:(Point)aLocation
 {
 	BOOL			theResult = NO;
 	FSRef			theFSRef;
@@ -192,8 +192,8 @@
 	if( [self getFSRef:&theFSRef] && FSGetCatalogInfo( &theFSRef, kFSCatInfoFinderInfo, &theInfo, NULL, NULL, NULL) == noErr )
 	{
 		FileInfo*	theFileInfo = (FileInfo*)(&theInfo.finderInfo);
-		theFileInfo->location.h = aLocation.x;
-		theFileInfo->location.v = aLocation.y;
+		theFileInfo->location.h = aLocation.h;
+		theFileInfo->location.v = aLocation.v;
 
 		theResult = FSSetCatalogInfo( &theFSRef, kFSCatInfoFinderInfo, &theInfo) == noErr;
 	}

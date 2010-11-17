@@ -2,7 +2,7 @@
 	NSURL+NDCarbonUtilities.h
 
 	Created by Nathan Day on 05.12.01 under a MIT-style license. 
-	Copyright (c) 2008-2009 Nathan Day
+	Copyright (c) 2008-2010 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -135,11 +135,11 @@
 
 /*!
 	@method finderLocation
-	@abstract Return a finder items location.
-	@discussion Returns a finder items location within its parent window.
-	@result A <tt>NSPoint</tt>
+	@abstract Return a finder item's location.
+	@discussion Returns a finder item's location within its parent window and in QuickDraw coordinates.
+	@result A <tt>Point</tt>
  */
-- (NSPoint)finderLocation;
+- (Point)finderLocation;
 
 /*!
 	@method setFinderInfoFlags:mask:type:creator:
@@ -174,12 +174,12 @@
 
 /*!
 	@method setFinderLocation:
-	@abstract Sets the location a finder item.
-	@discussion Set the location of a finder item within in container.
+	@abstract Sets the location of a finder item.
+	@discussion Set the location of a finder item within in container and in QuickDraw coordinates.
 	@param location The location
 	@result Returns <tt>YES</tt> if successful.
  */
-- (BOOL)setFinderLocation:(NSPoint)location;
+- (BOOL)setFinderLocation:(Point)location;
 
 
 @end

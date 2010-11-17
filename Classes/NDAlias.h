@@ -2,7 +2,7 @@
 	NDAlias.h
 
 	Created by Nathan Day on 05.12.01 under a MIT-style license.
-	Copyright (c) 2008-2009 Nathan Day
+	Copyright (c) 2008-2010 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -170,7 +170,7 @@
 /*!
 	@method setAllowUserInteraction:
 	@abstract Option controls how the alias is resolved
-	@discussion Sets wether the OS may present a user interface when resolving the receiver. By default, as of version 1.3, user interaction is not allowed. In previous versions, the default was to allow user interaction.
+	@discussion Sets whether the OS may present a user interface when resolving the receiver. By default, as of version 1.3, user interaction is not allowed. In previous versions, the default was to allow user interaction.
 	@param flag <tt>YES</tt> to stop any user interaction.
  */
 - (void)setAllowUserInteraction:(BOOL)flag;
@@ -197,7 +197,7 @@
 /*!
 	@method allowUserInteraction
 	@abstract Option controls how the alias is resolved
-	@discussion Gets wether the OS may present a user interface when resolving the receiver. By default, as of version 1.3, user interaction is not allowed. In previous versions, the default was to allow user interaction.
+	@discussion Gets whether the OS may present a user interface when resolving the receiver. By default, as of version 1.3, user interaction is not allowed. In previous versions, the default was to allow user interaction.
 	@result Returns <tt>YES</tt> if user interaction is allowed.
  */
 - (BOOL)allowUserInteraction;
