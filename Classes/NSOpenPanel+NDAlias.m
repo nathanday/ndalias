@@ -2,7 +2,7 @@
 	NSOpenPanel+NDAlias.m
 
 	Created by Sean McBride on 16.08.07 under a MIT-style license. 
-	Copyright (c) 2008 Nathan Day
+	Copyright (c) 2008-2011 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -38,14 +38,22 @@
 - (NSArray *)aliases
 {
 	NSMutableArray *	aliases = nil;
-	NSArray *			filenames = [self filenames];
+#if (MAC_OS_X_VERSION_MIN_REQUIRED >= 1060)
+	NSArray *			files = [self URLs];
+#else
+	NSArray *			files = [self filenames];
+#endif
 	NSUInteger			i;
-	if (filenames != nil)
+	if (files != nil)
 	{
 		aliases = [NSMutableArray array];
-		for( i = 0; i < [filenames count]; i++)
+		for( i = 0; i < [files count]; i++)
 		{
-			NDAlias *		anAlias = [NDAlias aliasWithPath:[filenames objectAtIndex:i]];
+#if (MAC_OS_X_VERSION_MIN_REQUIRED >= 1060)
+			NDAlias *		anAlias = [NDAlias aliasWithURL:[files objectAtIndex:i]];
+#else
+			NDAlias *		anAlias = [NDAlias aliasWithPath:[files objectAtIndex:i]];
+#endif
 			[aliases addObject:anAlias];
 		}
 	}
