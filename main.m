@@ -31,9 +31,8 @@
 // ********** and it must be within your home folder somewhere.                                  **********
 static NSString * const		kDirOfTestProject = @"~/Developer/Projects/NDAlias/";
 
-static NSString * const		filePath = @"Test File.txt";
-static NSString * const		folderPath = @"Test Folder";
-static NSString * const		aliasFilePath = @"AliasFile";
+static NSString * const		kTestFileName = @"Test File.txt";
+static NSString * const		kAliasFileName = @"AliasFile";
 
 static void testUsingFileFolder( NSString * aFilePath );
 static void testCreatingAliasFileFor( NSString * aFilePath );
@@ -58,15 +57,15 @@ int main (int argc, const char * argv[])
 	case '1':
 	default:
 		getchar();
-		testUsingFileFolder( [[kDirOfTestProject stringByAppendingPathComponent:filePath] stringByExpandingTildeInPath] );
+		testUsingFileFolder( [[kDirOfTestProject stringByAppendingPathComponent:kTestFileName] stringByExpandingTildeInPath] );
 		break;
 	case '2':
 //		getchar();
-		testCreatingAliasFileFor( [[kDirOfTestProject stringByAppendingPathComponent:filePath] stringByExpandingTildeInPath] );
+		testCreatingAliasFileFor( [[kDirOfTestProject stringByAppendingPathComponent:kTestFileName] stringByExpandingTildeInPath] );
 		break;
 	case '3':
 //		getchar();
-		testReadingAliasFile( [[kDirOfTestProject stringByAppendingPathComponent:aliasFilePath] stringByExpandingTildeInPath] );
+		testReadingAliasFile( [[kDirOfTestProject stringByAppendingPathComponent:kAliasFileName] stringByExpandingTildeInPath] );
 		break;
 	}
 	
@@ -119,10 +118,12 @@ static void testUsingFileFolder( NSString * aFilePath )
 
 static void testCreatingAliasFileFor( NSString * aFilePath )
 {
-	if( [[NDAlias aliasWithPath:aFilePath fromPath:NSHomeDirectory()] writeToFile:aliasFilePath] )
+	NDAlias		* theAlias = [NDAlias aliasWithPath:aFilePath fromPath:NSHomeDirectory()];
+	
+	if( [theAlias writeToFile:kAliasFileName] )
 	{
 		printf("I have created an alias file for\n\t%s.\n", [aFilePath fileSystemRepresentation]);
-		[[NSWorkspace sharedWorkspace] selectFile:aliasFilePath inFileViewerRootedAtPath:@""];
+		[[NSWorkspace sharedWorkspace] selectFile:[theAlias path] inFileViewerRootedAtPath:@""];
 	}
 	else
 	{
