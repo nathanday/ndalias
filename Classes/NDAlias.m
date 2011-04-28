@@ -2,7 +2,7 @@
 	NDAlias.m
 
 	Created by Nathan Day on 07.02.02 under a MIT-style license.
-	Copyright (c) 2008-2009 Nathan Day
+	Copyright (c) 2008-2011 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -94,11 +94,17 @@
  */
 - (id)initWithPath:(NSString *)aPath fromPath:(NSString *)aFromPath
 {
-	if( aPath && [[NSFileManager defaultManager] fileExistsAtPath:aPath] )
+#if (MAC_OS_X_VERSION_MIN_REQUIRED >= 1050)
+	NSFileManager* fileManager = [[[NSFileManager alloc] init] autorelease];
+#else
+	NSFileManager* fileManager = [NSFileManager defaultManager];
+#endif
+	
+	if( aPath && [fileManager fileExistsAtPath:aPath] )
 	{
 		if( aFromPath )
 		{
-			if( [[NSFileManager defaultManager] fileExistsAtPath:aFromPath] )
+			if( [fileManager fileExistsAtPath:aFromPath] )
 			{
 				self = [self initWithURL:[NSURL fileURLWithPath:aPath] fromURL:[NSURL fileURLWithPath:aFromPath]];
 			}
@@ -389,9 +395,16 @@
 - (BOOL)setPath:(NSString *)aPath fromPath:(NSString *)aFromPath
 {
 	BOOL		theSuccess = NO;
-	if( [[NSFileManager defaultManager] fileExistsAtPath:aPath] )
+	
+#if (MAC_OS_X_VERSION_MIN_REQUIRED >= 1050)
+	NSFileManager* fileManager = [[[NSFileManager alloc] init] autorelease];
+#else
+	NSFileManager* fileManager = [NSFileManager defaultManager];
+#endif
+	
+	if( [fileManager fileExistsAtPath:aPath] )
 	{
-		if( [[NSFileManager defaultManager] fileExistsAtPath:aFromPath] )
+		if( [fileManager fileExistsAtPath:aFromPath] )
 			theSuccess = [self setURL:[NSURL fileURLWithPath:aPath] fromURL:[NSURL fileURLWithPath:aFromPath]];
 		else
 			theSuccess = [self setURL:[NSURL fileURLWithPath:aPath] fromURL:nil];
@@ -441,7 +454,13 @@
  */
 - (NSString *)displayName
 {
-	return [[NSFileManager defaultManager] displayNameAtPath:[self path]];
+#if (MAC_OS_X_VERSION_MIN_REQUIRED >= 1050)
+	NSFileManager* fileManager = [[[NSFileManager alloc] init] autorelease];
+#else
+	NSFileManager* fileManager = [NSFileManager defaultManager];
+#endif
+	
+	return [fileManager displayNameAtPath:[self path]];
 }
 
 /*
