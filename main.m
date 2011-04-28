@@ -1,26 +1,53 @@
+/*
+	main.m
+
+	Created by Nathan Day on 05.12.01 under a MIT-style license.
+	Copyright (c) 2008-2011 Nathan Day
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
+
+	The above copyright notice and this permission notice shall be included in
+	all copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+	THE SOFTWARE.
+ */
+
 #import <Cocoa/Cocoa.h>
 #import "NDAlias.h"
 #import "NDAlias+AliasFile.h"
 
-NSString		* kDirOfTestProject = @"~/Developer/Projects/NDAlias/";	// you need to change this to the location of NDAlias
+// ********** you need to change this to the location of the folder containing NDAlias.xcodeproj **********
+// ********** and it must be within your home folder somewhere.                                  **********
+static NSString * const		kDirOfTestProject = @"~/Developer/Projects/NDAlias/";
 
-NSString		* filePath = @"Test File.txt",
-				* folderPath = @"Test Folder",
-				* aliasFilePath = @"AliasFile";
+static NSString * const		filePath = @"Test File.txt";
+static NSString * const		folderPath = @"Test Folder";
+static NSString * const		aliasFilePath = @"AliasFile";
 
-void testUsingFileFolder( NSString * aFilePath );
-void testCreatingAliasFileFor( NSString * aFilePath );
-void testReadingAliasFile( NSString * aAliasPath );
+static void testUsingFileFolder( NSString * aFilePath );
+static void testCreatingAliasFileFor( NSString * aFilePath );
+static void testReadingAliasFile( NSString * aAliasPath );
 
 int main (int argc, const char * argv[])
 {
 	NSAutoreleasePool		* pool = [[NSAutoreleasePool alloc] init];
 	char					theChoice;
-	char					theString[1024];
+	char					theString[PATH_MAX];
 	
 	printf( "Path is [%s]\n", getcwd( theString, sizeof(theString) ) );
 
-	printf("Do you want to;\n1)\ttest alias records,\n2)\ttest writting an alias file or,\n3)\ttest reading an alias file?\n<1,  2 or 3>");
+	printf("Do you want to;\n1)\ttest alias records,\n2)\ttest writing an alias file or,\n3)\ttest reading an alias file?\n<1, 2 or 3>");
 
 	fflush(stdout);
 
@@ -31,26 +58,26 @@ int main (int argc, const char * argv[])
 	case '1':
 	default:
 		getchar();
-		testUsingFileFolder( [[kDirOfTestProject stringByAppendingString:filePath] stringByExpandingTildeInPath] );
+		testUsingFileFolder( [[kDirOfTestProject stringByAppendingPathComponent:filePath] stringByExpandingTildeInPath] );
 		break;
 	case '2':
 //		getchar();
-		testCreatingAliasFileFor( [[kDirOfTestProject stringByAppendingString:filePath] stringByExpandingTildeInPath] );
+		testCreatingAliasFileFor( [[kDirOfTestProject stringByAppendingPathComponent:filePath] stringByExpandingTildeInPath] );
 		break;
 	case '3':
 //		getchar();
-		testReadingAliasFile( [[kDirOfTestProject stringByAppendingString:aliasFilePath] stringByExpandingTildeInPath] );
+		testReadingAliasFile( [[kDirOfTestProject stringByAppendingPathComponent:aliasFilePath] stringByExpandingTildeInPath] );
 		break;
 	}
 	
-	[pool release];
+	[pool drain];
 	return 0;
 }
 
 /*
  * testUsingFileFolder()
  */
-void testUsingFileFolder( NSString * aFilePath )
+static void testUsingFileFolder( NSString * aFilePath )
 {
 	NDAlias		* theOriginalAlias = nil,
 				* theNewAlias = nil;
@@ -86,11 +113,11 @@ void testUsingFileFolder( NSString * aFilePath )
 	}
 	else
 	{
-		printf("OK where did you hide it.\n");
+		printf("OK, where did you hide it?\n");
 	}
 }
 
-void testCreatingAliasFileFor( NSString * aFilePath )
+static void testCreatingAliasFileFor( NSString * aFilePath )
 {
 	if( [[NDAlias aliasWithPath:aFilePath fromPath:NSHomeDirectory()] writeToFile:aliasFilePath] )
 	{
@@ -103,7 +130,7 @@ void testCreatingAliasFileFor( NSString * aFilePath )
 	}
 }
 
-void testReadingAliasFile( NSString * aAliasPath )
+static void testReadingAliasFile( NSString * aAliasPath )
 {
 	NDAlias		* theNewAlias = [NDAlias aliasWithContentsOfFile:aAliasPath];
 	
