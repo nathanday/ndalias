@@ -2,7 +2,7 @@
 	NDResourceFork.h category
 
 	Created by Nathan Day on 05.12.01 under a MIT-style license. 
-	Copyright (c) 2008-2009 Nathan Day
+	Copyright (c) 2008-2011 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -157,7 +157,7 @@ BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aType, NSSt
 
 	if( noErr != theError && theError != dupFNErr )
 	{
-		[self release];
+		[super dealloc];
 		self = nil;
 	}
 
@@ -173,7 +173,7 @@ BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aType, NSSt
 		return [self initForPermission:fsRdPerm atURL:[NSURL fileURLWithPath:aPath]];
 	else
 	{
-		[self release];
+		[super dealloc];
 		return nil;
 	}
 }
