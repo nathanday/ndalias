@@ -2,7 +2,7 @@
 	NSURL+NDCarbonUtilities.m
 
 	Created by Nathan Day on 05.12.01 under a MIT-style license. 
-	Copyright (c) 2008-2010 Nathan Day
+	Copyright (c) 2008-2011 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -129,10 +129,11 @@
 
 	if( [self getFSRef:&theFSRef] && FSGetCatalogInfo( &theFSRef, kFSCatInfoFinderInfo, &theInfo, NULL, NULL, NULL) == noErr )
 	{
-		FileInfo*	theFileInfo = (FileInfo*)(&theInfo.finderInfo);
-		if( aFlags ) *aFlags = theFileInfo->finderFlags;
-		if( aType ) *aType = theFileInfo->fileType;
-		if( aCreator ) *aCreator = theFileInfo->fileCreator;
+		FileInfo	theFileInfo;
+		memcpy(&theFileInfo, &theInfo.finderInfo, sizeof(theFileInfo));
+		if( aFlags ) *aFlags = theFileInfo.finderFlags;
+		if( aType ) *aType = theFileInfo.fileType;
+		if( aCreator ) *aCreator = theFileInfo.fileCreator;
 
 		return YES;
 	}
@@ -151,8 +152,9 @@
 
 	if( [self getFSRef:&theFSRef] && FSGetCatalogInfo( &theFSRef, kFSCatInfoFinderInfo, &theInfo, NULL, NULL, NULL) == noErr )
 	{
-		FileInfo*	theFileInfo = (FileInfo*)(&theInfo.finderInfo);
-		thePoint = theFileInfo->location;
+		FileInfo	theFileInfo;
+		memcpy(&theFileInfo, &theInfo.finderInfo, sizeof(theFileInfo));
+		thePoint = theFileInfo.location;
 	}
 
 	return thePoint;
@@ -169,11 +171,16 @@
 
 	if( [self getFSRef:&theFSRef] && FSGetCatalogInfo( &theFSRef, kFSCatInfoFinderInfo, &theInfo, NULL, NULL, NULL) == noErr )
 	{
-		FileInfo*	theFileInfo = (FileInfo*)(&theInfo.finderInfo);
-		theFileInfo->finderFlags = ((aFlags & aMask) | (theFileInfo->finderFlags & ~aMask)) & ~kHasBeenInited;
-		theFileInfo->fileType = aType;
-		theFileInfo->fileCreator = aCreator;
+		// Copy to a temporary, mutate, and copy back. Coercing with a cast would likely work, but violates alignment rules.
+		FileInfo	theFileInfo;
+		memcpy(&theFileInfo, &theInfo.finderInfo, sizeof(theFileInfo));
+		
+		theFileInfo.finderFlags = ((aFlags & aMask) | (theFileInfo.finderFlags & ~aMask)) & ~kHasBeenInited;
+		theFileInfo.fileType = aType;
+		theFileInfo.fileCreator = aCreator;
 
+		memcpy(&theInfo.finderInfo, &theFileInfo, sizeof(theFileInfo));
+		
 		theResult = FSSetCatalogInfo( &theFSRef, kFSCatInfoFinderInfo, &theInfo) == noErr;
 	}
 
@@ -191,10 +198,15 @@
 
 	if( [self getFSRef:&theFSRef] && FSGetCatalogInfo( &theFSRef, kFSCatInfoFinderInfo, &theInfo, NULL, NULL, NULL) == noErr )
 	{
-		FileInfo*	theFileInfo = (FileInfo*)(&theInfo.finderInfo);
-		theFileInfo->location.h = aLocation.h;
-		theFileInfo->location.v = aLocation.v;
+		// Copy to a temporary, mutate, and copy back. Coercing with a cast would likely work, but violates alignment rules.
+		FileInfo	theFileInfo;
+		memcpy(&theFileInfo, &theInfo.finderInfo, sizeof(theFileInfo));
+		
+		theFileInfo.location.h = aLocation.h;
+		theFileInfo.location.v = aLocation.v;
 
+		memcpy(&theInfo.finderInfo, &theFileInfo, sizeof(theFileInfo));
+		
 		theResult = FSSetCatalogInfo( &theFSRef, kFSCatInfoFinderInfo, &theInfo) == noErr;
 	}
 
@@ -214,6 +226,3 @@
 }
 
 @end
-
-
-
