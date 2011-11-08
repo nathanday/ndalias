@@ -142,7 +142,8 @@
 	// Do not use this code in a Garbage Collected application!!!
 	// The NSMutableData may be collected before this method even returns (since this method only returns an inner pointer).
 #ifdef __OBJC_GC__
-	NSAssert( NO, @"WARNING: do not use pascalString in GC apps");
+	// WARNING: do not use pascalString in GC apps because the returned buffer can be collected immediately.
+	assert(0);
 #endif
 	const unsigned int	kPascalStringLen = 256;
 	NSMutableData		* theData = [NSMutableData dataWithCapacity:kPascalStringLen];
