@@ -1,8 +1,8 @@
 /*
 	NDAlias+AliasFile.m category
 
-	Created by Nathan Day on 05.12.01 under a MIT-style license. 
-	Copyright (c) 2008-2010 Nathan Day
+	Created by Nathan Day on 05.12.01 under a MIT-style license.
+	Copyright (c) 2008-2011 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -35,7 +35,41 @@ const short		aliasRecordId = 0;
 
 @implementation NDAlias (AliasFile)
 
-OSType aliasOSTypeFor( NSURL * aURL );
+static OSType aliasOSTypeFor( NSURL * aURL )
+{
+	LSItemInfoRecord	theItemInfo;
+	OSType				theType = kContainerFolderAliasType;
+		
+	/*
+	* alias files to documents take on the targets type and creator
+	* alias files to others take on special types and finder creator
+	*/
+	if( LSCopyItemInfoForURL( (CFURLRef)aURL, kLSRequestBasicFlagsOnly, &theItemInfo) == noErr)
+	{
+		if( (theItemInfo.flags & kLSItemInfoIsApplication) && (theItemInfo.flags & kLSItemInfoIsPackage) )	// package app
+		{
+			theType = kAppPackageAliasType;
+		}
+		else if( theItemInfo.flags & kLSItemInfoIsApplication )	// straight app
+		{
+			theType = kApplicationAliasType;
+		}
+		else if( theItemInfo.flags & kLSItemInfoIsPlainFile )	// document
+		{
+			theType = 0;		// straight documents don't have a special alias type
+		}
+		else if( theItemInfo.flags & kLSItemInfoIsPackage )	// package
+		{
+			theType = kPackageAliasType;
+		}
+		else if( theItemInfo.flags & kLSItemInfoIsVolume )	// disk
+		{
+			theType = kContainerHardDiskAliasType;
+		}
+	}
+
+	return theType;
+}
 
 + (id)aliasWithContentsOfFile:(NSString *)aPath
 {
@@ -140,42 +174,6 @@ OSType aliasOSTypeFor( NSURL * aURL );
 	[theResourceFork closeFile];
 	[theResourceFork release];
 	return theSuccess;
-}
-
-OSType aliasOSTypeFor( NSURL * aURL )
-{
-	LSItemInfoRecord	theItemInfo;
-	OSType				theType = kContainerFolderAliasType;
-		
-	/*
-	* alias files to documents take on the targets type and creator
-	* alias files to others take on special types and finder creator
-	*/
-	if( LSCopyItemInfoForURL( (CFURLRef)aURL, kLSRequestBasicFlagsOnly, &theItemInfo) == noErr)
-	{
-		if( (theItemInfo.flags & kLSItemInfoIsApplication) && (theItemInfo.flags & kLSItemInfoIsPackage) )	// package app
-		{
-			theType = kAppPackageAliasType;
-		}
-		else if( theItemInfo.flags & kLSItemInfoIsApplication )	// straight app
-		{
-			theType = kApplicationAliasType;
-		}
-		else if( theItemInfo.flags & kLSItemInfoIsPlainFile )	// document
-		{
-			theType = 0;		// straight documents don't have a special alias type
-		}
-		else if( theItemInfo.flags & kLSItemInfoIsPackage )	// package
-		{
-			theType = kPackageAliasType;
-		}
-		else if( theItemInfo.flags & kLSItemInfoIsVolume )	// disk
-		{
-			theType = kContainerHardDiskAliasType;
-		}
-	}
-
-	return theType;
 }
 
 @end
