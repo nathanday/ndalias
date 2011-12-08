@@ -138,7 +138,7 @@ static BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aTyp
 /*
 	- initForPermission:AtURL:
  */
-- (id)initForPermission:(char)aPermission atURL:(NSURL *)aURL
+- (id)initForPermission:(SInt8)aPermission atURL:(NSURL *)aURL
 {
 	return [self initForPermission:aPermission atPath:[aURL path]];
 }
@@ -146,7 +146,7 @@ static BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aTyp
 /*
 	- initForPermission:AtPath:
  */
-- (id)initForPermission:(char)aPermission atPath:(NSString *)aPath
+- (id)initForPermission:(SInt8)aPermission atPath:(NSString *)aPath
 {
 	OSErr			theError = !noErr;
 	FSRef			theFsRef,
@@ -174,7 +174,7 @@ static BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aTyp
 
 					FSCreateResFile( &theParentFsRef, theNameLength, theUnicodeName, 0, NULL, NULL, NULL );		// doesn't replace if already exists
 
-					theError =  ResError( );
+					theError = ResError( );
 
 					if( theError == noErr || theError == dupFNErr )
 					{

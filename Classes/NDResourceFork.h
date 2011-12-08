@@ -145,7 +145,7 @@
 	@param URL A file url specifying the name and location of the file whose resource fork is to be opened.
 	@result An initialized <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or initalization failed.
  */
-- (id)initForPermission:(char)permission atURL:(NSURL *)URL;
+- (id)initForPermission:(SInt8)permission atURL:(NSURL *)URL;
 /*!
 	@method initForPermission:atPath:
 	@abstract Initalises a <tt>NDResourceFork</tt>.
@@ -172,7 +172,7 @@
 	@param path A path specifying the name and location of the file whose resource fork is to be opened.
 	@result An initialized <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or initalization failed.
  */
-- (id)initForPermission:(char)permission atPath:(NSString *)path;
+- (id)initForPermission:(SInt8)permission atPath:(NSString *)path;
 
 /*!
 	@method addData:type:Id:name:
