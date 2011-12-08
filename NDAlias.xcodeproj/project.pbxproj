@@ -243,19 +243,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				HEADER_SEARCH_PATHS = "";
 				INSTALL_PATH = "$(HOME)/bin";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = NDAliasesURLProject;
 				REZ_EXECUTABLE = YES;
-				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -269,16 +263,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
-				HEADER_SEARCH_PATHS = "";
 				INSTALL_PATH = "$(HOME)/bin";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = NDAliasesURLProject;
 				REZ_EXECUTABLE = YES;
-				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -291,16 +279,10 @@
 		1451D43D1052CFD400AEDF28 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "";
-				HEADER_SEARCH_PATHS = "";
 				INSTALL_PATH = "$(HOME)/bin";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = NDAliasesURLProject;
 				REZ_EXECUTABLE = YES;
-				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
