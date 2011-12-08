@@ -1,8 +1,8 @@
 /*
 	NSSavePanel+NDAlias.h
 
-	Created by Sean McBride on 18.08.07 under a MIT-style license. 
-	Copyright (c) 2008-2009 Nathan Day
+	Created by Sean McBride on 18.08.07 under a MIT-style license.
+	Copyright (c) 2008-2011 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -31,7 +31,7 @@
 	@author Sean McBride
  */
 
-#import <Cocoa/Cocoa.h>
+#import <AppKit/AppKit.h>
 #import "NDSDKCompatibility.h"
 
 @class NDAlias;

@@ -1,8 +1,8 @@
 /*
 	NDResourceFork+OtherSorces.m category
 
-	Created by Nathan Day on 05.12.02 under a MIT-style license. 
-	Copyright (c) 2008 Nathan Day
+	Created by Nathan Day on 05.12.02 under a MIT-style license.
+	Copyright (c) 2008-2011 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -29,7 +29,7 @@
 	@discussion Defines method for <tt>NDResourceFork</tt> for retrieving resource type data from non resource fork sources, at lest not directly. The category <tt>OtherSorces</tt> can be omitted from your project if the additonal functionalty is not desired.
  */
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 #import "NDResourceFork.h"
 #import "NDSDKCompatibility.h"
 

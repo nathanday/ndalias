@@ -28,10 +28,8 @@
 #import "NSURL+NDCarbonUtilities.h"
 #import "NDResourceFork+OtherSorces.h"
 
-//const ResType	aliasResourceType = 'alis';
 const OSType	finderCreatorCode = 0x4D414353; // 'MACS'
 const short		aliasRecordId = 0;
-//					customIconID = -16496;
 
 @implementation NDAlias (AliasFile)
 
@@ -145,7 +143,7 @@ static OSType aliasOSTypeFor( NSURL * aURL )
 
 		theAliasType = aliasOSTypeFor( theTargetURL );	// get the alias type
 
-		if( theAliasType == 0 )	// 0 alias type means doc which just takes the targets type
+		if( theAliasType == 0 )	// 0 alias type means doc which just takes the target's type
 		{
 			theAliasCreator = theTargetCreator;
 			theAliasType = theTargetType;
@@ -155,7 +153,7 @@ static OSType aliasOSTypeFor( NSURL * aURL )
 			theAliasCreator = finderCreatorCode;
 		}
 
-		// item with custom icon as well as apps need to have a custoime icon for the alias
+		// item with custom icon as well as apps need to have a custom icon for the alias
 		if( aCustomIcon && ((theAliasType == 0 ) || (theFlags & kHasCustomIcon) || (theAliasType == kAppPackageAliasType) || (theAliasType == kApplicationAliasType)) )
 		{
 			NSData		* theIconFamilyData;
@@ -173,6 +171,7 @@ static OSType aliasOSTypeFor( NSURL * aURL )
 
 	[theResourceFork closeFile];
 	[theResourceFork release];
+	
 	return theSuccess;
 }
 

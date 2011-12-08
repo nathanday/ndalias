@@ -23,7 +23,7 @@
 	THE SOFTWARE.
  */
 
-#import <Cocoa/Cocoa.h>
+#import <AppKit/AppKit.h>
 #import "NDAlias.h"
 #import "NDAlias+AliasFile.h"
 
