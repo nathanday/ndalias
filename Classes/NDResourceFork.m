@@ -1,7 +1,7 @@
 /*
 	NDResourceFork.h category
 
-	Created by Nathan Day on 05.12.01 under a MIT-style license. 
+	Created by Nathan Day on 05.12.01 under a MIT-style license.
 	Copyright (c) 2008-2011 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,8 +26,49 @@
 #import "NDResourceFork.h"
 #import "NSString+NDCarbonUtilities.h"
 
-NSData * dataFromResourceHandle( Handle aResourceHandle );
-BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aType, NSString * aName, ResID anId, BOOL (*aFunction)(Handle,ResType,NSString*,ResID,void*), void * aContext );
+/*
+ * dataFromResourceHandle()
+ */
+static NSData * dataFromResourceHandle( Handle aResourceHandle )
+{
+	NSData		* theData = nil;
+	if( aResourceHandle )
+	{
+		theData = [NSData dataWithBytes:*aResourceHandle length:GetHandleSize( aResourceHandle )];
+	}
+
+	return theData;
+}
+
+static BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aType, NSString * aName, ResID anId, BOOL (*aFunction)(Handle,ResType,NSString*,ResID,void*), void * aContext )
+{
+	Handle			theResHandle = NULL;
+	ResFileRefNum	thePreviousRefNum;
+	Str255			thePName;
+	BOOL			theResult = NO;
+
+	thePreviousRefNum = CurResFile();	// save current resource
+
+	UseResFile( afileRef );    		// set this resource to be current
+
+	if( noErr ==  ResError( ) && ((aName && [aName getPascalString:(StringPtr)thePName length:sizeof(thePName)]) || !aName ))
+	{
+		if( aName && [aName getPascalString:(StringPtr)thePName length:sizeof(thePName)] )
+			theResHandle = Get1NamedResource( aType, thePName );
+		else if( !aName )
+			theResHandle = Get1Resource( aType, anId );
+
+		if( noErr == ResError() )
+				theResult = aFunction( theResHandle, aType, aName, anId, aContext  );
+
+		if ( theResHandle )
+			ReleaseResource( theResHandle );
+	}
+
+	UseResFile( thePreviousRefNum );     		// reset back to resource previously set
+
+	return theResult;
+}
 
 /*
  * class interface ResourceTypeEnumerator : NSEnumerator
@@ -630,50 +671,6 @@ static BOOL setAttributesFunction( Handle aResHandle, ResType aType, NSString * 
 		[theResourceFork closeFile];
 		[theResourceFork release];
 	}
-	return theResult;
-}
-
-/*
- * dataFromResourceHandle()
- */
-NSData * dataFromResourceHandle( Handle aResourceHandle )
-{
-	NSData		* theData = nil;
-	if( aResourceHandle )
-	{
-		theData = [NSData dataWithBytes:*aResourceHandle length:GetHandleSize( aResourceHandle )];
-	}
-
-	return theData;
-}
-
-BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aType, NSString * aName, ResID anId, BOOL (*aFunction)(Handle,ResType,NSString*,ResID,void*), void * aContext )
-{
-	Handle			theResHandle = NULL;
-	ResFileRefNum	thePreviousRefNum;
-	Str255			thePName;
-	BOOL			theResult = NO;
-
-	thePreviousRefNum = CurResFile();	// save current resource
-
-	UseResFile( afileRef );    		// set this resource to be current
-
-	if( noErr ==  ResError( ) && ((aName && [aName getPascalString:(StringPtr)thePName length:sizeof(thePName)]) || !aName ))
-	{
-		if( aName && [aName getPascalString:(StringPtr)thePName length:sizeof(thePName)] )
-			theResHandle = Get1NamedResource( aType, thePName );
-		else if( !aName )
-			theResHandle = Get1Resource( aType, anId );			
-				
-		if( noErr == ResError() )
-				theResult = aFunction( theResHandle, aType, aName, anId, aContext  );
-
-		if ( theResHandle )
-			ReleaseResource( theResHandle );
-	}
-
-	UseResFile( thePreviousRefNum );     		// reset back to resource previously set
-
 	return theResult;
 }
 
