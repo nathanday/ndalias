@@ -40,6 +40,9 @@ static void testReadingAliasFile( NSString * aAliasPath );
 
 int main (int argc, const char * argv[])
 {
+	(void)argc;
+	(void)argv;
+	
 	NSAutoreleasePool		* pool = [[NSAutoreleasePool alloc] init];
 	char					theChoice;
 	char					theString[PATH_MAX];
