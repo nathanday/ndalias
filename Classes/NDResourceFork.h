@@ -32,7 +32,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import <Carbon/Carbon.h>
+#import <CoreServices/CoreServices.h>
 #import "NDSDKCompatibility.h"
 
 /*!
@@ -49,7 +49,7 @@
 /*!
 @method resourceForkForReadingAtURL:
 	@abstract Creates and initalises a <tt>NDResourceFork</tt>.
-	@discussion Creates and intializes a <tt>NDResourceFork</tt> and opens a resource fork for reading using the file url.. The <tt>NDResourceFork</tt> resource fork is closed when the receiver is deallocated.
+	@discussion Creates and intializes a <tt>NDResourceFork</tt> and opens a resource fork for reading using the file url. You must invoke closeFile when you are finished with the object.
 	@param URL A file url specifying the name and location of the file whose resource fork is to be opened.
 	@result A <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or Create and initalise failed.
  */
@@ -57,7 +57,7 @@
 /*!
 	@method resourceForkForWritingAtURL:
 	@abstract Creates and initalises a <tt>NDResourceFork</tt>.
-	@discussion Creates and intializes a <tt>NDResourceFork</tt> and opens a resource fork for writting, creating it before hand if it does not already exists, using the file url. The <tt>NDResourceFork</tt> resource fork is closed when the receiver is deallocated.
+	@discussion Creates and intializes a <tt>NDResourceFork</tt> and opens a resource fork for writting, creating it before hand if it does not already exists, using the file url. You must invoke closeFile when you are finished with the object.
 	@param URL A file url specifying the name and location of the file whose resource fork is to be opened.
 	@result A <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or Create and initalise failed.
  */
@@ -65,7 +65,7 @@
 /*!
 	@method resourceForkForReadingAtPath:
 	@abstract Creates and initalises a <tt>NDResourceFork</tt>.
-	@discussion Creates and intializes a <tt>NDResourceFork</tt> and opens a resource fork for reading using the path. The receiver's resource fork is closed when the receiver is deallocated.
+	@discussion Creates and intializes a <tt>NDResourceFork</tt> and opens a resource fork for reading using the path. You must invoke closeFile when you are finished with the object.
 	@param path A path specifying the name and location of the file whose resource fork is to be opened.
 	@result A <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or Create and initalise failed.
  */
@@ -73,7 +73,7 @@
 /*!
 	@method resourceForkForWritingAtPath:
 	@abstract Creates and initalises a <tt>NDResourceFork</tt>.
-	@discussion Creates and intializes a <tt>NDResourceFork</tt>r and opens a resource fork for writting, creating it before hand if it does not already exists, using the path. The receiver's resource fork is closed when the receiver is deallocated.
+	@discussion Creates and intializes a <tt>NDResourceFork</tt>r and opens a resource fork for writting, creating it before hand if it does not already exists, using the path. You must invoke closeFile when you are finished with the object.
 	@param path A path specifying the name and location of the file whose resource fork is to be opened.
 	@result A <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or Create and initalise failed.
  */
@@ -83,14 +83,14 @@
 	@method initForReadingAtURL:
 	@abstract Initalises a <tt>NDResourceFork</tt>.
 	@discussion Intializes the receiver and opens a resource fork for reading using the file url.
-	@param URL A file url specifying the name and location of the file whose resource fork is to be opened. The receiver's resource fork is closed when the receiver is deallocated.
+	@param URL A file url specifying the name and location of the file whose resource fork is to be opened. You must invoke closeFile when you are finished with the object.
 	@result An initialized <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or initalization failed.
   */
 - (id)initForReadingAtURL:(NSURL *)URL;
 /*!
 	@method initForReadingAtURL:
 	@abstract Initalises a <tt>NDResourceFork</tt>.
-	@discussion Intializes the receiver and opens a resource fork for writting, creating it before hand if it does not already exists, using the file url. The receiver's resource fork is closed when the receiver is deallocated.
+	@discussion Intializes the receiver and opens a resource fork for writting, creating it before hand if it does not already exists, using the file url. You must invoke closeFile when you are finished with the object.
 	@param URL A file url specifying the name and location of the file whose resource fork is to be opened.
 	@result An initialized <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or initalization failed.
  */
@@ -98,7 +98,7 @@
 /*!
 	@method initForReadingAtPath:
 	@abstract Initalises a <tt>NDResourceFork</tt>.
-	@discussion Intializes the receiver and opens a resource fork for reading using the path. The receiver's resource fork is closed when the receiver is deallocated.
+	@discussion Intializes the receiver and opens a resource fork for reading using the path. You must invoke closeFile when you are finished with the object.
 	@param path A path specifying the name and location of the file whose resource fork is to be opened.
 	@result An initialized <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or initalization failed.
  */
@@ -106,7 +106,7 @@
 /*!
 	@method initForWritingAtPath:
 	@abstract Initalises a <tt>NDResourceFork</tt>.
-	@discussion Intializes the receiver and opens a resource fork for writting, creating it before hand if it does not already exists, using the path. The receiver's resource fork is closed when the receiver is deallocated.
+	@discussion Intializes the receiver and opens a resource fork for writting, creating it before hand if it does not already exists, using the path. You must invoke closeFile when you are finished with the object.
 	@param path A path specifying the name and location of the file whose resource fork is to be opened.
 	@result An initialized <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or initalization failed.
  */
@@ -122,7 +122,7 @@
 /*!
 	@method initForPermission:atURL:
 	@abstract Initalises a <tt>NDResourceFork</tt>.
-	@discussion Intializes the receiver and opens a resource fork for reading and/or writting using the file url. If write permission is specified, then an empty resource fork created before hand if it does not already exists.  The receiver's resource fork is closed when the receiver is deallocated.Possible permission values are as follows;
+	@discussion Intializes the receiver and opens a resource fork for reading and/or writting using the file url. If write permission is specified, then an empty resource fork created before hand if it does not already exists.  You must invoke closeFile when you are finished with the object.Possible permission values are as follows;
 	<blockquote>
 		<table border=0 cellpadding=4>
 			<tr><td width=80 valign=top><tt>fsCurPerm</tt></td>
@@ -149,7 +149,7 @@
 /*!
 	@method initForPermission:atPath:
 	@abstract Initalises a <tt>NDResourceFork</tt>.
-	@discussion Intializes the receiver and opens a resource fork for reading and/or writting using the path. If write permission is specified, then an empty resource fork created before hand if it does not already exists. The receiver's resource fork is closed when the receiver is deallocated. Possible permission values are as follows;
+	@discussion Intializes the receiver and opens a resource fork for reading and/or writting using the path. If write permission is specified, then an empty resource fork created before hand if it does not already exists. You must invoke closeFile when you are finished with the object. Possible permission values are as follows;
 	<blockquote>
 		<table border=0 cellpadding=4>
 			<tr><td width=80 valign=top><tt>fsCurPerm</tt></td>

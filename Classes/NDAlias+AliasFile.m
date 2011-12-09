@@ -28,8 +28,9 @@
 #import "NSURL+NDCarbonUtilities.h"
 #import "NDResourceFork+OtherSorces.h"
 
-const OSType	finderCreatorCode = 0x4D414353; // 'MACS'
-const short		aliasRecordId = 0;
+static const ResType	aliasResourceType = 0x616C6973; // 'alis'
+static const OSType		finderCreatorCode = 0x4D414353; // 'MACS'
+static const short		aliasRecordId = 0;
 
 @implementation NDAlias (AliasFile)
 
@@ -84,7 +85,7 @@ static OSType aliasOSTypeFor( NSURL * aURL )
 	NDResourceFork		* theResourceFork;
 	theResourceFork = [[NDResourceFork alloc] initForReadingAtPath:aPath];
 
-	self = [self initWithData:[theResourceFork dataForType:formAlias Id:aliasRecordId]];
+	self = [self initWithData:[theResourceFork dataForType:aliasResourceType Id:aliasRecordId]];
 
 	[theResourceFork closeFile];
 	[theResourceFork release];
@@ -97,7 +98,7 @@ static OSType aliasOSTypeFor( NSURL * aURL )
 	NDResourceFork		* theResourceFork;
 	theResourceFork = [[NDResourceFork alloc] initForReadingAtURL:aURL];
 
-	self = [self initWithData:[theResourceFork dataForType:formAlias Id:aliasRecordId]];
+	self = [self initWithData:[theResourceFork dataForType:aliasResourceType Id:aliasRecordId]];
 
 	[theResourceFork closeFile];
 	[theResourceFork release];
@@ -126,7 +127,7 @@ static OSType aliasOSTypeFor( NSURL * aURL )
 	NDResourceFork		* theResourceFork;
 	
 	theResourceFork = [[NDResourceFork alloc] initForWritingAtURL:aURL];
-	theSuccess = [theResourceFork addData:[self data] type:formAlias Id:aliasRecordId name:@"created by NDAlias"];
+	theSuccess = [theResourceFork addData:[self data] type:aliasResourceType Id:aliasRecordId name:@"created by NDAlias"];
 
 	if( theSuccess )
 	{
@@ -176,4 +177,3 @@ static OSType aliasOSTypeFor( NSURL * aURL )
 }
 
 @end
-
