@@ -85,7 +85,7 @@
 /*!
 	@method resolveAliasFile
 	@abstract Resolve an alias file.
-	@discussion If the receiver does not refer to an alias file, the receiver itself is returned.  If the receiver does refer to an alias file, alias resolution is attepted.  If successful, a POSIX path <tt>NSString</tt> of the original is returned, else nil is returned.
+	@discussion If the receiver does not refer to an alias file, the receiver itself is returned.  If the receiver does refer to an alias file, alias resolution is attempted.  If successful, a POSIX path <tt>NSString</tt> of the original is returned, else nil is returned.
 	@result An POSIX path <tt>NSString</tt>.
   */
 - (NSString *)resolveAliasFile;

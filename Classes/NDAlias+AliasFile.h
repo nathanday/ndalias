@@ -115,7 +115,7 @@
 /*!
 	@method writeToURL:includeCustomIcon:
 	@abstract Writes an <tt>NDAlias</tt> to a Finder alias file.
-	@discussion The method <tt>writeToURL:</tt> writes the alias record data contained within the reciever to a Finder alias file at the file url <tt>URL</tt>. <tt>writeToFile:</tt> can be used to create alias files that the user can see in Finder and use.. If the target file of for the alias has a custom icon or is an application then the <tt><i>customIcon</i></tt> can be used to included a custom icon for the alias identical to the target.
+	@discussion The method <tt>writeToURL:</tt> writes the alias record data contained within the reciever to a Finder alias file at the file url <tt>URL</tt>. <tt>writeToFile:</tt> can be used to create alias files that the user can see in Finder and use. If the target file of for the alias has a custom icon or is an application then the <tt><i>customIcon</i></tt> can be used to included a custom icon for the alias identical to the target.
 	@param URL the file url for the alias file. Not the file url the alias record represents.
 	@param customIcon inlcude custom icon if required.
 	@result <#result#>
