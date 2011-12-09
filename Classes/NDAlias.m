@@ -174,7 +174,9 @@ static NSData * NDDataForAliasHandle (AliasHandle anAliasHandle)
 		}
 		else
 		{
+#ifndef __OBJC_GC__
 			[super dealloc];
+#endif
 			self = nil;
 		}
 	}
@@ -209,7 +211,9 @@ static NSData * NDDataForAliasHandle (AliasHandle anAliasHandle)
 		}
 		else
 		{
+#ifndef __OBJC_GC__
 			[super dealloc];
+#endif
 			self = nil;
 		}
 

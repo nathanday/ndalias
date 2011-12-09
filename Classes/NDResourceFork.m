@@ -198,7 +198,9 @@ static BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aTyp
 
 	if( noErr != theError && theError != dupFNErr )
 	{
+#ifndef __OBJC_GC__
 		[super dealloc];
+#endif
 		self = nil;
 	}
 
