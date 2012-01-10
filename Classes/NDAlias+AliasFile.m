@@ -2,7 +2,7 @@
 	NDAlias+AliasFile.m category
 
 	Created by Nathan Day on 05.12.01 under a MIT-style license.
-	Copyright (c) 2008-2011 Nathan Day
+	Copyright (c) 2008-2012 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -72,12 +72,12 @@ static OSType aliasOSTypeFor( NSURL * aURL )
 
 + (id)aliasWithContentsOfFile:(NSString *)aPath
 {
-	return [[[self alloc] initWithContentsOfFile:aPath] autorelease];
+	return [[(NDAlias*)[self alloc] initWithContentsOfFile:aPath] autorelease];
 }
 
 + (id)aliasWithContentsOfURL:(NSURL *)aURL
 {
-	return [[[self alloc] initWithContentsOfURL:aURL] autorelease];
+	return [[(NDAlias*)[self alloc] initWithContentsOfURL:aURL] autorelease];
 }
 
 - (id)initWithContentsOfFile:(NSString *)aPath
