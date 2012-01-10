@@ -2,7 +2,7 @@
 	NDResourceFork.h category
 
 	Created by Nathan Day on 05.12.01 under a MIT-style license.
-	Copyright (c) 2008-2011 Nathan Day
+	Copyright (c) 2008-2012 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -223,14 +223,6 @@
 	@result Returns <tt>YES</tt> if the resource was successfully removed, otherwise if returns <tt>NO</tt>.
   */
 - (BOOL)removeType:(ResType)type Id:(ResID)ID;
-
-/*!
-	@method everyResourceType
-	@abstract Gets every resource type available in the receiver's resource file.
-	@discussion <tt>everyResourceType</tt> returns an <tt>NSArray</tt> of <tt>NSNumber</tt>s each containing a <tt>unsigned long</tt>  or <tt>ResType</tt>s.
-	@result A <tt>NSArray</tt> of <tt>NSNumber</tt>s containing <tt>ResType</tt>s.
-  */
-- (NSArray *)everyResourceType;
 
 /*!
 	@method nameOfResourceType:Id:
