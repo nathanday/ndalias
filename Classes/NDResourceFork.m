@@ -2,7 +2,7 @@
 	NDResourceFork.h category
 
 	Created by Nathan Day on 05.12.01 under a MIT-style license.
-	Copyright (c) 2008-2011 Nathan Day
+	Copyright (c) 2008-2012 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -79,7 +79,7 @@ static BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aTyp
 	SInt16	numberOfTypes,
 				typeIndex;
 }
-+ (id)resourceTypeEnumerator;
++ (instancetype)resourceTypeEnumerator;
 @end
 
 /*
@@ -90,7 +90,7 @@ static BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aTyp
 /*
  * resourceForkForReadingAtURL:
  */
-+ (id)resourceForkForReadingAtURL:(NSURL *)aURL
++ (instancetype)resourceForkForReadingAtURL:(NSURL *)aURL
 {
 	return [[[self alloc] initForReadingAtURL:aURL] autorelease];
 }
@@ -98,7 +98,7 @@ static BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aTyp
 /*
  * resourceForkForWritingAtURL:
  */
-+ (id)resourceForkForWritingAtURL:(NSURL *)aURL
++ (instancetype)resourceForkForWritingAtURL:(NSURL *)aURL
 {
 	return [[[self alloc] initForWritingAtURL:aURL] autorelease];
 }
@@ -106,7 +106,7 @@ static BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aTyp
 /*
  * resourceForkForReadingAtPath:
  */
-+ (id)resourceForkForReadingAtPath:(NSString *)aPath
++ (instancetype)resourceForkForReadingAtPath:(NSString *)aPath
 {
 	return [[[self alloc] initForReadingAtPath:aPath] autorelease];
 }
@@ -114,7 +114,7 @@ static BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aTyp
 /*
  * resourceForkForWritingAtPath:
  */
-+ (id)resourceForkForWritingAtPath:(NSString *)aPath
++ (instancetype)resourceForkForWritingAtPath:(NSString *)aPath
 {
 	return [[[self alloc] initForWritingAtPath:aPath] autorelease];
 }
@@ -122,7 +122,7 @@ static BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aTyp
 /*
 	- initForReadingAtURL:
  */
-- (id)initForReadingAtURL:(NSURL *)aURL
+- (instancetype)initForReadingAtURL:(NSURL *)aURL
 {
 	return [self initForPermission:fsRdPerm atURL:aURL];
 }
@@ -130,7 +130,7 @@ static BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aTyp
 /*
 	- initForWritingAtURL:
  */
-- (id)initForWritingAtURL:(NSURL *)aURL
+- (instancetype)initForWritingAtURL:(NSURL *)aURL
 {
 	return [self initForPermission:fsWrPerm atURL:aURL];
 }
@@ -138,7 +138,7 @@ static BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aTyp
 /*
 	- initForPermission:AtURL:
  */
-- (id)initForPermission:(SInt8)aPermission atURL:(NSURL *)aURL
+- (instancetype)initForPermission:(SInt8)aPermission atURL:(NSURL *)aURL
 {
 	return [self initForPermission:aPermission atPath:[aURL path]];
 }
@@ -146,7 +146,7 @@ static BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aTyp
 /*
 	- initForPermission:AtPath:
  */
-- (id)initForPermission:(SInt8)aPermission atPath:(NSString *)aPath
+- (instancetype)initForPermission:(SInt8)aPermission atPath:(NSString *)aPath
 {
 	OSErr			theError = !noErr;
 	FSRef			theFsRef,
@@ -210,7 +210,7 @@ static BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aTyp
 /*
 	- initForReadingAtPath:
  */
-- (id)initForReadingAtPath:(NSString *)aPath
+- (instancetype)initForReadingAtPath:(NSString *)aPath
 {
 	if( [[NSFileManager defaultManager] fileExistsAtPath:aPath] )
 		return [self initForPermission:fsRdPerm atURL:[NSURL fileURLWithPath:aPath]];
@@ -224,7 +224,7 @@ static BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aTyp
 /*
 	- initForWritingAtPath:
  */
-- (id)initForWritingAtPath:(NSString *)aPath
+- (instancetype)initForWritingAtPath:(NSString *)aPath
 {
 	return [self initForPermission:fsWrPerm atURL:[NSURL fileURLWithPath:aPath]];
 }
@@ -544,7 +544,7 @@ static BOOL setAttributesFunction( Handle aResHandle, ResType aType, NSString * 
 /*
  * +resourceTypeEnumerator
  */
-+ (id)resourceTypeEnumerator
++ (instancetype)resourceTypeEnumerator
 {
 	return [[[self alloc] init] autorelease];
 }
@@ -552,7 +552,7 @@ static BOOL setAttributesFunction( Handle aResHandle, ResType aType, NSString * 
 /*
 	- init
  */
-- (id)init
+- (instancetype)init
 {
 	if( (self = [super init]) != nil )
 	{
@@ -586,7 +586,6 @@ static BOOL setAttributesFunction( Handle aResHandle, ResType aType, NSString * 
 	}
 
 	return theResTypeNumber;
-
 }
 
 @end

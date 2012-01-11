@@ -2,7 +2,7 @@
 	NDSDKCompatibility.h
 
 	Created by Nick Zitzmann on 2007-10-22 as a contrbution to NDAlias under a MIT-style license.
-	Copyright (c) 2008 Nathan Day
+	Copyright (c) 2008-2012 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -55,4 +55,14 @@
 	#define CGFLOAT_MAX FLT_MAX
 	#define CGFLOAT_IS_DOUBLE 0
 	#define CGFLOAT_DEFINED 1
+#endif
+
+// __has_feature is new in the 10.7 SDK, define it here if it's not yet defined.
+#ifndef __has_feature
+	#define __has_feature(x) 0
+#endif
+
+// instancetype is new in clang. id is a good replacement elsewhere.
+#if !__has_feature(objc_instancetype) && !defined(instancetype)
+	#define instancetype id
 #endif

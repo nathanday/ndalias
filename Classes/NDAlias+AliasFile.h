@@ -2,7 +2,7 @@
 	NDAlias+AliasFile.h category
 
 	Created by Nathan Day on 05.12.01 under a MIT-style license.
-	Copyright (c) 2008-2011 Nathan Day
+	Copyright (c) 2008-2012 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -56,7 +56,7 @@
 	@param path the path to an alias file.
 	@result A <tt>NDAlias</tt> instance, returns <tt>nil</tt> if <tt>NDAlias</tt> creation fails.
  */
-+ (id)aliasWithContentsOfFile:(NSString *)path;
++ (instancetype)aliasWithContentsOfFile:(NSString *)path;
 	/*!
   @method aliasWithContentsOfURL:
 	@abstract Initalises a <tt>NDAlias</tt>.
@@ -64,7 +64,7 @@
 	@param URL the file url to the alias file.
 	@result A <tt>NDAlias</tt> instance, returns <tt>nil</tt> if <tt>NDAlias</tt> creation fails.
  */
-+ (id)aliasWithContentsOfURL:(NSURL *)URL;
++ (instancetype)aliasWithContentsOfURL:(NSURL *)URL;
 
 /*!
 	@method initWithContentsOfFile:
@@ -73,7 +73,7 @@
 	@param path the path to the alias file.
 	@result An initalises <tt>NDAlias</tt>, returns <tt>nil</tt> if initalises fails.
   */
-- (id)initWithContentsOfFile:(NSString *)path;
+- (instancetype)initWithContentsOfFile:(NSString *)path;
 /*!
 	@method initWithContentsOfURL:
 	@abstract Initalises a <tt>NDAlias</tt>.
@@ -81,7 +81,7 @@
 	@param URL the file url to the alias file.
 	@result An initalises <tt>NDAlias</tt>, returns <tt>nil</tt> if initalises fails.
  */
-- (id)initWithContentsOfURL:(NSURL *)URL;
+- (instancetype)initWithContentsOfURL:(NSURL *)URL;
 
 /*!
 	@functiongroup Create an alias file from an alias

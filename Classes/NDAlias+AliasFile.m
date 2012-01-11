@@ -70,17 +70,17 @@ static OSType aliasOSTypeFor( NSURL * aURL )
 	return theType;
 }
 
-+ (id)aliasWithContentsOfFile:(NSString *)aPath
++ (instancetype)aliasWithContentsOfFile:(NSString *)aPath
 {
 	return [[(NDAlias*)[self alloc] initWithContentsOfFile:aPath] autorelease];
 }
 
-+ (id)aliasWithContentsOfURL:(NSURL *)aURL
++ (instancetype)aliasWithContentsOfURL:(NSURL *)aURL
 {
 	return [[(NDAlias*)[self alloc] initWithContentsOfURL:aURL] autorelease];
 }
 
-- (id)initWithContentsOfFile:(NSString *)aPath
+- (instancetype)initWithContentsOfFile:(NSString *)aPath
 {
 	NDResourceFork		* theResourceFork;
 	theResourceFork = [[NDResourceFork alloc] initForReadingAtPath:aPath];
@@ -93,7 +93,7 @@ static OSType aliasOSTypeFor( NSURL * aURL )
 	return self;
 }
 
-- (id)initWithContentsOfURL:(NSURL *)aURL
+- (instancetype)initWithContentsOfURL:(NSURL *)aURL
 {
 	NDResourceFork		* theResourceFork;
 	theResourceFork = [[NDResourceFork alloc] initForReadingAtURL:aURL];

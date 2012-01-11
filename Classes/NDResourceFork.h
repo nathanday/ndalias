@@ -53,7 +53,7 @@
 	@param URL A file url specifying the name and location of the file whose resource fork is to be opened.
 	@result A <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or Create and initalise failed.
  */
-+ (id)resourceForkForReadingAtURL:(NSURL *)URL;
++ (instancetype)resourceForkForReadingAtURL:(NSURL *)URL;
 /*!
 	@method resourceForkForWritingAtURL:
 	@abstract Creates and initalises a <tt>NDResourceFork</tt>.
@@ -61,7 +61,7 @@
 	@param URL A file url specifying the name and location of the file whose resource fork is to be opened.
 	@result A <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or Create and initalise failed.
  */
-+ (id)resourceForkForWritingAtURL:(NSURL *)URL;
++ (instancetype)resourceForkForWritingAtURL:(NSURL *)URL;
 /*!
 	@method resourceForkForReadingAtPath:
 	@abstract Creates and initalises a <tt>NDResourceFork</tt>.
@@ -69,7 +69,7 @@
 	@param path A path specifying the name and location of the file whose resource fork is to be opened.
 	@result A <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or Create and initalise failed.
  */
-+ (id)resourceForkForReadingAtPath:(NSString *)path;
++ (instancetype)resourceForkForReadingAtPath:(NSString *)path;
 /*!
 	@method resourceForkForWritingAtPath:
 	@abstract Creates and initalises a <tt>NDResourceFork</tt>.
@@ -77,7 +77,7 @@
 	@param path A path specifying the name and location of the file whose resource fork is to be opened.
 	@result A <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or Create and initalise failed.
  */
-+ (id)resourceForkForWritingAtPath:(NSString *)path;
++ (instancetype)resourceForkForWritingAtPath:(NSString *)path;
 
 /*!
 	@method initForReadingAtURL:
@@ -86,7 +86,7 @@
 	@param URL A file url specifying the name and location of the file whose resource fork is to be opened. You must invoke closeFile when you are finished with the object.
 	@result An initialized <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or initalization failed.
   */
-- (id)initForReadingAtURL:(NSURL *)URL;
+- (instancetype)initForReadingAtURL:(NSURL *)URL;
 /*!
 	@method initForReadingAtURL:
 	@abstract Initalises a <tt>NDResourceFork</tt>.
@@ -94,7 +94,7 @@
 	@param URL A file url specifying the name and location of the file whose resource fork is to be opened.
 	@result An initialized <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or initalization failed.
  */
-- (id)initForWritingAtURL:(NSURL *)URL;
+- (instancetype)initForWritingAtURL:(NSURL *)URL;
 /*!
 	@method initForReadingAtPath:
 	@abstract Initalises a <tt>NDResourceFork</tt>.
@@ -102,7 +102,7 @@
 	@param path A path specifying the name and location of the file whose resource fork is to be opened.
 	@result An initialized <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or initalization failed.
  */
-- (id)initForReadingAtPath:(NSString *)path;
+- (instancetype)initForReadingAtPath:(NSString *)path;
 /*!
 	@method initForWritingAtPath:
 	@abstract Initalises a <tt>NDResourceFork</tt>.
@@ -110,7 +110,7 @@
 	@param path A path specifying the name and location of the file whose resource fork is to be opened.
 	@result An initialized <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or initalization failed.
  */
-- (id)initForWritingAtPath:(NSString *)path;
+- (instancetype)initForWritingAtPath:(NSString *)path;
 /*!
 	@method closeFile
 	@abstract
@@ -145,7 +145,7 @@
 	@param URL A file url specifying the name and location of the file whose resource fork is to be opened.
 	@result An initialized <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or initalization failed.
  */
-- (id)initForPermission:(SInt8)permission atURL:(NSURL *)URL;
+- (instancetype)initForPermission:(SInt8)permission atURL:(NSURL *)URL;
 /*!
 	@method initForPermission:atPath:
 	@abstract Initalises a <tt>NDResourceFork</tt>.
@@ -172,7 +172,7 @@
 	@param path A path specifying the name and location of the file whose resource fork is to be opened.
 	@result An initialized <tt>NDResourceFork</tt> for an opened resource fork, returns <tt>nil</tt> if the resource fork could not be opened or initalization failed.
  */
-- (id)initForPermission:(SInt8)permission atPath:(NSString *)path;
+- (instancetype)initForPermission:(SInt8)permission atPath:(NSString *)path;
 
 /*!
 	@method addData:type:Id:name:

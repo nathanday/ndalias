@@ -2,7 +2,7 @@
 	NDAlias.h
 
 	Created by Nathan Day on 05.12.01 under a MIT-style license.
-	Copyright (c) 2008-2011 Nathan Day
+	Copyright (c) 2008-2012 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -61,7 +61,7 @@
 	@param URL the file url for the target of the alias.
 	@result An <tt>NDAlias</tt> instance, returns <tt>nil</tt> if <tt>NDAlias</tt> creation fails.
   */
-+ (id)aliasWithURL:(NSURL *)URL;
++ (instancetype)aliasWithURL:(NSURL *)URL;
 /*!
 	@method aliasWithURL:fromURL:
 	 @abstract Creates and initalises an <tt>NDAlias</tt>.
@@ -70,7 +70,7 @@
 	@param fromURL The starting point for a relative path, to be used later in a relative search. The two file or directory url's, <tt>fromURL</tt> and <tt>URL</tt>, must reside on the same volume.
 	@result An <tt>NDAlias</tt> instance, returns <tt>nil</tt> if <tt>NDAlias</tt> creation fails.
  */
-+ (id)aliasWithURL:(NSURL *)URL fromURL:(NSURL *)fromURL;
++ (instancetype)aliasWithURL:(NSURL *)URL fromURL:(NSURL *)fromURL;
 /*!
 	@method aliasWithPath:
 	@abstract Creates and initalises an <tt>NDAlias</tt>.
@@ -79,7 +79,7 @@
 	@param path the path for the target of the alias.
 	@result An <tt>NDAlias</tt> instance, returns <tt>nil</tt> if <tt>NDAlias</tt> creation fails.
  */
-+ (id)aliasWithPath:(NSString *)path;
++ (instancetype)aliasWithPath:(NSString *)path;
 /*!
 	@method aliasWithPath:fromPath:
 	 @abstract Creates and initalises an <tt>NDAlias</tt>.
@@ -88,7 +88,7 @@
 	 @param fromPath The starting point for a relative path, to be used later in a relative search. The two file or directory url's, <tt>fromPath</tt> and <tt>URL</tt>, must reside on the same volume.
 	 @result A NDAlias instance, returns <tt>nil</tt> if <tt>NDAlias</tt> creation fails.
  */
-+ (id)aliasWithPath:(NSString *)path fromPath:(NSString *)fromPath;
++ (instancetype)aliasWithPath:(NSString *)path fromPath:(NSString *)fromPath;
 
 /*!
 	@method aliasWithData:
@@ -97,7 +97,7 @@
 	@param data The <tt>NSData</tt> instances that contains the data returned previously from the method <tt>data</tt>.
 	@result A NDAlias instance, returns <tt>nil</tt> if <tt>NDAlias</tt> creation fails.
   */
-+ (id)aliasWithData:(NSData *)data;
++ (instancetype)aliasWithData:(NSData *)data;
 
 /*!
 	@method aliasWithFSRef:
@@ -106,7 +106,7 @@
 	@param aFSRef An <tt>FSRef</tt> instance that points to the object to make an alias of.
 	@result A NDAlias instance, returns <tt>nil</tt> if <tt>NDAlias</tt> creation fails.
   */
-+ (id)aliasWithFSRef:(FSRef *)aFSRef;
++ (instancetype)aliasWithFSRef:(FSRef *)aFSRef;
 
 /*!
 	@method initWithURL:
@@ -116,7 +116,7 @@
 	@param URL the file url for the target of the alias.
 	@result An <tt>NDAlias</tt> instance, returns <tt>nil</tt> if <tt>NDAlias</tt> creation fails.
  */
-- (id)initWithURL:(NSURL *)URL;
+- (instancetype)initWithURL:(NSURL *)URL;
 /*!
 	@method initWithPath:fromURL:
 	 @abstract Initalises an <tt>NDAlias</tt>.
@@ -125,7 +125,7 @@
 	 @param fromURL The starting point for a relative path, to be used later in a relative search. The two file or directory url's, <tt>fromURL</tt> and <tt>URL</tt>, must reside on the same volume.
 	@result An initalised <tt>NDAlias</tt>, returns <tt>nil</tt> if initialisation fails.
  */
-- (id)initWithURL:(NSURL *)URL fromURL:(NSURL *)fromURL;
+- (instancetype)initWithURL:(NSURL *)URL fromURL:(NSURL *)fromURL;
 /*!
 	@method initWithPath:
 	 @abstract Initalises an <tt>NDAlias</tt>.
@@ -134,7 +134,7 @@
 	 @param path the path for the target of the alias.
 	@result An initalised <tt>NDAlias</tt>, returns <tt>nil</tt> if initialisation fails.
  */
-- (id)initWithPath:(NSString *)path;
+- (instancetype)initWithPath:(NSString *)path;
 /*!
 	@method initWithPath:fromPath:
 	 @abstract Initalises an <tt>NDAlias</tt>.
@@ -143,7 +143,7 @@
 	 @param fromPath The starting point for a relative path, to be used later in a relative search. The two file or directory url's, <tt>fromPath</tt> and <tt>path</tt>, must reside on the same volume.
 	@result An initalised <tt>NDAlias</tt>, returns <tt>nil</tt> if initialisation fails.
  */
-- (id)initWithPath:(NSString *)path fromPath:(NSString *)fromPath;
+- (instancetype)initWithPath:(NSString *)path fromPath:(NSString *)fromPath;
 
 /*!
 	@method initWithData:
@@ -152,7 +152,7 @@
 	@param data The <tt>NSData</tt> instances that contains the data returned previously from the method <tt>data</tt>.
 	@result An initalised <tt>NDAlias</tt>, returns <tt>nil</tt> if initialisation fails.
 */
-- (id)initWithData:(NSData *)data;
+- (instancetype)initWithData:(NSData *)data;
 
 /*!
 	@method initWithFSRef:
@@ -161,7 +161,7 @@
 	@param aFSRef An <tt>FSRef</tt> instance that points to the object to make an alias of.
 	@result An initalised <tt>NDAlias</tt>, returns <tt>nil</tt> if initialisation fails.
 */
-- (id)initWithFSRef:(FSRef *)aFSRef;
+- (instancetype)initWithFSRef:(FSRef *)aFSRef;
 
 /*!
 	@functiongroup Setting the way the alias is resolved
