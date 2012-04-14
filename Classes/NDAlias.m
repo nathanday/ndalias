@@ -448,7 +448,7 @@ static NSData * NDDataForAliasHandle (AliasHandle anAliasHandle)
  */
 - (NSString *)debugDescription
 {
-	NSString * str = [NSString stringWithFormat:@"aliasHandle %p, changed %d, mountFlags %x, lastKnownPath %@",
+	NSString * str = [NSString stringWithFormat:@"aliasHandle %p, changed %d, mountFlags %lx, lastKnownPath %@",
 					  aliasHandle,
 					  changed,
 					  mountFlags,
