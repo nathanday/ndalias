@@ -84,7 +84,7 @@
 	@method aliasWithPath:fromPath:
 	 @abstract Creates and initalises an <tt>NDAlias</tt>.
 	 @discussion  The method <tt>aliasWithPath:fromPath:</tt> creates an <tt>NDAlias</tt> that describes the specified target. <tt>aliasWithPath:fromPath:</tt> always records the name and file or directory ID of the target, its creation date, the parent directory name and ID, and the volume name and creation date. It also records the full pathname of the target and a collection of other information relevant to locating the target, verifying the target, and mounting the target's volume, if necessary. <tt>aliasWithPath:fromPath:</tt> also stores relative path information as well by supplying a starting point for a relative path.
-	 @param URL the file url for the target of the alias.
+	 @param path the file path for the target of the alias.
 	 @param fromPath The starting point for a relative path, to be used later in a relative search. The two file or directory url's, <tt>fromPath</tt> and <tt>URL</tt>, must reside on the same volume.
 	 @result A NDAlias instance, returns <tt>nil</tt> if <tt>NDAlias</tt> creation fails.
  */
@@ -218,8 +218,8 @@
 	@method getFSRef:
 	@abstract Get a <tt>FSRef</tt> for the receiver.
 	@discussion Initializes an <tt>FSRef</tt>.
-	@param fsRef a pointer to a <tt>FSRef</tt>.
-	@result Returns <tt>YES</tt> if the method was successful, if the function returns <tt>NO</tt> then the <tt>FSRef</tt> pointed to by <tt>fsRef</tt> is garbage.
+	@param aFsRef a pointer to a <tt>FSRef</tt>.
+	@result Returns <tt>YES</tt> if the method was successful, if the function returns <tt>NO</tt> then the <tt>FSRef</tt> pointed to by <tt>aFsRef</tt> is garbage.
   */
 - (BOOL)getFSRef:(FSRef *)aFsRef;
 
