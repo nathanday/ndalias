@@ -179,8 +179,8 @@ static BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aTyp
 					if( theError == noErr || theError == dupFNErr )
 					{
 						[aPath getFSRef:&theFsRef];
-						fileReference = FSOpenResFile ( &theFsRef, aPermission );
-						theError = fileReference > 0 ? ResError( ) : !noErr;
+						_fileReference = FSOpenResFile ( &theFsRef, aPermission );
+						theError = _fileReference > 0 ? ResError( ) : !noErr;
 					}
 				}
 				else
@@ -190,8 +190,8 @@ static BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aTyp
 		else		// dont have write permission
 		{
 			[aPath getFSRef:&theFsRef];
-			fileReference = FSOpenResFile ( &theFsRef, aPermission );
-			theError = fileReference > 0 ? ResError( ) : !noErr;
+			_fileReference = FSOpenResFile ( &theFsRef, aPermission );
+			theError = _fileReference > 0 ? ResError( ) : !noErr;
 		}
 
 	}
@@ -234,10 +234,10 @@ static BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aTyp
  */
 - (void)closeFile
 {
-	if( fileReference > 0 )
+	if( _fileReference > 0 )
 	{
-		CloseResFile( fileReference );
-		fileReference = 0;
+		CloseResFile( _fileReference );
+		_fileReference = 0;
 	}
 }
 
@@ -248,13 +248,13 @@ static BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aTyp
  */
 - (void)dealloc
 {
-	if( fileReference > 0 )
+	if( _fileReference > 0 )
 	{
 		// Unlike in finalize, we can safely call closeFile here, but to be consistent between GC and non-GC, the caller should always call closeFile himself, and not rely on it being done here.
 		[self closeFile];
 		NSLog (@"NDAlias ERROR: you neglected to call closeFile: before disposing this NDResourceFork");
 	}
-	fileReference = 0;
+	_fileReference = 0;
 	[super dealloc];
 }
 
@@ -265,12 +265,12 @@ static BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aTyp
  */
 - (void)finalize
 {
-	if( fileReference > 0 )
+	if( _fileReference > 0 )
 	{
 		// Note: all finalize methods must be thread-safe!  Thus we cannot call closeFile here because it calls CloseResFile() which, along with the rest of the Resource Manager, is not thread-safe.  
 		NSLog (@"NDAlias ERROR: you neglected to call closeFile: before disposing this NDResourceFork");
 	}
-	fileReference = 0;
+	_fileReference = 0;
 	[super finalize];
 }
 
@@ -289,7 +289,7 @@ static BOOL operateOnResourceUsingFunction( ResFileRefNum afileRef, ResType aTyp
 		ResFileRefNum	thePreviousRefNum;
 
 		thePreviousRefNum = CurResFile();	// save current resource
-		UseResFile( fileReference );    			// set this resource to be current
+		UseResFile( _fileReference );    			// set this resource to be current
 	
 		// copy NSData's bytes to a handle
 		if ( noErr == PtrToHand ( [aData bytes], &theResHandle, [aData length] ) )
@@ -340,7 +340,7 @@ static BOOL getDataFunction( Handle aResHandle, ResType aType, NSString * aName,
 {
 	NSData	* theData = nil;
 	
-	if( operateOnResourceUsingFunction( fileReference, aType, nil, anId, getDataFunction, (void*)&theData )  )
+	if( operateOnResourceUsingFunction( _fileReference, aType, nil, anId, getDataFunction, (void*)&theData )  )
 		return theData;
 	else
 		return nil;
@@ -353,7 +353,7 @@ static BOOL getDataFunction( Handle aResHandle, ResType aType, NSString * aName,
 {
 	NSData	* theData = nil;
 
-	if( operateOnResourceUsingFunction( fileReference, aType, aName, 0, getDataFunction, (void*)&theData )  )
+	if( operateOnResourceUsingFunction( _fileReference, aType, aName, 0, getDataFunction, (void*)&theData )  )
 		return theData;
 	else
 		return nil;
@@ -374,7 +374,7 @@ static BOOL removeResourceFunction( Handle aResHandle, ResType aType, NSString *
 }
 - (BOOL)removeType:(ResType)aType Id:(ResID)anId
 {
-	return operateOnResourceUsingFunction( fileReference, aType, nil, anId, removeResourceFunction,  NULL);
+	return operateOnResourceUsingFunction( _fileReference, aType, nil, anId, removeResourceFunction,  NULL);
 }
 
 static BOOL getNameFunction( Handle aResHandle, ResType aType, NSString * aName, ResID anId, void * aContext )
@@ -399,7 +399,7 @@ static BOOL getNameFunction( Handle aResHandle, ResType aType, NSString * aName,
 {
 	NSString		* theString = nil;
 
-	if( operateOnResourceUsingFunction( fileReference, aType, nil, anId, getNameFunction, (void*)&theString ) )
+	if( operateOnResourceUsingFunction( _fileReference, aType, nil, anId, getNameFunction, (void*)&theString ) )
 		return theString;
 	else
 		return nil;
@@ -425,7 +425,7 @@ static BOOL getIdFunction( Handle aResHandle, ResType aType, NSString * aName, R
 - (BOOL)getId:(ResID *)anId ofResourceType:(ResType)aType named:(NSString *)aName
 {
 	(void)anId;
-	return operateOnResourceUsingFunction( fileReference, aType, aName, 0, getIdFunction, NULL );
+	return operateOnResourceUsingFunction( _fileReference, aType, aName, 0, getIdFunction, NULL );
 }
 
 static BOOL getAttributesFunction( Handle aResHandle, ResType aType, NSString * aName, ResID anId, void * aContext )
@@ -447,7 +447,7 @@ static BOOL getAttributesFunction( Handle aResHandle, ResType aType, NSString * 
  */
 - (BOOL)getAttributeFlags:(ResAttributes*)attributes forResourceType:(ResType)aType Id:(ResID)anId
 {
-	return operateOnResourceUsingFunction( fileReference, aType, nil, anId, getAttributesFunction, (void*)attributes );
+	return operateOnResourceUsingFunction( _fileReference, aType, nil, anId, getAttributesFunction, (void*)attributes );
 }
 
 static BOOL setAttributesFunction( Handle aResHandle, ResType aType, NSString * aName, ResID anId, void * aContext  )
@@ -476,7 +476,7 @@ static BOOL setAttributesFunction( Handle aResHandle, ResType aType, NSString * 
 	BOOL				theSuccess;
 
 	NSLog(@"WARRING: Currently the setAttributeFlags:forResourceType:Id: does not work");
-	theSuccess = operateOnResourceUsingFunction( fileReference, aType, nil, anId, setAttributesFunction, &attributes );
+	theSuccess = operateOnResourceUsingFunction( _fileReference, aType, nil, anId, setAttributesFunction, &attributes );
 	return theSuccess;
 }
 
@@ -506,11 +506,11 @@ static BOOL setAttributesFunction( Handle aResHandle, ResType aType, NSString * 
 	ByteCount		theByteCount;
 	SInt64			theForkSize;
 	
-	if( FSGetForkSize( fileReference, &theForkSize ) == noErr && theForkSize > 0 )
+	if( FSGetForkSize( _fileReference, &theForkSize ) == noErr && theForkSize > 0 )
 	{
 		// Casting theForkSize to unsigned is safe since we checked that it is positive.
 		theData = [NSMutableData dataWithLength:(NSUInteger)theForkSize];
-		if( FSReadFork( fileReference, fsFromStart, 0LL, (ByteCount)theForkSize, [theData mutableBytes], &theByteCount ) != noErr || theByteCount != (ByteCount)theForkSize )
+		if( FSReadFork( _fileReference, fsFromStart, 0LL, (ByteCount)theForkSize, [theData mutableBytes], &theByteCount ) != noErr || theByteCount != (ByteCount)theForkSize )
 			theData = nil;
 	}
 
@@ -526,7 +526,7 @@ static BOOL setAttributesFunction( Handle aResHandle, ResType aType, NSString * 
 	NSUInteger		theDataLength = [aData length];
 
 	// return true if aData exists, length not zero, write succeeds, write length equals data length
-	BOOL			theSuccess = aData && theDataLength != 0 && FSWriteFork( fileReference, fsFromStart, 0, theDataLength, [aData bytes], &theWrittenBytes ) == noErr && theDataLength == theWrittenBytes;
+	BOOL			theSuccess = aData && theDataLength != 0 && FSWriteFork( _fileReference, fsFromStart, 0, theDataLength, [aData bytes], &theWrittenBytes ) == noErr && theDataLength == theWrittenBytes;
 
 	// To prevent premature collection.  (Under GC, the given NSData may have no strong references for all we know, and our inner pointer does not keep the NSData alive.  So without this, the data could be collected before we are done with it!)
 	[aData self];

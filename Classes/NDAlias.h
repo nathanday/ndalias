@@ -44,9 +44,9 @@
 @interface NDAlias : NSObject <NSCoding>
 {
 @private
-	AliasHandle		aliasHandle;
-	Boolean			changed;
-	unsigned long	mountFlags;
+	AliasHandle		_aliasHandle;
+	Boolean			_changed;
+	unsigned long	_mountFlags;
 }
 
 /*!

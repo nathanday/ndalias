@@ -43,7 +43,7 @@
 @interface NDResourceFork : NSObject
 {
 @private
-	ResFileRefNum	fileReference;
+	ResFileRefNum	_fileReference;
 }
 
 /*!

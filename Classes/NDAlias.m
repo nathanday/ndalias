@@ -202,12 +202,12 @@ static NSData * NDDataForAliasHandle (AliasHandle anAliasHandle)
 	{
 		const void* dataBytes = [aData bytes];
 		NSUInteger dataLength = [aData length];
-		if( dataBytes && (dataLength > 0) && PtrToHand( dataBytes, (Handle*)&aliasHandle, dataLength ) == noErr )
+		if( dataBytes && (dataLength > 0) && PtrToHand( dataBytes, (Handle*)&_aliasHandle, dataLength ) == noErr )
 		{
-			changed = false;
+			_changed = false;
 
 			// Because an alias is more of a model-layer object, we don't want the OS popping up a UI when we try to resolve an alias, at least not by default.
-			mountFlags = kResolveAliasFileNoUI;
+			_mountFlags = kResolveAliasFileNoUI;
 		}
 		else
 		{
@@ -266,10 +266,10 @@ static NSData * NDDataForAliasHandle (AliasHandle anAliasHandle)
  */
 - (void)dealloc
 {
-	if ( aliasHandle )
+	if ( _aliasHandle )
 	{
-		DisposeHandle( (Handle)aliasHandle );
-		aliasHandle = NULL;
+		DisposeHandle( (Handle)_aliasHandle );
+		_aliasHandle = NULL;
 	}
 	[super dealloc];
 }
@@ -280,10 +280,10 @@ static NSData * NDDataForAliasHandle (AliasHandle anAliasHandle)
 - (void)finalize
 {
 	/* Important: finalize methods must be threadsafe!  DisposeHandle() is threadsafe since 10.3. */
-	if ( aliasHandle )
+	if ( _aliasHandle )
 	{
-		DisposeHandle( (Handle)aliasHandle );
-		aliasHandle = NULL;
+		DisposeHandle( (Handle)_aliasHandle );
+		_aliasHandle = NULL;
 	}
 	[super finalize];
 }
@@ -293,7 +293,7 @@ static NSData * NDDataForAliasHandle (AliasHandle anAliasHandle)
  */
 - (void)setAllowUserInteraction:(BOOL)aFlag
 {
-	mountFlags = aFlag ? (mountFlags & ~kResolveAliasFileNoUI) : (mountFlags | kResolveAliasFileNoUI);
+	_mountFlags = aFlag ? (_mountFlags & ~kResolveAliasFileNoUI) : (_mountFlags | kResolveAliasFileNoUI);
 }
 
 /*
@@ -301,7 +301,7 @@ static NSData * NDDataForAliasHandle (AliasHandle anAliasHandle)
  */
 - (BOOL)allowUserInteraction
 {
-	return mountFlags & kResolveAliasFileNoUI ? NO : YES;
+	return _mountFlags & kResolveAliasFileNoUI ? NO : YES;
 }
 
 /*
@@ -309,7 +309,7 @@ static NSData * NDDataForAliasHandle (AliasHandle anAliasHandle)
  */
 - (void)setTryFileIDFirst:(BOOL)aFlag
 {
-	mountFlags = aFlag ? (mountFlags | kResolveAliasTryFileIDFirst) : (mountFlags & ~kResolveAliasTryFileIDFirst);
+	_mountFlags = aFlag ? (_mountFlags | kResolveAliasTryFileIDFirst) : (_mountFlags & ~kResolveAliasTryFileIDFirst);
 }
 
 /*
@@ -317,7 +317,7 @@ static NSData * NDDataForAliasHandle (AliasHandle anAliasHandle)
  */
 - (BOOL)tryFileIDFirst
 {
-	return mountFlags & kResolveAliasTryFileIDFirst ? YES : NO;
+	return _mountFlags & kResolveAliasTryFileIDFirst ? YES : NO;
 }
 
 /*
@@ -329,7 +329,7 @@ static NSData * NDDataForAliasHandle (AliasHandle anAliasHandle)
 	if ( aFsRef )
 	{
 		OSErr				theError;
-		theError = FSResolveAliasWithMountFlags( NULL, aliasHandle, aFsRef, &changed, mountFlags );
+		theError = FSResolveAliasWithMountFlags( NULL, _aliasHandle, aFsRef, &_changed, _mountFlags );
 		success = theError == noErr;
 	}
 	return success;
@@ -372,7 +372,7 @@ static NSData * NDDataForAliasHandle (AliasHandle anAliasHandle)
  */
 - (BOOL)changed
 {
-	return changed ? YES : NO;
+	return _changed ? YES : NO;
 }
 
 /*
@@ -395,9 +395,9 @@ static NSData * NDDataForAliasHandle (AliasHandle anAliasHandle)
 	if( aURL != nil && [aURL isFileURL] && [aURL getFSRef:&theReference] )
 	{
 		if( aFromURL != nil && [aFromURL isFileURL] && [aFromURL getFSRef:&theFromReference] )
-			theError = FSUpdateAlias( &theFromReference, &theReference, aliasHandle, &changed );
+			theError = FSUpdateAlias( &theFromReference, &theReference, _aliasHandle, &_changed );
 		else
-			theError = FSUpdateAlias( NULL, &theReference, aliasHandle, &changed );
+			theError = FSUpdateAlias( NULL, &theReference, _aliasHandle, &_changed );
 	}
 
 	return theError == noErr;
@@ -449,9 +449,9 @@ static NSData * NDDataForAliasHandle (AliasHandle anAliasHandle)
 - (NSString *)debugDescription
 {
 	NSString * str = [NSString stringWithFormat:@"aliasHandle %p, changed %d, mountFlags %lx, lastKnownPath %@",
-					  aliasHandle,
-					  changed,
-					  mountFlags,
+					  _aliasHandle,
+					  _changed,
+					  _mountFlags,
 					  [self lastKnownPath]];
 	
 	return str;
@@ -462,7 +462,7 @@ static NSData * NDDataForAliasHandle (AliasHandle anAliasHandle)
  */
 - (NSData *)data
 {
-	NSData * theData = NDDataForAliasHandle (aliasHandle);
+	NSData * theData = NDDataForAliasHandle (_aliasHandle);
 
 	return theData;
 }
@@ -487,7 +487,7 @@ static NSData * NDDataForAliasHandle (AliasHandle anAliasHandle)
 - (NSString *)lastKnownPath
 {
 	CFStringRef path = nil;
-	(void)FSCopyAliasInfo (aliasHandle, NULL, NULL, &path, NULL, NULL);
+	(void)FSCopyAliasInfo (_aliasHandle, NULL, NULL, &path, NULL, NULL);
 
 	/* To support GC and non-GC, we need this contortion. */
 	return [NSMakeCollectable(path) autorelease];
@@ -500,7 +500,7 @@ static NSData * NDDataForAliasHandle (AliasHandle anAliasHandle)
 {
 	CFStringRef path = nil;
 	HFSUniStr255 name;
-	OSStatus err = FSCopyAliasInfo (aliasHandle, &name, NULL, NULL, NULL, NULL);
+	OSStatus err = FSCopyAliasInfo (_aliasHandle, &name, NULL, NULL, NULL, NULL);
 	if ( !err )
 	{
 		path = FSCreateStringFromHFSUniStr (NULL, &name);
@@ -517,7 +517,7 @@ static NSData * NDDataForAliasHandle (AliasHandle anAliasHandle)
 {
 	CFStringRef path = nil;
 	HFSUniStr255 name;
-	OSStatus err = FSCopyAliasInfo (aliasHandle, NULL, &name, NULL, NULL, NULL);
+	OSStatus err = FSCopyAliasInfo (_aliasHandle, NULL, &name, NULL, NULL, NULL);
 	if ( !err )
 	{
 		path = FSCreateStringFromHFSUniStr (NULL, &name);
@@ -548,7 +548,7 @@ static NSData * NDDataForAliasHandle (AliasHandle anAliasHandle)
 			if ( isAliasFile )
 			{
 				Boolean isTargetFolder, wasAliased;
-				err = FSResolveAliasFileWithMountFlags (&fsRef, true, &isTargetFolder, &wasAliased, mountFlags);
+				err = FSResolveAliasFileWithMountFlags (&fsRef, true, &isTargetFolder, &wasAliased, _mountFlags);
 				if ( !err )
 				{
 					NDAlias * aliasToOriginal = [NDAlias aliasWithFSRef:&fsRef];
