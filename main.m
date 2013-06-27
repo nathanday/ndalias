@@ -2,7 +2,7 @@
 	main.m
 
 	Created by Nathan Day on 05.12.01 under a MIT-style license.
-	Copyright (c) 2008-2011 Nathan Day
+	Copyright (c) 2008-2013 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -44,7 +44,7 @@ int main (int argc, const char * argv[])
 	(void)argv;
 	
 	NSAutoreleasePool		* pool = [[NSAutoreleasePool alloc] init];
-	char					theChoice;
+	int						theChoice;
 	char					theString[PATH_MAX];
 	
 	printf( "Path is [%s]\n", getcwd( theString, sizeof(theString) ) );
