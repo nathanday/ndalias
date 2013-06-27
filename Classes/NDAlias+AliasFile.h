@@ -41,7 +41,7 @@
 	@abstract A category of the class <tt>NDAlias</tt>
 	@discussion This category add aditional functionality to <tt>NDAlias</tt> for reading and writting <tt>NDAlias</tt> instances to Finder alias files. Though this could be used for archiving purposed, the methods of the adopted protocol <tt>NSCoding</tt> are proble better suited. The method of <tt>NDAlias (AliasFile)</tt> are mainly for creating alias files that are visible in Finder to the user.
 	<P>As well as the class <tt>NDAlias</tt> and the classes and categories it uses, <tt>NDAlias (AliasFile)</tt> also requires the class <tt>NDResourceFork</tt> and it's category <tt>NDResourceFork (OtherSorces)</tt>. If the additional functioanlity of <tt>NDAlias (AliasFile)</tt> is not required then the files for <tt>NDAlias (AliasFile)</tt>, <tt>NDResourceFork</tt> and <tt>NDResourceFork (OtherSorces)</tt> can be excluded from your project.</P>
-	@helperclass NDResourceFork is requried to read and write to the alias file resource fork.
+	@helperclass NDResourceFork is required to read and write to the alias file resource fork.
  */
 @interface NDAlias (AliasFile)
 
