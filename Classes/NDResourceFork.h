@@ -2,7 +2,7 @@
 	NDResourceFork.h category
 
 	Created by Nathan Day on 05.12.01 under a MIT-style license.
-	Copyright (c) 2008-2012 Nathan Day
+	Copyright (c) 2008-2013 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -113,10 +113,7 @@
 - (instancetype)initForWritingAtPath:(NSString *)path;
 /*!
 	@method closeFile
-	@abstract
-	@discussion
-	@param
-	@result
+	@abstract Closes the resource file.
  */
 - (void)closeFile;
 /*!

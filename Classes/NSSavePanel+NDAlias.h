@@ -2,7 +2,7 @@
 	NSSavePanel+NDAlias.h
 
 	Created by Sean McBride on 18.08.07 under a MIT-style license.
-	Copyright (c) 2008-2011 Nathan Day
+	Copyright (c) 2008-2013 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -55,7 +55,6 @@
 	@method setDirectoryAlias
 	@abstract Sets the current directory currently shown in the receiver to the alias given. Does nothing if the alias cannot be resolved.
 	@discussion Works in a similiar way to -[NSSavePanel setDirectory].
-	@result
   */
 - (void)setDirectoryAlias:(NDAlias*)alias;
 

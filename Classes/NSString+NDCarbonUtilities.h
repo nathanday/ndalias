@@ -2,7 +2,7 @@
 	NSString+NDCarbonUtilities.h
 
 	Created by Nathan Day on 03.08.02 under a MIT-style license.
-	Copyright (c) 2008-2011 Nathan Day
+	Copyright (c) 2008-2013 Nathan Day
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -261,7 +261,7 @@
 	@method setIsStationeryFinderInfoFlag:
 	@abstract <#abstract#>
 	@discussion <#discussion#>
-	@param flag <#discussion#>
+	@param aFlag <#discussion#>
 	@result <#result#>
  */
 - (BOOL)setIsStationeryFinderInfoFlag:(BOOL)aFlag;
@@ -269,7 +269,7 @@
 	@method setHasNameLockedFinderInfoFlag:
 	@abstract <#abstract#>
 	@discussion <#discussion#>
-	@param flag <#discussion#>
+	@param aFlag <#discussion#>
 	@result <#result#>
  */
 - (BOOL)setHasNameLockedFinderInfoFlag:(BOOL)aFlag;
@@ -277,7 +277,7 @@
 	@method setHasBundleFinderInfoFlag:
 	@abstract <#abstract#>
 	@discussion <#discussion#>
-	@param flag <#discussion#>
+	@param aFlag <#discussion#>
 	@result <#result#>
  */
 - (BOOL)setHasBundleFinderInfoFlag:(BOOL)aFlag;
@@ -285,7 +285,7 @@
 	@method setIsInvisibleFinderInfoFlag:
 	@abstract <#abstract#>
 	@discussion <#discussion#>
-	@param flag <#discussion#>
+	@param aFlag <#discussion#>
 	@result <#result#>
  */
 - (BOOL)setIsInvisibleFinderInfoFlag:(BOOL)aFlag;
@@ -293,7 +293,7 @@
 	@method setIsAliasFinderInfoFlag:
 	@abstract <#abstract#>
 	@discussion <#discussion#>
-	@param flag <#discussion#>
+	@param aFlag <#discussion#>
 	@result <#result#>
  */
 - (BOOL)setIsAliasFinderInfoFlag:(BOOL)aFlag;
